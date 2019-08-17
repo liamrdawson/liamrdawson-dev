@@ -1,21 +1,47 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Header from './components/Header';
+import Body from './components/Body';
+import Introduction from './components/Introduction';
+import Skill from './components/Skill';
 import './App.css';
 
-function Header() {
-    return (
-        <header>
-            <h1>
-            Hello World
-        </h1>
-        <h3>What are you looking at?</h3>
-        </header>
-    );
-}
 
-function App() {
-    return (
-        <Header />
-    );
+class App extends Component {
+
+    state = {
+        skillSet: [
+            { nameOfTech: 'React'},
+            { nameOfTech: 'JavaScript ES6'},
+            { nameOfTech: 'HTML5 & CSS3'},
+            { nameOfTech: 'SASS / SCSS'},
+            { nameOfTech: 'Babel'},
+            { nameOfTech: 'Bootstrap 3 & 4'},
+            { nameOfTech: 'Git'},
+            { nameOfTech: 'JQuery'}
+        ]
+    };
+
+    render() {
+        return (
+            <div className="container">
+                <Header />
+                <Introduction />
+                <Body />
+
+                {/*SKILLS LIST*/}
+                <section className="skills">
+                    {this.state.skillSet.map( (skill, index) => 
+                        <Skill
+                            skill={skill.nameOfTech}
+                            index={index}
+                        />
+                    )}
+                </section>
+
+            </div>
+        );       
+    }
+
 }
 
 export default App;
