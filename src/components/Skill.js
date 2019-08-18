@@ -10,7 +10,7 @@ class Skill extends Component {
         console.log(`${skill} rendered. Index is ${index}`);
 
         return (
-                <div className="skill">
+                <div className={`skill-${skill} skill`}>
                     <span>{skill}</span>
                 </div>
         );

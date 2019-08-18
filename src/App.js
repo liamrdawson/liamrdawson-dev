@@ -17,7 +17,10 @@ class App extends Component {
             { nameOfTech: 'Babel'},
             { nameOfTech: 'Bootstrap 3 & 4'},
             { nameOfTech: 'Git'},
-            { nameOfTech: 'JQuery'}
+            { nameOfTech: 'Node'},
+            { nameOfTech: 'Express'},
+            { nameOfTech: 'MongoDB'},
+            { nameOfTech: 'Webpack'},
         ]
     };
 
