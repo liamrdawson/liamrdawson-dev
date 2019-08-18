@@ -10,17 +10,50 @@ class App extends Component {
 
     state = {
         skillSet: [
-            { nameOfTech: 'React'},
-            { nameOfTech: 'JavaScript ES6'},
-            { nameOfTech: 'HTML5 & CSS3'},
-            { nameOfTech: 'SASS / SCSS'},
-            { nameOfTech: 'Babel'},
-            { nameOfTech: 'Bootstrap 3 & 4'},
-            { nameOfTech: 'Git'},
-            { nameOfTech: 'Node'},
-            { nameOfTech: 'Express'},
-            { nameOfTech: 'MongoDB'},
-            { nameOfTech: 'Webpack'},
+            {   
+                nameOfTech: 'React',
+                    class: 'react'
+            },
+            {   
+                nameOfTech: 'JavaScript ES6',
+                    class: 'javascript'
+            },
+            { 
+                nameOfTech: 'HTML5 & CSS3',
+                    class: 'html-css'
+            },
+            { 
+                nameOfTech: 'SASS / SCSS',
+                    class: 'sass'
+            },
+            { 
+                nameOfTech: 'Babel',
+                class: 'babel'
+            },
+            { 
+                nameOfTech: 'Bootstrap 3 & 4',
+                class: 'bootstrap'
+            },
+            { 
+                nameOfTech: 'Git',
+                class: 'git'
+            },
+            { 
+                nameOfTech: 'Node',
+                class: 'node'
+            },
+            { 
+                nameOfTech: 'Express',
+                class: 'express'
+            },
+            { 
+                nameOfTech: 'MongoDB',
+                class: 'mongodb'
+            },
+            { 
+                nameOfTech: 'Webpack',
+                class: 'webpack'
+            },
         ]
     };
 
@@ -35,7 +68,7 @@ class App extends Component {
                 <section className="skills">
                     {this.state.skillSet.map( (skill, index) => 
                         <Skill
-                            skill={skill.nameOfTech}
+                            skill={skill.class}
                             index={index}
                         />
                     )}

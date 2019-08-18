@@ -18,10 +18,13 @@ h1 {
 }
 
 h3 {
-    color: rgba(176, 224, 230, 0.6);
+    color: rgba(176, 224, 230, 0.4);
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: 35px 20px 0 20px;
     height: 55px;
     display: flex;
@@ -30,6 +33,10 @@ header {
     background-color: #010101;
     opacity: .95;
     color: white;
+}
+
+header span {
+    font-weight: 800;
 }
 
 section {
@@ -50,10 +57,13 @@ section {
     background-color: white;
 }
 
+
+/*  SKILLS  */
+
 .skill { 
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+    border-radius: 25%;
     background-color: steelblue;
     display: inline-block;
     margin: auto;
@@ -62,6 +72,9 @@ section {
     justify-content: center;
     align-items: center;
     opacity: 0.85;
+
+    -moz-box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,51 +82,51 @@ section {
     text-align: center;
 }
 
-.skill-React {
+.skill-react {
     background-color: #282c34;
     color: #61dafb;
 }
 
-.skill-JavaScript {
+.skill-javascript {
     background-color: #f7df1e;
 }
 
-.skill-SASS {
+.skill-sass {
     background-color: #bf4080;
     color: white;
 }
 
-.skill-Babel {
+.skill-babel {
     background-color: #323330;
     color: #f5da55;
 }
 
-.skill-Bootstrap {
+.skill-bootstrap {
     background-color: #563d7c;
     color: white;
 }
 
-.skill-Git {
+.skill-git {
     background-color: #f14e32;
     color: white;
 }
 
-.skill-Node {
+.skill-node {
     background-color: #026e00;
     color: white;
 }
 
-.skill-Express {
+.skill-express {
     background-color: #eee;
     color: #259dff;
 }
 
-.skill-MongoDB {
+.skill-mongodb {
    background-color: #13aa52;
    color: white;
 }
 
-.skill-Webpack {
+.skill-webpack {
     background-color: white;
     color: #2b3a42;
 }
