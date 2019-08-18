@@ -1,5 +1,6 @@
 # To Do
 
+[ ] - Menu
 [ ] - About & Contact
 [ ] - Skills
 [ ] - Projects
@@ -8,4 +9,3 @@
 [ ] - What happens when users click / tap on skill?
     [ ] - How will this be established as a rule?
 [ ] - Accessibility checks
-
