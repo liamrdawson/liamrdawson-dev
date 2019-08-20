@@ -5,9 +5,9 @@
 - [ ] GitHub commit heatmap
 
 ## Pages and Sections
-- [ ] About & Contact
-- [ ] Skills
+- [ ] About
 - [ ] Projects
+- [ ] Contact
 
 ## General
 - [x] Add SCSS to workflow

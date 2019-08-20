@@ -7,31 +7,37 @@ class Projects extends Component {
             {
                 name: 'Board Game Scoreboard App',
                 techUsed: ['React', 'Webpack', 'Babel'],
-                description: 'React application built to help friends keep track of leaderbord on game nights',
+                description: 'React application built to help friends keep track of leaderbord on game nights.',
                 github:  'https://github.com/liamrdawson/Scoreboard-App'
+            },
+            {
+                name: 'Portfolio Website',
+                techUsed: ['React', 'Webpack', 'Babel', 'SASS/SCSS'],
+                description: 'React website built to demonstrate skills and abilities in front end development.',
+                github:  'https://github.com/liamrdawson/liamrdawson-frontend-dev'
             },
             {
                 name: 'LiamRDawson.com',
                 techUsed: ['JavaScript ES6', 'SASS/SCSS'],
-                description: 'Portfolio website to showcase work in photography',
+                description: 'Portfolio website to showcase work in photography.',
                 github: 'https://github.com/liamrdawson/Liam-Dawson-Photography'
             },
             {
                 name: 'Command Line Weather App',
                 techUsed: ['Node', 'Express'],
-                description: 'A command line application that returns current weather from user input location',
+                description: 'A command line application that returns current weather from user input location.',
                 github: 'https://github.com/liamrdawson/node-exercises/blob/master/Weather%20App/app.js'
             },
             {
                 name: 'Riff Login UI',
                 techUsed: ['HTML', 'SASS/SCSS', 'JavaScript ES6'],
-                description: 'Application prototype interface',
+                description: 'Application prototype interface.',
                 github: 'https://github.com/liamrdawson/Riff-Login-UI'
             },
             {
                 name: 'To Do List',
                 techUsed: ['Bootstrap', 'JavaScript ES6'],
-                description: 'Simple to-do list application',
+                description: 'Simple to-do list application.',
                 github: 'https://github.com/liamrdawson/to-do-app'
             }
         ]

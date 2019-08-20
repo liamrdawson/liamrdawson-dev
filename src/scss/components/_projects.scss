@@ -4,12 +4,16 @@
 
 .project {
     background-color: $dark;
-    height: 150px;
-    margin: $space5 0;
+    height: 200px;
+    margin: $space6 0;
     border-radius: 12px;
     cursor: pointer;
     padding: $pa1;
     @include box-shadow;
+}
+
+.project-container {
+    margin: $space7 0;
 }
 
 .project span, 

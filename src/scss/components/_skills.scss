@@ -1,6 +1,7 @@
 .skills {
-    width: 100%;
-    height: 500px;
+    width: 90vw;
+    height: auto;
+    margin: 0 0 $space7 0;
     &-section {
         padding: $pa3;
     }
@@ -8,17 +9,20 @@
 
 .skill span {
     text-align: center;
+    font-size: $space4;
+    font-weight: 700;
 }
 
 .skill {
     width: 75px;
     height: 75px;
-    border-radius: 25%;
+    border-radius: 12px;
     display: inline-block;
     margin: auto;
+    padding: $pa1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     opacity: 0.9;
 

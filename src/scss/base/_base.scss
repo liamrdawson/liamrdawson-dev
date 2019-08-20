@@ -6,9 +6,10 @@
 
 h1 {
     font-size: $space7;
+    font-weight: 400;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $title-font;
     @include title();
 }
@@ -18,8 +19,14 @@ h1, h3 {
 }
 
 h2 {
+    text-align: center;
+}
+
+h2 {
     color: $dark;
 }
+
+
 
 img {
     height: 150px;
