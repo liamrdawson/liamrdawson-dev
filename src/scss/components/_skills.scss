@@ -1,76 +1,67 @@
 .skills {
     width: 100%;
     height: 500px;
-    background-color: white;
-}
-
-.skill { 
-    width: 75px;
-    height: 75px;
-    border-radius: 25%;
-    background-color: steelblue;
-    display: inline-block;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.85;
-
-    -moz-box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 7px 0.5px rgba(0, 0, 0, 0.1);
+    &-section {
+        padding: $pa3;
+    }
 }
 
 .skill span {
     text-align: center;
 }
 
-.skill-react {
-    background-color: #282c34;
-    color: #61dafb;
+.skill {
+    width: 75px;
+    height: 75px;
+    border-radius: 25%;
+    display: inline-block;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+
+    @include box-shadow();
+
+    &-react {
+        background-color: #282c34;
+        color: #61dafb;
+    }
+    &-javascript {
+        background-color: #f7df1e;
+    }
+    &-sass {
+        background-color: #bf4080;
+        color: white;
+    }
+    &-babel {
+        background-color: #323330;
+        color: #f5da55;
+    }
+    &-bootstrap {
+        background-color: #563d7c;
+        color: white;
+    }
+    &-git {
+        background-color: #f14e32;
+        color: white;
+    }
+    &-node {
+        background-color: #026e00;
+        color: white;
+    }
+    &-express {
+        background-color: #eee;
+        color: #259dff;
+    }
+    &-mongodb {
+       background-color: #13aa52;
+       color: white;
+    }
+    &-webpack {
+        background-color: white;
+        color: #2b3a42;
+    }
 }
 
-.skill-javascript {
-    background-color: #f7df1e;
-}
-
-.skill-sass {
-    background-color: #bf4080;
-    color: white;
-}
-
-.skill-babel {
-    background-color: #323330;
-    color: #f5da55;
-}
-
-.skill-bootstrap {
-    background-color: #563d7c;
-    color: white;
-}
-
-.skill-git {
-    background-color: #f14e32;
-    color: white;
-}
-
-.skill-node {
-    background-color: #026e00;
-    color: white;
-}
-
-.skill-express {
-    background-color: #eee;
-    color: #259dff;
-}
-
-.skill-mongodb {
-   background-color: #13aa52;
-   color: white;
-}
-
-.skill-webpack {
-    background-color: white;
-    color: #2b3a42;
-}

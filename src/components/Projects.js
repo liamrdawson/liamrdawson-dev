@@ -39,7 +39,7 @@ class Projects extends Component {
 
     render () {
         return (
-            <section className={`Projects`}>
+            <section className={`projects`}>
                 <h2>
                     Projects
                 </h2>

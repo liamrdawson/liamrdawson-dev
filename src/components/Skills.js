@@ -57,7 +57,7 @@ class Skills extends Component {
         console.log(`${skill} rendered. Index is ${index}`);
 
         return (
-            <section>
+            <section className="skills-section">
                 <h2>Skills</h2>
                 <span>I love developing and learning about the latest technologies. Here are the technologies I use most.</span>
                 <div className="skills">

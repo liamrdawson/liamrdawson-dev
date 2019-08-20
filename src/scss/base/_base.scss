@@ -1,22 +1,33 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $standard-font;
 }
 
 h1 {
-    color: #f5da55;
-    font-size: 28px;
-    padding-bottom: 40px;
+    font-size: $space7;
 }
 
-h3 {
-    color: #f5da55;
+h1, h2, h3 {
+    font-family: $title-font;
+    @include title();
+}
+
+h1, h3 {
+    color: $brand;
+}
+
+h2 {
+    color: $dark;
 }
 
 img {
     height: 150px;
     border-radius: 50%;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: $space6;
+}
+
+a {
+    text-decoration: none;
 }

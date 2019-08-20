@@ -2,14 +2,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    padding: 25px 20px 25px 20px;
+    padding: $pa3;
     height: 55px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #010101;
-    opacity: .95;
-    color: white;
+    background-color: $dark;
+    color: $light;
 }
 
 header span {

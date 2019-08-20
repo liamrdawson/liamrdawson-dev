@@ -1,20 +1,18 @@
-.project-container {
-    padding: 18.75px;
+.projects {
+    padding: $pa3
 }
 
 .project {
-    background-color: #2b3a42;
+    background-color: $dark;
     height: 150px;
-    margin: 20px 0;
+    margin: $space5 0;
     border-radius: 12px;
     cursor: pointer;
-    padding: 5px;
+    padding: $pa1;
+    @include box-shadow;
 }
 
-.project span {
-    color: white;
-}
-
+.project span, 
 .project p {
-    color: white;
+    color: $light;
 }
