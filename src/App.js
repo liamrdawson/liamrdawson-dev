@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Header from './components/Header';
-import Body from './components/Body';
 import Introduction from './components/Introduction';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import './App.css';
+import Footer from './components/Footer';
+import './scss/App.scss';
 
 
 class App extends Component {
@@ -14,12 +14,13 @@ class App extends Component {
             <div className="container">
                 <Header />
                 <Introduction />
-                <Body />
 
                 {/*SKILLS LIST*/}
                 <Skills/>
-                <Projects/>
 
+                {/*PROJECTS LIST*/}
+                <Projects/>
+                <Footer />
             </div>
         );       
     }

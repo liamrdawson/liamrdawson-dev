@@ -1,0 +1,17 @@
+.link-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 35px auto;
+    height: 50px;
+
+}
+
+svg {
+    border: 3px solid red;
+}
+
+.icon { 
+    height: 70px;
+    border-radius: 0;
+}

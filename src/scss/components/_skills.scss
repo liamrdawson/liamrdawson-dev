@@ -1,65 +1,8 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-img {
-    height: 150px;
-    border-radius: 50%;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-h1 {
-    color: rgb(176, 224, 230);
-    font-size: 28px;
-    padding-bottom: 40px;
-}
-
-h3 {
-    color: rgba(176, 224, 230, 0.4);
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: 25px 20px 25px 20px;
-    height: 55px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #010101;
-    opacity: .95;
-    color: white;
-}
-
-header span {
-    font-weight: 800;
-}
-
-.introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 450px;
-    justify-content: space-around;
-    background-color: #010101;
-    opacity: .95;
-    padding: 20px 20px 0 20px;
-}
-
 .skills {
     width: 100%;
     height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     background-color: white;
 }
-
-
-/*  SKILLS  */
 
 .skill { 
     width: 75px;
@@ -130,21 +73,4 @@ header span {
 .skill-webpack {
     background-color: white;
     color: #2b3a42;
-}
-
-/*   PROJECTS   */
-
-.project-container {
-    padding: 18.75px;
-}
-
-.project {
-    background-color: #2b3a42;
-    height: 125px;
-    margin: 20px 0;
-    border-radius: 12px;
-}
-
-.project span {
-    color: white;
 }
