@@ -1,0 +1,13 @@
+.sections-container {
+    margin: 0 auto;
+    max-width: 800px;
+    @include mq('sm') {
+        padding: $space6 $space9 $space8;
+    }
+    @include mq('sm-med') {
+        padding: $space7 $space10 $space9;
+    }
+    @include mq('med') {
+        padding: $space8 $space11 $space10;
+    }
+}

@@ -83,7 +83,7 @@ class Skills extends Component {
                 <h2>Skills</h2>
                 <span>I love developing and learning about the latest technologies. Here are the technologies I use most.</span>
                 <h4>Front End</h4>
-                <div className="skills">
+                <div className="skills front-end">
                     {this.state.skillSet.filter(skill => skill.area === 'front end').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
                             <span>{skill.nameOfTech}</span>
@@ -92,7 +92,7 @@ class Skills extends Component {
                     )}
                 </div>
                 <h4>Back End</h4>
-                <div className="skills">
+                <div className="skills back-end">
                     {this.state.skillSet.filter(skill => skill.area === 'back end').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
                             <span>{skill.nameOfTech}</span>
@@ -101,7 +101,7 @@ class Skills extends Component {
                     )}
                 </div>
                 <h4>Tooling</h4>
-                <div className="skills">
+                <div className="skills tooling">
                     {this.state.skillSet.filter(skill => skill.area === 'tooling').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
                             <span>{skill.nameOfTech}</span>

@@ -15,35 +15,35 @@
     @include box-shadow;
     &-photography {
         background: url('../../images/photography.png'),
-        rgba($dark, .6);  
+        rgba($dark, .65);  
         background-blend-mode: overlay; 
         background-size: cover;
         background-position: top;
     }
     &-riff {
         background: url('../../images/riff.png'),
-        rgba($dark, .6);  
+        rgba($dark, .65);  
         background-blend-mode: overlay;     
         background-size: cover;
         background-position: top;
     }
     &-scoreboard {
         background: url('../../images/scoreboard.png'),
-        rgba($dark, .6);  
+        rgba($dark, .65);  
         background-blend-mode: overlay; 
         background-size: cover;
         background-position: top;
     }
     &-weather-app {
         background: url('../../images/weather.png'),
-        rgba($dark, .6);  
+        rgba($dark, .65);  
         background-blend-mode: overlay; 
         background-size: cover;
         background-position: top;
     } 
     &-to-do {
         background: url('../../images/todo.png'),
-        rgba($dark, .6);  
+        rgba($dark, .65);  
         background-blend-mode: overlay; 
         background-size: cover;
         background-position: top;

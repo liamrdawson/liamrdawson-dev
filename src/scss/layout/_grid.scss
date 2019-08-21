@@ -3,4 +3,23 @@
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px;
+    @include mq('sm') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include mq('med') {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+.front-end {
+    grid-area: front-end;
+}
+
+.back-end {
+    grid-area: back-end;
+}
+
+.tooling {
+    grid-area: tooling;
 }

@@ -7,11 +7,19 @@
 h1 {
     font-size: $space7;
     font-weight: 400;
+    max-width: 474px;
+    @include mq('med') {
+        font-size: $space8;
+    }
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-family: $title-font;
     @include title();
+}
+
+h4 {
+    margin: $space7 0 0;
 }
 
 h1, h3 {
@@ -28,6 +36,7 @@ h2 {
 
 body {
     background-color: $light;
+    color: rgba($dark, .9);
 }
 
 img {

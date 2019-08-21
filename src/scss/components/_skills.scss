@@ -1,5 +1,4 @@
 .skills {
-    width: 90vw;
     height: auto;
     margin: 0 0 $space7 0;
     &-section {
@@ -24,7 +23,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    opacity: 0.9;
+    opacity: 0.88;
 
     @include box-shadow();
 

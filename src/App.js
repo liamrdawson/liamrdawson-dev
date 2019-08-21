@@ -15,11 +15,12 @@ class App extends Component {
                 <Header />
                 <Introduction />
 
-                {/*SKILLS LIST*/}
-                <Skills/>
-
-                {/*PROJECTS LIST*/}
-                <Projects/>
+                <div className="sections-container">
+                    {/*SKILLS LIST*/}
+                    <Skills/>
+                    {/*PROJECTS LIST*/}
+                    <Projects/>
+                </div>
                 <Footer />
             </div>
         );       
