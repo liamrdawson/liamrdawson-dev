@@ -14,9 +14,9 @@
 }
 
 .skill {
-    width: 75px;
-    height: 75px;
-    border-radius: 12px;
+    width: 70px;
+    height: 70px;
+    border-radius: $corners;
     display: inline-block;
     margin: auto;
     padding: $pa1;
@@ -37,6 +37,14 @@
     }
     &-sass {
         background-color: #bf4080;
+        color: white;
+    }
+    &-css3 {
+        background-color: #29A9DF;
+        color: white;
+    }
+    &-html5 {
+        background-color: #EF5F26;
         color: white;
     }
     &-babel {

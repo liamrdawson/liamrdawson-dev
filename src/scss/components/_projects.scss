@@ -3,13 +3,51 @@
 }
 
 .project {
-    background-color: $dark;
     height: 200px;
     margin: $space6 0;
-    border-radius: 12px;
+    border-radius: $corners;
     cursor: pointer;
     padding: $pa1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $brand;
     @include box-shadow;
+    &-photography {
+        background: url('../../images/photography.png'),
+        rgba($dark, .6);  
+        background-blend-mode: overlay; 
+        background-size: cover;
+        background-position: top;
+    }
+    &-riff {
+        background: url('../../images/riff.png'),
+        rgba($dark, .6);  
+        background-blend-mode: overlay;     
+        background-size: cover;
+        background-position: top;
+    }
+    &-scoreboard {
+        background: url('../../images/scoreboard.png'),
+        rgba($dark, .6);  
+        background-blend-mode: overlay; 
+        background-size: cover;
+        background-position: top;
+    }
+    &-weather-app {
+        background: url('../../images/weather.png'),
+        rgba($dark, .6);  
+        background-blend-mode: overlay; 
+        background-size: cover;
+        background-position: top;
+    } 
+    &-to-do {
+        background: url('../../images/todo.png'),
+        rgba($dark, .6);  
+        background-blend-mode: overlay; 
+        background-size: cover;
+        background-position: top;
+    }
 }
 
 .project-container {
