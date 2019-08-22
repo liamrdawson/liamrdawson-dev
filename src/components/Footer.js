@@ -1,6 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line 
 import github from '../icons/GitHub.svg';
+// eslint-disable-next-line
 import twitter from '../icons/twitter.svg';
+// eslint-disable-next-line
 import linkedin from '../icons/linkedin.svg';
 
 function Footer() {

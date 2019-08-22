@@ -14,7 +14,7 @@ class Skills extends Component {
             {   
                 nameOfTech: 'React',
                     class: 'react',
-                    area: 'front end'
+                    area: 'front end',
             },
             {   
                 nameOfTech: 'JavaScript',

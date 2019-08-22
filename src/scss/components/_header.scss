@@ -1,16 +1,32 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: $pa3;
-    height: 55px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    z-index: 30;
+    height: $space10;
     background-color: $dark;
-    color: $light;
+    color: $brand;
+    font-size: $space5;
+    @include mq('sm') {
+        height: 66px;
+    }
 }
 
-header span {
-    font-weight: 800;
+.menu {
+    @include mq('sm') {
+        display: none;
+    }
+}
+
+header a {
+        color: $brand;
+}
+
+nav {
+    display: none;
+    
+    @include mq('sm') {
+        display: flex;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

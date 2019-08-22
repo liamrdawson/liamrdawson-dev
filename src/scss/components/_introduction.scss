@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    height: 350px;
     justify-content: space-around;
+    z-index: -10;
     background-color: $dark;
     padding: $pa3 $pa3 0 $pa3;
+    h1, img {
+        margin: 0;
+    }
 }

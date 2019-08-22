@@ -1,13 +1,13 @@
 .skills {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 80px);
     grid-auto-rows: 100px;
-    @include mq('sm') {
-        grid-template-columns: repeat(4, 1fr);
+    @include mq('sm-med') {
+        grid-template-columns: repeat(5, 80px);
     }
     @include mq('med') {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 80px);
     }
 }
 
