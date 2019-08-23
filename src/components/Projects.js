@@ -57,9 +57,11 @@ class Projects extends Component {
                         {this.state.projects.map( (project) => 
                             <a href={project.github}>
                                 <div className={`project project-${project.class}`}>
-                                    <h3>{project.name}</h3>
-                                    <p>{project.description}</p>
-                                    <span>Built with: {project.techUsed.join(', ')}</span>
+                                    <div className="project-bg">
+                                        <h3>{project.name}</h3>
+                                      {/*  <p>{project.description}</p>*/}
+                                        <span>Built with: {project.techUsed.join(', ')}</span>
+                                    </div>
                                 </div>
                             </a>
                         )}

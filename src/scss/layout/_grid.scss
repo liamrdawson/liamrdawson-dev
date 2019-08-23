@@ -11,7 +11,18 @@
     }
 }
 
-
+.project-container {
+        display: grid;
+        justify-items: stretch;
+        align-items: center;
+        grid-gap: 15px;
+        width: 100%;
+    @include mq('med') {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+    }
+}
 
 .front-end {
     grid-area: front-end;
