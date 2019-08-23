@@ -31,7 +31,7 @@ h2 {
 }
 
 h2, h3 {
-    color: $dark;
+    color: $dark-text;
 }
 
 h3 {
@@ -40,7 +40,7 @@ h3 {
 
 body {
     background-color: rgba($dark, .01);
-    color: rgba($dark, .9);
+    color: $dark-text;
 }
 
 img {

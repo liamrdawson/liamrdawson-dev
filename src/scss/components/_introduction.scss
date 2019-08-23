@@ -10,4 +10,9 @@
     h1, img {
         margin: 0;
     }
+    background: 
+                url('../../images/bg-1.svg'),
+                rgba($dark, .1);
+    background-blend-mode: overlay;
+    background-size: cover;
 }

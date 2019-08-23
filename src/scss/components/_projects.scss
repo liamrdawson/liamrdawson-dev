@@ -5,14 +5,12 @@
 .project {
     min-height: 200px;
     width: 100%;
-   // margin: $space6 0;
     border-radius: $corners;
     cursor: pointer;
-   // padding: $pa1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: $brand;
+    background-color: rgba($brand, .99);
     @include box-shadow;
     &-bg {
         padding: $pa1;
@@ -23,15 +21,15 @@
     &-photography {
         background:  
              url('../../images/photography.png'),
-            rgba($dark, .2);
+            rgba($dark, .05);
         background-blend-mode: overlay;
         background-size: cover;
-        background-position: top;
+        background-position: bottom;
     }
     &-riff {
         background:  
             url('../../images/riff.png'),
-            rgba($dark, .2);
+            rgba($dark, .05);
         background-blend-mode: overlay;     
         background-size: cover;
         background-position: top;
@@ -39,7 +37,7 @@
     &-scoreboard {
         background: 
             url('../../images/scoreboard.png'),
-            rgba($dark, .2);
+            rgba($dark, .05);
         background-blend-mode: overlay;
         background-size: cover;
         background-position: top;
@@ -47,7 +45,7 @@
     &-weather-app {
         background:  
              url('../../images/weather.png'),             
-             rgba($dark, .2);
+             rgba($dark, .05);
         background-blend-mode: overlay;
         background-size: cover;
         background-position: top;
@@ -55,7 +53,7 @@
     &-to-do {
         background:  
             url('../../images/todo.png'),
-            rgba($dark, .2);
+            rgba($dark, .05);
         background-blend-mode: overlay; 
         background-size: cover;
         background-position: top;
@@ -68,5 +66,5 @@
 
 .project span, 
 .project p {
-    color: $dark;
+    color: $dark-text;
 }

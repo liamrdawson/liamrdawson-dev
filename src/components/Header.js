@@ -8,7 +8,7 @@ function Header() {
                 <span className="menu">Menu</span>
                 <nav>
                     <a href="#">About</a>
-                    <a href="#">Projects</a>
+                    <a href="#projects">Projects</a>
                     <a href="#">Contact</a>
                 </nav>
             </div>
