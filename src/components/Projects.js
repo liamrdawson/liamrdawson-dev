@@ -51,17 +51,22 @@ class Projects extends Component {
                 <span>
                     I work on personal projects and freelance work in my free time. Here are some that I've developed/created.
                 </span>
-                <div className="project-container">
-                    {this.state.projects.map( (project) => 
-                        <a href={project.github}>
-                            <div className={`project project-${project.class}`}>
-                                <h3>{project.name}</h3>
-                                <p>{project.description}</p>
-                                <span>Built with: {project.techUsed.join(', ')}</span>
-                            </div>
-                        </a>
-                    )}
+                <div className="project-grid">
+
+                    <div className="project-container">
+                        {this.state.projects.map( (project) => 
+                            <a href={project.github}>
+                                <div className={`project project-${project.class}`}>
+                                    <h3>{project.name}</h3>
+                                    <p>{project.description}</p>
+                                    <span>Built with: {project.techUsed.join(', ')}</span>
+                                </div>
+                            </a>
+                        )}
+                    </div>
+
                 </div>
+                
             </section>
         );
     }
