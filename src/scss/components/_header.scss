@@ -1,8 +1,8 @@
 header {
     z-index: 30;
     height: $space10;
-    background-color: $dark;
-    color: $brand;
+   // background-color: $dark;
+    color: $dark;
     font-size: $space5;
     @include mq('sm') {
         height: 66px;
@@ -16,7 +16,7 @@ header {
 }
 
 header a {
-        color: $brand;
+        color: $dark;
 }
 
 nav {

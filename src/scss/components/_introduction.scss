@@ -5,14 +5,11 @@
     height: 350px;
     justify-content: space-around;
     z-index: -10;
-    background-color: $dark;
+   // background-color: $dark;
     padding: $pa3 $pa3 0 $pa3;
     h1, img {
         margin: 0;
     }
-    background: 
-                url('../../images/bg-1.svg'),
-                rgba($dark, .1);
     background-blend-mode: overlay;
     background-size: cover;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgHeader from '../icons/Header';
 
 function Header() {
     return (

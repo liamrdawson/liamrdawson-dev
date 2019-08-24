@@ -1,14 +1,9 @@
-.link-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: $space8 auto;
-    height: 50px;
-
-}
-
-
-.icon { 
-    height: 70px;
-    border-radius: 0;
+.svg-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
 }

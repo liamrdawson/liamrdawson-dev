@@ -1,4 +1,15 @@
 import React, {Component} from 'react';
+import SvgReact from '../icons/React';
+import SvgJs from '../icons/Js';
+import SvgSass from '../icons/Sass';
+import SvgCss3 from '../icons/Css3';
+import SvgHtml5 from '../icons/Html5';
+import SvgBootstrap from '../icons/Bootstrap';
+import SvgNode from '../icons/Node';
+import SvgBabel from '../icons/Babel';
+import SvgGit from '../icons/Git';
+import SvgWebpack from '../icons/Webpack';
+import SvgExpress from '../icons/Express';
 
 // Consider breaking this down into:
 //     Front end 
@@ -12,59 +23,70 @@ class Skills extends Component {
         skillSet: [
             //front end
             {   
-                nameOfTech: 'React',
+               // nameOfTech: 'React',
                     class: 'react',
                     area: 'front end',
+                    iconModule: <SvgReact/>
             },
             {   
-                nameOfTech: 'JavaScript',
+               // nameOfTech: 'JavaScript',
                     class: 'javascript',
-                    area: 'front end'
+                    area: 'front end',
+                    iconModule: <SvgJs/>
             },
             { 
-                nameOfTech: 'SCSS',
+                //nameOfTech: 'SCSS',
                     class: 'sass',
-                    area: 'front end'
+                    area: 'front end',
+                    iconModule: <SvgSass/>
             },
             { 
-                nameOfTech: 'CSS3',
+                //nameOfTech: 'CSS3',
                     class: 'css3',
-                    area: 'front end'
+                    area: 'front end',
+                    iconModule: <SvgCss3/>
             },
             { 
-                nameOfTech: 'HTML5',
+                //nameOfTech: 'HTML5',
                     class: 'html5',
-                    area: 'front end'
+                    area: 'front end',
+                    iconModule: <SvgHtml5/>
             },
             { 
-                nameOfTech: 'Bootstrap',
+               // nameOfTech: 'Bootstrap',
                 class: 'bootstrap',
-                area: 'front end'
+                area: 'front end',
+                iconModule: <SvgBootstrap/>
             },
             { 
-                nameOfTech: 'Webpack',
+             //   nameOfTech: 'Webpack',
                 class: 'webpack',
-                area: 'tooling'
+                area: 'tooling',
+                iconModule: <SvgWebpack/>
             },
             { 
-                nameOfTech: 'Babel',
+              //  nameOfTech: 'Babel',
                 class: 'babel',
-                area: 'tooling'
+                area: 'tooling',
+                iconModule: <SvgBabel/>
             },
             { 
-                nameOfTech: 'Git',
+             //   nameOfTech: 'Git',
                 class: 'git',
-                area: 'tooling'
+                area: 'tooling',
+                iconModule: <SvgGit/>
             },
             { 
-                nameOfTech: 'Node',
+              //  nameOfTech: 'Node',
                 class: 'node',
-                area: 'back end'
+                area: 'back end',
+                iconModule: <SvgNode />
             },
             { 
-                nameOfTech: 'Express',
+               // nameOfTech: 'Express',
                 class: 'express',
-                area: 'back end'
+                area: 'back end',
+                iconModule: <SvgExpress/>
             },
         ]
     };
@@ -86,6 +108,7 @@ class Skills extends Component {
                 <div className="skills front-end">
                     {this.state.skillSet.filter(skill => skill.area === 'front end').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
+                            {skill.iconModule}
                             <span>{skill.nameOfTech}</span>
                         </div>
                         
@@ -95,6 +118,7 @@ class Skills extends Component {
                 <div className="skills back-end">
                     {this.state.skillSet.filter(skill => skill.area === 'back end').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
+                            {skill.iconModule}
                             <span>{skill.nameOfTech}</span>
                         </div>
                         
@@ -104,6 +128,7 @@ class Skills extends Component {
                 <div className="skills tooling">
                     {this.state.skillSet.filter(skill => skill.area === 'tooling').map( (skill) => 
                         <div className={`skill-${skill.class} skill`}>
+                           {skill.iconModule}  
                             <span>{skill.nameOfTech}</span>
                         </div>
                         

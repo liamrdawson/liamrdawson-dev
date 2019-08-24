@@ -1,18 +1,17 @@
 import React from 'react';
-// eslint-disable-next-line 
-import github from '../icons/GitHub.svg';
-// eslint-disable-next-line
-import twitter from '../icons/twitter.svg';
-// eslint-disable-next-line
-import linkedin from '../icons/linkedin.svg';
+import SvgGitHub from '../icons/GitHub';
+import SvgTwitter from '../icons/Twitter';
+import ScgLinkedIn from '../icons/Linkedin';
+import SvgLinkedin from '../icons/Linkedin';
+
 
 function Footer() {
     return (
         <footer>
             <div className="link-icons">
-                {/* <a href="https://github.com/liamrdawson"><img src={github} className="icon" alt="github icon"/></a>
-                <a  href="https://twitter.com/LiamRDawson"><img src={twitter} className="icon" alt="twitter icon"/></a>
-                <a href="https://www.linkedin.com/in/liamrdawson/"><img src={linkedin} className="icon" alt="linkedin icon"/></a> */}
+                <a href="https://github.com/liamrdawson"><SvgGitHub className="sm-icon"/></a>
+                <a  href="https://twitter.com/LiamRDawson"><SvgTwitter className="sm-icon"/></a>
+                <a href="https://www.linkedin.com/in/liamrdawson/"><SvgLinkedin className="sm-icon"/></a>
             </div>
         </footer>
     )

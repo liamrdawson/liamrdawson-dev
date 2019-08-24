@@ -1,4 +1,18 @@
 footer {
-    height: 250px;
-    background-color: $dark;
+    height: 150px;
+    background-color: $brand;
+    margin-top: $space10;
+    opacity: .9;
+    padding: $space7;
+}
+
+.link-icons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sm-icon {
+    height: 40px;
+    opacity: .8;
 }
