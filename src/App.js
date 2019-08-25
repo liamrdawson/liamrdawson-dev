@@ -13,27 +13,29 @@ class App extends Component {
 
     state = {
         showIntro: false,
-        showContact: false
+        showContact: false,
+        on: false
     }
 
     changeInfo = () => {
 
-        this.setState = (  
+        this.setState(  
             {
                 showContact: !this.state.showContact
-            });
+            }) 
     }
+
+
 
     render() {
         return (
             <div className="container">
                 <SvgHeader className="svg-header"/>
-                <Header
-                    showIntro={this.state.showIntro}
+                <Header 
                     showContact={this.state.showContact}
                     changeInfo={this.changeInfo}
                 />
-                <Introduction />
+s                {this.state.showContact ? <Contact/> : <Introduction/>}
                 <div className="sections-container">
                     {/*SKILLS LIST*/}
                     <Skills/>

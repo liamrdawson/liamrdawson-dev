@@ -10,23 +10,24 @@ header {
 }
 
 .menu {
-   // @include mq('sm') {
+   @include mq('sm') {
         display: none;
-    //}
+    }
 }
 
 header a {
         color: $dark;
+        cursor: pointer;
 }
 
 nav {
     display: none;
     
-    //@include mq('sm') {
+    @include mq('sm') {
         display: flex;
         width: 50%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-  //  }
+        justify-content: space-between;
+   }
 }
