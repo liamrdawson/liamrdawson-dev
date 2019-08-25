@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgBg1 from '../icons/Bg1';
 
 function Introduction() {
     return (

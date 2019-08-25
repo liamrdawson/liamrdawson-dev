@@ -1,7 +1,8 @@
 import React from "react";
-
+//viewBox="0 0 1366.22 718.91" 
 const SvgHeader = props => (
-  <svg width="100vw" viewBox="0 0 1366.22 718.91" {...props} overflow="hidden">
+  <svg width="100vw" viewBox="0 0 1366.22 718.91"
+  {...props} overflow="hidden">
     <defs>
       <linearGradient
         id="Header_svg__a"

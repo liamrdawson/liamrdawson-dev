@@ -10,9 +10,9 @@ header {
 }
 
 .menu {
-    @include mq('sm') {
+   // @include mq('sm') {
         display: none;
-    }
+    //}
 }
 
 header a {
@@ -22,11 +22,11 @@ header a {
 nav {
     display: none;
     
-    @include mq('sm') {
+    //@include mq('sm') {
         display: flex;
         width: 50%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-    }
+        justify-content: flex-end;
+  //  }
 }

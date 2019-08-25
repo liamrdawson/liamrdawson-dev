@@ -7,12 +7,17 @@ footer {
 }
 
 .link-icons {
-    margin-top: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    max-width: 400px;
+
 }
 
 .sm-icon {
     height: 40px;
     opacity: .8;
+    &:hover {
+        opacity: 1;
+    }
 }

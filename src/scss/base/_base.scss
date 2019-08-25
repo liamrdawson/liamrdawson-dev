@@ -47,5 +47,10 @@ img {
 }
 
 a {
+    color: $dark;
     text-decoration: none;
+    &.hover, img:hover {
+        opacity: 1;
+        font-weight: 600;
+    }
 }

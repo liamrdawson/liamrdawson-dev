@@ -1,7 +1,6 @@
 import React from 'react';
 import SvgGitHub from '../icons/GitHub';
 import SvgTwitter from '../icons/Twitter';
-import ScgLinkedIn from '../icons/Linkedin';
 import SvgLinkedin from '../icons/Linkedin';
 
 
