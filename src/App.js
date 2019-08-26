@@ -17,8 +17,10 @@ class App extends Component {
         on: false
     }
 
-    changeInfo = () => {
 
+    // change the state base on target 
+
+    changeInfo = (e) => {
         this.setState(  
             {
                 showContact: !this.state.showContact
@@ -35,7 +37,7 @@ class App extends Component {
                     showContact={this.state.showContact}
                     changeInfo={this.changeInfo}
                 />
-s                {this.state.showContact ? <Contact/> : <Introduction/>}
+                {this.state.showContact ? <Contact/> : <Introduction/>}
                 <div className="sections-container">
                     {/*SKILLS LIST*/}
                     <Skills/>

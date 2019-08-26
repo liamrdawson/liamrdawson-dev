@@ -11,7 +11,7 @@ header {
 
 .menu {
    @include mq('sm') {
-        display: none;
+ //       display: none;
     }
 }
 
@@ -21,7 +21,7 @@ header a {
 }
 
 nav {
-    display: none;
+  //  display: none;
     
     @include mq('sm') {
         display: flex;
