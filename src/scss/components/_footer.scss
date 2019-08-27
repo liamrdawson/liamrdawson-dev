@@ -16,7 +16,8 @@ footer {
 
 .sm-icon {
     height: 40px;
-    opacity: .8;
+    opacity: .6;
+    transition: opacity 0.3s ease-in;
     &:hover {
         opacity: 1;
     }
