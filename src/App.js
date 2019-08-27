@@ -20,9 +20,16 @@ class App extends Component {
 
     // change the state base on target 
 
-    changeInfo = (e) => {
-        this.setState(  
-            {
+    clickHome = () => {
+        this.setState({
+            showIntro: true,
+            showContact: false
+        })
+    }
+
+    clickContact = () => {
+        this.setState({
+                showIntro: false,
                 showContact: !this.state.showContact
             }) 
     }
@@ -35,7 +42,8 @@ class App extends Component {
                 <SvgHeader className="svg-header"/>
                 <Header 
                     showContact={this.state.showContact}
-                    changeInfo={this.changeInfo}
+                    clickHome={this.clickHome}
+                    clickContact={this.clickContact}
                 />
                 {this.state.showContact ? <Contact/> : <Introduction/>}
                 <div className="sections-container">

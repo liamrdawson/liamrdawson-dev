@@ -17,7 +17,7 @@ class Header extends Component {
         return (
             <header>
                 <div className="header-elements-container">
-                    <a href="#"><span>Liam R. Dawson</span></a>
+                    <button onClick={this.props.clickHome}><span>Liam R. Dawson</span></button>
 
                     {/* <span className="menu" onClick={this.toggleMenu}>Menu</span> */}
 
@@ -25,7 +25,7 @@ class Header extends Component {
                         (<nav>
                             <a href="#">About</a>
                             <a href="#projects">Projects</a>
-                            <button onClick={this.props.changeInfo}>Contact</button>
+                            <button onClick={this.props.clickContact}>Contact</button>
                             <button onClick={this.toggleMenu}>Close</button>
                         </nav> )
                     }
