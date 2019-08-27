@@ -38,7 +38,7 @@ body {
     background-color: rgba($dark, .01);
 }
 
-body, nav, .contact, .introduction {
+body, nav, .contact, .introduction, .menu-active, .header-elements-container {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
      -ms-animation: fadein 1s; /* Internet Explorer */

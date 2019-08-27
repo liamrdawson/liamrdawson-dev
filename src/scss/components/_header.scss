@@ -22,7 +22,10 @@ header a {
 
 nav {
   //  display: none;
-    
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     @include mq('sm') {
         display: flex;
         width: 50%;
@@ -39,6 +42,16 @@ button {
     background: none;
     transition: text-decoration .1s ease-in;
     &:hover {
+        transition: text-decoration .1s ease-in;
         text-decoration: underline;
+    }
+}
+
+.menu-active {
+    max-width: 850px;
+    padding: $pa3;
+    margin: 0 auto;
+    @include mq('sm-med') {
+        padding: $pa3 $pa4 0;
     }
 }
