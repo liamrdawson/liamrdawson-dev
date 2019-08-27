@@ -26,7 +26,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    @include mq('sm') {
+    @include mq('med') {
         display: flex;
         width: 50%;
         display: flex;

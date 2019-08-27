@@ -1,4 +1,6 @@
 import React, { Component} from 'react';
+import MediaQuery from 'react-responsive';
+
 
 class Header extends Component {
 
@@ -16,10 +18,10 @@ class Header extends Component {
         console.log(this.props);
         return (
             <header>
-                
-                    {/* <span className="menu" onClick={this.toggleMenu}>Menu</span> */}
 
-                    {this.state.showMenuIcon === false &&
+                    {/* <span className="menu" onClick={this.toggleMenu}>Menu</span> */}
+                <MediaQuery query="(max-width: 639px)">
+                {this.state.showMenuIcon === false &&
                         (<div className="menu-active">
                             <nav >
                             <a href="#">About</a>
@@ -37,8 +39,20 @@ class Header extends Component {
                             
                         </div>)
                     }
-
+                </ MediaQuery>
+                <MediaQuery query="(min-width: 640px)">
+                    <div className="header-elements-container">
+                    <button onClick={this.props.clickHome}><span>Liam R. Dawson</span></button>
+                        <nav >
+                            <a href="#">About</a>
+                            <a href="#projects">Projects</a>
+                            <button onClick={this.props.clickContact}>Contact</button>
+                        </nav> 
+                    </div>
+                </MediaQuery>
             </header>
+
+
         );
     }
     
