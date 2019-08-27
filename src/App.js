@@ -45,7 +45,7 @@ class App extends Component {
                     clickHome={this.clickHome}
                     clickContact={this.clickContact}
                 />
-                {this.state.showContact ? <Contact/> : <Introduction/>}
+                {this.state.showContact ? <Contact className="fade"/> : <Introduction className="fade"/>}
                 <div className="sections-container">
                     {/*SKILLS LIST*/}
                     <Skills/>
