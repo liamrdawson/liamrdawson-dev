@@ -38,7 +38,7 @@ body {
     background-color: rgba($dark, .01);
 }
 
-body, nav, .contact, .introduction, .menu-active, .header-elements-container {
+body, nav, .contact, .introduction, .menu-active, .header-elements-container, button {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
      -ms-animation: fadein 1s; /* Internet Explorer */
@@ -47,9 +47,48 @@ body, nav, .contact, .introduction, .menu-active, .header-elements-container {
     color: $dark-text;
 }
 
+.header-elements-container,
+.menu-active {
+    -webkit-animation: shiftin .6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: shiftin .6s; /* Firefox < 16 */
+     -ms-animation: shiftin .6s; /* Internet Explorer */
+      -o-animation: shiftin .6s; /* Opera < 12.1 */
+         animation: shiftin .6s;
+         transition: opacity 1s ease-in;
+         :active {
+            transition: opacity 1s ease-in;
+            opacity: 1;
+         }
+}
+
+@keyframes shiftin {
+    from { transform: translateX(10px) }
+    to { transform: translateX(0) }
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@-moz-keyframes shiftin {
+    from { transform: translateX(10px) }
+    to { transform: translateX(0) }
+}
+
+@-webkit-keyframes shiftin {
+    from { transform: translateX(10px) }
+    to { transform: translateX(0) }
+}
+
+@-ms-keyframes shiftin {
+    from { transform: translateX(10px) }
+    to { transform: translateX(0) }
+}
+
+@-o-keyframes shiftin {
+    from { transform: translateX(10px) }
+    to { transform: translateX(0) }
 }
 
 /* Firefox < 16 */
