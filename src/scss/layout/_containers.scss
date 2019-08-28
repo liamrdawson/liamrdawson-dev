@@ -1,13 +1,28 @@
-.sections-container {
-    margin: 0 auto;
-    background-color: $light;
+body {
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+}
+
+.sections-container, 
+.about, 
+.contact {
+    margin: $space8 auto;
+    background-color: rgba($light, .9);
     border-radius: $corners;
     @include mq('sm') {
         padding: $space5 $space9 $space8;
     }
     @include mq('tab-w') {
         z-index: 20;
-        margin: -$space7 auto 0;
+      //  margin: 0 auto;
         padding: $space7 $space10 $space9;
     }
     @include mq('large') {
@@ -18,7 +33,10 @@
 
 
 .header-elements-container,
-.sections-container{
+.sections-container, 
+.about-elements-container, 
+.about, 
+.contact {
     max-width: 850px;
 }
 
@@ -37,7 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    min-height: 250px;
     max-width: 750px;
     justify-content: space-around;
     @include mq('tab-w') {
@@ -50,8 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
-    max-width: 450px;
+    max-width: 850px;
     margin: 0 auto;
 }
 

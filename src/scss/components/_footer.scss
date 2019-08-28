@@ -4,6 +4,12 @@ footer {
     margin-top: $space10;
     opacity: .9;
     padding: $space7;
+
+}
+
+.footer-bar {
+    position: sticky;
+    bottom: 0;
 }
 
 .link-icons {

@@ -1,15 +1,25 @@
-.introduction, .contact {
+
+
+.contact, .about, .introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px;
+    min-height: 200px;
     justify-content: space-around;
     z-index: -10;
    // background-color: $dark;
     padding: $pa3 $pa3 0 $pa3;
-    h1, img {
+    img {
         margin: 0;
     }
     background-blend-mode: overlay;
     background-size: cover;
+}
+
+.about, .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    p {
+        margin: 0 0 $space6 0;
+    }
 }
