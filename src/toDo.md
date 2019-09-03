@@ -5,8 +5,9 @@
 - [ ] GitHub commit heatmap.
 
 ## Pages and Sections
-- [ ] Change the information displayed in the hero area depending on if the user clicks on...  
+- [x] Change the information displayed in the hero area depending on if the user clicks on...  
     - [x] About
+        - [ ] Add and style resume section.
     - [x] Projects
     - [x] Contact
 

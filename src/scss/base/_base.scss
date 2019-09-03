@@ -12,9 +12,6 @@ h1 {
     font-size: $space7;
     font-weight: 400;
     max-width: 474px;
-    @include mq('med') {
-        font-size: $space8;
-    }
 }
 
 h1, h2 {
