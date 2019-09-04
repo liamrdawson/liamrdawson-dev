@@ -18,6 +18,7 @@ class App extends Component {
     }
 
     // change the state based on target 
+        // refactor into single function
 
     clickHome = () => {
         this.setState({
@@ -26,9 +27,6 @@ class App extends Component {
             showContact: false
         })
     }
-
-
-    // refactor into single function
 
     clickContact = () => {
         this.setState({
