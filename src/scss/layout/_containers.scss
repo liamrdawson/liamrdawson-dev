@@ -8,21 +8,21 @@ body {
 
 .container {
     min-height: 100vh;
-    position: relative;
+    display: grid;
+    grid-template-rows: auto auto 150px;
 }
 
 .sections-container, 
 .about, 
 .contact {
     margin: $space8 auto;
-    background-color: rgba($light, .9);
+    background-color: rgba($light, .95);
     border-radius: $corners;
     @include mq('sm') {
         padding: $space5 $space9 $space8;
     }
     @include mq('tab-w') {
         z-index: 20;
-      //  margin: 0 auto;
         padding: $space7 $space10 $space9;
     }
     @include mq('large') {

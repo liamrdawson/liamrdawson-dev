@@ -1,17 +1,10 @@
 header {
     z-index: 30;
     height: $space10;
-   // background-color: $dark;
     color: $dark;
     font-size: $space5;
     @include mq('sm') {
         height: 66px;
-    }
-}
-
-.menu {
-   @include mq('sm') {
- //       display: none;
     }
 }
 
@@ -21,7 +14,6 @@ header a {
 }
 
 nav {
-  //  display: none;
      display: flex;
     flex-direction: row;
     justify-content: space-between;

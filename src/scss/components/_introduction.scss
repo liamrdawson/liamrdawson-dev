@@ -1,13 +1,12 @@
-
-
-.contact, .about, .introduction {
+.contact, 
+.about, 
+.introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 200px;
     justify-content: space-around;
     z-index: -10;
-   // background-color: $dark;
     padding: $pa3 $pa3 0 $pa3;
     img {
         margin: 0;
@@ -16,7 +15,8 @@
     background-size: cover;
 }
 
-.about, .contact {
+.about, 
+.contact {
     max-width: 800px;
     margin: 0 auto;
     p {

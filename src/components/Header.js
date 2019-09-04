@@ -1,5 +1,7 @@
 import React, { Component} from 'react';
 import MediaQuery from 'react-responsive';
+import SvgHeader from '../icons/Header';
+
 
 
 class Header extends Component {
@@ -20,6 +22,7 @@ class Header extends Component {
             <header>
 
                     {/* <span className="menu" onClick={this.toggleMenu}>Menu</span> */}
+
                 <MediaQuery query="(max-width: 639px)">
                 {this.state.showMenuIcon === false &&
                         (<div className="menu-active">

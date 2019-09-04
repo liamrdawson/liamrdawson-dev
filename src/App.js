@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import Main from './components/Main';
 import Header from './components/Header';
-import Introduction from './components/Introduction';
 import Contact from './components/Contact';
 import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
 import Footer from './components/Footer';
 import SvgHeader from './icons/Header';
 import './scss/App.scss';
@@ -32,7 +29,7 @@ class App extends Component {
 
 
     // refactor into single function
-    
+
     clickContact = () => {
         this.setState({
                 showIntro: false,
@@ -52,14 +49,14 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <SvgHeader className="svg-header"/>
+            <SvgHeader className="svg-header"/>
                 <Header 
                     clickAbout={this.clickAbout}
                     showAbout={this.state.showAbout}
                     clickContact={this.clickContact}
                     showContact={this.state.showContact}
                     clickHome={this.clickHome}
-                />
+                /> 
                 {   this.state.showContact ? 
                     <Contact className="fade"/> : this.state.showAbout ? 
                     <About className="fade"/> : 
