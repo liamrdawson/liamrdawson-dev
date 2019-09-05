@@ -42,7 +42,7 @@ body {
     background-color: rgba($dark, .01);
 }
 
-body, nav, .contact, .about, .introduction, .menu-active, .header-elements-container, button {
+body, nav, .contact, .about, .introduction, .menu-active, .header-elements-container, .projects-elements-container, button {
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
      -ms-animation: fadein 1s; /* Internet Explorer */
