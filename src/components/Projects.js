@@ -44,7 +44,7 @@ class Projects extends Component {
 
     render () {
         return (
-            <section id="projects" className={`projects`}>
+            <section id="projects" className={`projects projects-elements-container`}>
                 <h2>
                     Projects
                 </h2>

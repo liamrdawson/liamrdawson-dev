@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import MediaQuery from 'react-responsive';
-import SvgHeader from '../icons/Header';
+
 
 
 
@@ -28,7 +28,7 @@ class Header extends Component {
                         (<div className="menu-active">
                             <nav >
                             <button onClick={this.props.clickAbout}>About</button>
-                            <button>Projects</button>
+                            <button onClick={this.props.clickProjects}>Projects</button>
                             <button onClick={this.props.clickContact}>Contact</button>
                             <button onClick={this.toggleMenu}>Close</button>
                         </nav> 
@@ -48,7 +48,7 @@ class Header extends Component {
                     <button onClick={this.props.clickHome}><span>Liam R. Dawson</span></button>
                         <nav >
                             <button onClick={this.props.clickAbout}>About</button>
-                            <button >Projects</button>
+                            <button onClick={this.props.clickProjects}>Projects</button>
                             <button onClick={this.props.clickContact}>Contact</button>
                         </nav> 
                     </div>

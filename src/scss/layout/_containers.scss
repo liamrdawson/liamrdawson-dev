@@ -35,9 +35,11 @@ body {
 .header-elements-container,
 .sections-container, 
 .about-elements-container, 
+.projects-elements-container,
 .about, 
 .contact {
     max-width: 850px;
+    margin: 0 auto $space10;
 }
 
 .header-elements-container {
