@@ -10,6 +10,7 @@
         - [ ] Add and style resume section.
     - [x] Projects
     - [x] Contact
+- [ ] Add routing to site
 
 ## General
 - [x] Add SCSS to workflow.
