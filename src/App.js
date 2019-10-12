@@ -1,86 +1,39 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+//  COMPONENTS
 import Main from './components/Main';
 import Header from './components/Header';
 import Contact from './components/Contact';
 import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+
+//  ICONS & IMAGES
 import SvgHeader from './icons/Header';
+
+//  STYLES
 import './scss/App.scss';
 
 
 class App extends Component {
 
-    state = {
-        showIntro: false,
-        showContact: false,
-        showAbout:false,
-        showProjects: false,
-        on: false
-    }
-
-    // change the state based on target 
-        // refactor into single function
-
-    clickHome = () => {
-        this.setState({
-            showIntro: true,
-            showAbout: false,
-            showContact: false,
-            showProjects: false
-        })
-    }
-
-    clickContact = () => {
-        this.setState({
-                showIntro: false,
-                showAbout: false,
-                showContact: !this.state.showContact,
-                showProjects: false
-            }) 
-    }
-
-    clickAbout = () => {
-        this.setState({
-                showIntro: false,
-                showContact: false,
-                showAbout: !this.state.showAbout,
-                showProjects: false
-            }) 
-    }
-
-    clickProjects = () => {
-        this.setState({
-                showIntro: false,
-                showContact: false,
-                showAbout: false,
-                showProjects: !this.state.showProjects
-            }) 
-    }
-
     render() {
         return (
-            <div className="container">
-            <SvgHeader className="svg-header"/>
-                <Header 
-                    clickAbout={this.clickAbout}
-                    showAbout={this.state.showAbout}
-
-                    clickContact={this.clickContact}
-                    showContact={this.state.showContact}
-
-                    clickProjects={this.clickProjects}
-                    showProjects={this.state.showProjects}
-                    clickHome={this.clickHome}
-                /> 
-                {   this.state.showContact ? 
-                    <Contact className="fade"/> : this.state.showAbout ? 
-                    <About className="fade"/> : this.state.showProjects ?
-                    <Projects className="fade"/> :
-                    <Main/>
-                }                
-                <Footer className="footer-bar"/>
-            </div>
+            
+                <div className="container">
+                <Router>
+                    <SvgHeader className="svg-header"/>
+                        <Header /> 
+                            <Switch>
+                            <Route path="/" exact component={Main} />
+                            <Route path="/about" component={About} />
+                            <Route path="/projects" component={Projects} />
+                            <Route path="/contact" component={Contact} />
+                            </Switch>
+                        <Footer className="footer-bar"/>
+                </Router>
+                </div>
         );       
     }
 
