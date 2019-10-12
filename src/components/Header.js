@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import MediaQuery from 'react-responsive';
-
+import {Link} from 'react-router-dom';
 
 
 
@@ -27,29 +27,47 @@ class Header extends Component {
                 {this.state.showMenuIcon === false &&
                         (<div className="menu-active">
                             <nav >
-                                <button onClick={this.props.clickAbout}>About</button>
-                                <button onClick={this.props.clickProjects}>Projects</button>
-                                <button onClick={this.props.clickContact}>Contact</button>
-                                <button onClick={this.toggleMenu}>Close</button>
+                                <Link to="/about">
+                                    <li >About</li>
+                                </Link>
+                                <Link to="/projects">
+                                    <li >Projects</li>
+                                </Link>
+                                <Link to="/contact">
+                                    <li >Contact</li>
+                                </Link>
+                                <Link to="/">
+                                <li onClick={this.toggleMenu}>Close</li>
+                                </Link>
                             </nav> 
                         </div>)
                     }
 
                     {this.state.showMenuIcon === true && 
                         (<div className="header-elements-container">
-                            <button onClick={this.props.clickHome}><span>Liam R. Dawson</span></button>
-                            <button  onClick={this.toggleMenu}>Menu</button>
+                            <Link to="/">
+                                <li><span>Liam R. Dawson</span></li>
+                            </Link>
+                            <li  onClick={this.toggleMenu}>Menu</li>
                             
                         </div>)
                     }
                 </ MediaQuery>
                 <MediaQuery query="(min-width: 640px)">
                     <div className="header-elements-container">
-                    <button onClick={this.props.clickHome}><span>Liam R. Dawson</span></button>
+                            <Link to="/">
+                                <li><span>Liam R. Dawson</span></li>
+                            </Link>
                         <nav >
-                            <button onClick={this.props.clickAbout}>About</button>
-                            <button onClick={this.props.clickProjects}>Projects</button>
-                            <button onClick={this.props.clickContact}>Contact</button>
+                            <Link to="/about">
+                                <li >About</li>
+                            </Link>
+                            <Link to="/projects">
+                                <li >Projects</li>
+                            </Link>
+                            <Link to="/contact">
+                                <li >Contact</li>
+                            </Link>
                         </nav> 
                     </div>
                 </MediaQuery>
