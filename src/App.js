@@ -24,10 +24,10 @@ class App extends Component {
                     <SvgHeader className="svg-header"/>
                         <Header /> 
                             <Switch>
-                            <Route path="/" exact component={Main} />
-                            <Route path="/about" component={About} />
-                            <Route path="/projects" component={Projects} />
-                            <Route path="/contact" component={Contact} />
+                                <Route path="/" exact component={Main} />
+                                <Route path="/about" component={About} />
+                                <Route path="/projects" component={Projects} />
+                                <Route path="/contact" component={Contact} />
                             </Switch>
                         <Footer className="footer-bar"/>
                 </Router>
