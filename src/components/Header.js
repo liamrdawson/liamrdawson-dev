@@ -27,16 +27,10 @@ class Header extends Component {
                 {this.state.showMenuIcon === false &&
                         (<div className="menu-active">
                             <nav >
-                                {/* <ul>
-                                    <li>About</li>
-                                    <li>Projects</li>
-                                    <li>Contact</li>
-                                    <li>Close</li>
-                                </ul> */}
-                            <button onClick={this.props.clickAbout}>About</button>
-                            <button onClick={this.props.clickProjects}>Projects</button>
-                            <button onClick={this.props.clickContact}>Contact</button>
-                            <button onClick={this.toggleMenu}>Close</button>
+                                <button onClick={this.props.clickAbout}>About</button>
+                                <button onClick={this.props.clickProjects}>Projects</button>
+                                <button onClick={this.props.clickContact}>Contact</button>
+                                <button onClick={this.toggleMenu}>Close</button>
                             </nav> 
                         </div>)
                     }
