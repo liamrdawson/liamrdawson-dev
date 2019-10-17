@@ -7,14 +7,14 @@ class Projects extends Component {
             {
                 name: 'Board Game Scoreboard App',
                 class: 'scoreboard',
-                techUsed: ['React', 'Webpack', 'Babel'],
+                techUsed: ['React', 'JavaScript ES6'],
                 description: 'React application built to help friends keep track of leaderbord on game nights.',
                 github:  'https://github.com/liamrdawson/Scoreboard-App',
             },
             {
                 name: 'LiamRDawson.com',
                 class: 'photography',
-                techUsed: ['JavaScript ES6', 'SASS/SCSS'],
+                techUsed: ['JavaScript ES6', 'Webpack','SASS/SCSS'],
                 description: 'Portfolio website to showcase work in photography.',
                 github: 'https://github.com/liamrdawson/Liam-Dawson-Photography',
             },
