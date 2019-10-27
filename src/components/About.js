@@ -25,7 +25,7 @@ class About extends Component {
         return (
             <section className="about">
                 <section className="about-elements-container">
-                    <h1>Hi, I'm Liam R. Dawson, a front-end developer living in Brighton.</h1>
+                    <h1 className="about-title">Hi, I'm Liam R. Dawson, a front-end developer living in Brighton.</h1>
                     <p className="about-text">
                         I also do freelance web design for projects which I find interesting, challenging or exciting and am often busy working on my own own side projects to develop my own skillset or to simply solve problems.
                     </p>
@@ -46,13 +46,7 @@ class About extends Component {
                             IT Service Analyst
                         </h4>
                         <span className="job-employer">
-                            University of Sussex
-                        </span>
-                        <span className="job-location">
-                            Brighton, Sussex
-                        </span>
-                        <span className="job-time">
-                            10/2016 to present
+                            University of Sussex | Brighton, Sussex | 10/2016 to present
                         </span>
                         <ul>
                             <li>
@@ -81,13 +75,7 @@ class About extends Component {
                             IT Support Technician
                         </h4>
                         <span className="job-employer">
-                            Learning Possibilities Ltd.
-                        </span>
-                        <span className="job-location">
-                            London
-                        </span>
-                        <span className="job-time">
-                            03/2015 to 10/2016
+                            Learning Possibilities Ltd. | London | 03/2015 to 10/2016
                         </span>
                         <ul>
                             <li>

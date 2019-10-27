@@ -1,10 +1,10 @@
 header {
     z-index: 30;
-    height: $space10;
+    height: $space9;
     color: $dark;
     font-size: $space5;
     @include mq('sm') {
-        height: 66px;
+        height: 50px;
     }
 }
 
