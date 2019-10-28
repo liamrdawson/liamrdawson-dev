@@ -16,24 +16,22 @@ import SvgHeader from './icons/Header';
 import './scss/App.scss';
 
 
-class App extends Component {
-    render() {
-        return (
-                <div className="container">
-                <Router>
-                    <SvgHeader className="svg-header"/>
-                        <Header /> 
-                            <Switch>
-                                <Route path="/" exact component={Main} />
-                                <Route path="/about" component={About} />
-                                <Route path="/projects" component={Projects} />
-                                <Route path="/contact" component={Contact} />
-                            </Switch>
-                        <Footer className="footer-bar"/>
-                </Router>
-                </div>
-        );       
-    }
+const App = () => {
+    return (
+        <div className="container">
+        <Router>
+            <SvgHeader className="svg-header"/>
+                <Header /> 
+                    <Switch>
+                        <Route path="/" exact component={Main} />
+                        <Route path="/about" component={About} />
+                        <Route path="/projects" component={Projects} />
+                        <Route path="/contact" component={Contact} />
+                    </Switch>
+                <Footer className="footer-bar"/>
+        </Router>
+        </div>
+    );       
 }
 
 export default App;
