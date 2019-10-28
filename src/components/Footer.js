@@ -4,7 +4,7 @@ import SvgTwitter from '../icons/Twitter';
 import SvgLinkedin from '../icons/Linkedin';
 
 
-function Footer() {
+const Footer = () => {
     return (
         <footer>
             <div className="link-icons">

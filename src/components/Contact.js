@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Contact() {
+const Contact = () => {
     return (
         <section className="contact">
             <div className="contact-elements-container">

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import MediaQuery from 'react-responsive';
 import {Link} from 'react-router-dom';
 
-
-
 const Header = () => {
     const [menuIsVisible, setMenuIsVisible] = useState(true)
     const toggleMenu = () => setMenuIsVisible(!menuIsVisible)

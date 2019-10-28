@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Introduction() {
+const Introduction = () => {
     return (
         <section className="introduction">
             <div className="introduction-elements-container">
