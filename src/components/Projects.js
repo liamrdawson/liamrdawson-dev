@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Projects extends Component {
+const Projects = () => {
 
-    state = {
-        projects: [
+       const projects = [
             {
                 name: 'Board Game Scoreboard App',
                 class: 'scoreboard',
@@ -39,10 +38,9 @@ class Projects extends Component {
                 description: 'Simple to-do list application.',
                 github: 'https://github.com/liamrdawson/to-do-app'
             }
-        ]
-    };
+        ];
 
-    render () {
+
         return (
             <section id="projects" className={`projects projects-elements-container`}>
                 <h2>
@@ -54,12 +52,11 @@ class Projects extends Component {
                 <div className="project-grid">
 
                     <div className="project-container">
-                        {this.state.projects.map( (project) => 
+                        {projects.map( (project) => 
                             <a href={project.github}>
                                 <div className={`project project-${project.class}`}>
                                     <div className="project-bg">
                                         <h3>{project.name}</h3>
-                                      {/*  <p>{project.description}</p>*/}
                                         <span>Built with: {project.techUsed.join(', ')}</span>
                                     </div>
                                 </div>
@@ -71,7 +68,7 @@ class Projects extends Component {
                 
             </section>
         );
-    }
+
 }
 
 export default Projects;

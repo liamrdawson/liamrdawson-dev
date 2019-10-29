@@ -4,7 +4,7 @@ import Projects from './Projects';
 import Introduction from './Introduction';
 
 
-function Main() {
+const Main = () => {
     return (
        
         <div className="container">
