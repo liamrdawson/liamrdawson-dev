@@ -53,7 +53,7 @@ const Projects = () => {
 
                     <div className="project-container">
                         {projects.map( (project) => 
-                            <a href={project.github}>
+                            <a href={project.github} key={project.class}>
                                 <div className={`project project-${project.class}`}>
                                     <div className="project-bg">
                                         <h3>{project.name}</h3>

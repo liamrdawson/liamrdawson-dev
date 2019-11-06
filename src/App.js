@@ -19,14 +19,14 @@ import './scss/App.scss';
 const App = () => {
     return (
         <div className="container">
-        <Router>
+        <Router key={99}>
             <SvgHeader className="svg-header"/>
                 <Header /> 
-                    <Switch>
-                        <Route path="/" exact component={Main} />
-                        <Route path="/about" component={About} />
-                        <Route path="/projects" component={Projects} />
-                        <Route path="/contact" component={Contact} />
+                    <Switch key={100}>
+                        <Route key={101} path="/" exact component={Main} />
+                        <Route key={102} path="/about" component={About} />
+                        <Route key={103} path="/projects" component={Projects} />
+                        <Route key={104} path="/contact" component={Contact} />
                     </Switch>
                 <Footer className="footer-bar"/>
         </Router>

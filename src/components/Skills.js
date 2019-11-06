@@ -17,68 +17,79 @@ const Skills = () =>  {
         {   
             class: 'react',
             area: 'front end',
-            iconModule: <SvgReact/>
+            iconModule: <SvgReact/>,
+            id: 1
         },
         {   
             class: 'javascript',
             area: 'front end',
-            iconModule: <SvgJs/>
+            iconModule: <SvgJs/>,
+            id: 2
         },
         { 
             class: 'sass',
             area: 'front end',
-            iconModule: <SvgSass/>
+            iconModule: <SvgSass/>,
+            id: 3
         },
         { 
             class: 'css3',
             area: 'front end',
-            iconModule: <SvgCss3/>
+            iconModule: <SvgCss3/>,
+            id: 4
         },
         { 
             class: 'html5',
             area: 'front end',
-            iconModule: <SvgHtml5/>
+            iconModule: <SvgHtml5/>,
+            id: 6
         },
         { 
             class: 'bootstrap',
             area: 'front end',
-            iconModule: <SvgBootstrap/>
+            iconModule: <SvgBootstrap/>,
+            id: 7
         },
         { 
             class: 'webpack',
             area: 'tooling',
-            iconModule: <SvgWebpack/>
+            iconModule: <SvgWebpack/>,
+            id: 8
         },
         { 
             class: 'babel',
             area: 'tooling',
-            iconModule: <SvgBabel/>
+            iconModule: <SvgBabel/>,
+            id: 9
         },
         { 
             class: 'git',
             area: 'tooling',
-            iconModule: <SvgGit/>
+            iconModule: <SvgGit/>,
+            id: 10
         },
         { 
             class: 'node',
             area: 'back end',
-            iconModule: <SvgNode />
+            iconModule: <SvgNode />,
+            id: 11
         },
         { 
             class: 'express',
             area: 'back end',
-            iconModule: <SvgExpress/>
+            iconModule: <SvgExpress/>,
+            id: 12
         },
     ];
 
     return (
-        <section className="skills-section">
+        <section className="skills-section" key={1}>
             <h2>Skills</h2>
             <span>I love developing and learning about the latest technologies. Here are the technologies I use most.</span>
             <h4>Front End</h4>
             <div className="skills front-end">
                 {skills.filter(skill => skill.area === 'front end').map( (skill) => 
-                    <div className={`skill-${skill.class} skill`}>
+                    <div className={`skill-${skill.class} skill`} skill={skill.class} key={skill.id}>
                         {skill.iconModule}
                     </div>
                 )}
@@ -86,7 +97,7 @@ const Skills = () =>  {
             <h4>Back End</h4>
             <div className="skills back-end">
                 {skills.filter(skill => skill.area === 'back end').map( (skill) => 
-                    <div className={`skill-${skill.class} skill`}>
+                    <div className={`skill-${skill.class} skill`} key={skill.id}>
                         {skill.iconModule}
                     </div>
                 )}
@@ -94,7 +105,7 @@ const Skills = () =>  {
             <h4>Tooling</h4>
             <div className="skills tooling">
                 {skills.filter(skill => skill.area === 'tooling').map( (skill) => 
-                    <div className={`skill-${skill.class} skill`}>
+                    <div className={`skill-${skill.class} skill`} key={skill.id}>
                         {skill.iconModule}  
                     </div>
                     

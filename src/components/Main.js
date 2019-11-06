@@ -11,7 +11,7 @@ const Main = () => {
             <Introduction className="fade"/> 
             <div className="sections-container">
                 {/*SKILLS LIST*/}
-                <Skills/>
+                <Skills />
                 {/*PROJECTS LIST*/}
                 <Projects/>
             </div>
