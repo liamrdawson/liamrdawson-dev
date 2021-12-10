@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import LinkAtom from '../../atoms/Link'
 
 const Nav = ({navLinks}) => (
         <nav>
@@ -7,13 +7,7 @@ const Nav = ({navLinks}) => (
                     navLinks.map((navLink) =>{
                         return (
                         <li key={`navLink-${navLinks.indexOf(navLink)}`}>
-                            <Link href={navLink.path}>
-                                <a>
-                                    <span>
-                                        {navLink.name}
-                                    </span>
-                                </a>
-                            </Link>
+                            <LinkAtom data={navLink} />
                         </li>
                         )}
                     )

@@ -5,7 +5,6 @@ const HomePage = () => {
 
     return ( 
         <>
-             <div>I ❤️ SOUL 🎂 CAKE</div>
             <Image 
                 src="/images/profile.jpg"
                 height={200}

@@ -1,11 +1,9 @@
 import Head from 'next/head'
-
-import Nav from '../../molecules/Nav'
+import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
 import { navigation } from '../../../pages/api/navigation'
 
 const Layout = ({ children }) => {
-    // console.log(navigation)
     return (
         <>
             <Head>
@@ -13,7 +11,7 @@ const Layout = ({ children }) => {
                     Liam&apos;s Site
                 </title>
             </Head>
-            <Nav navLinks={navigation}/>
+            <Header navigation={navigation} title="I ❤️ SOUL 🎂"/>
             <main>
                 {children}
             </main>
