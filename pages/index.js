@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-function HomePage() {
+const HomePage = () => {
+
     return ( 
         <>
-            <div>Welcome to the Jungle! 🌴🏕🎋</div>
+             <div>I ❤️ SOUL 🎂 CAKE</div>
             <Image 
                 src="/images/profile.jpg"
                 height={200}
