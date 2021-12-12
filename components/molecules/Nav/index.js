@@ -4,10 +4,10 @@ const Nav = ({navLinks}) => (
         <nav>
             <ul>
                 {
-                    navLinks.map((navLink) =>{
+                    navLinks.map((navLink) => {
                         return (
                         <li key={`navLink-${navLinks.indexOf(navLink)}`}>
-                            <LinkAtom data={navLink} />
+                            <LinkAtom path={navLink.path} name={navLink.name} />
                         </li>
                         )}
                     )
