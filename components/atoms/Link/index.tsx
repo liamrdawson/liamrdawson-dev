@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { FunctionComponent } from 'react'
 
 interface LinkAtomDataTypes {
         path: string
