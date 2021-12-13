@@ -7,6 +7,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["@emotion/react/types/css-prop"],
     "allowJs": true,
     "skipLibCheck": true, // Skip type checking all .d.ts files.
     "strict": true,
@@ -18,7 +19,8 @@
     "moduleResolution": "node", //* Specify how TypeScript looks up a file from a given module specifier.
     "resolveJsonModule": true, //* Enable importing .json files.
     "isolatedModules": true, //* Ensure that each file can be safely transpiled without relying on other imports.
-    "jsx": "preserve" //* Specify what JSX code is generated.
+    "jsx": "preserve", //* Specify what JSX code is generated.
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/molecules/Nav/index.tsx"],
   "exclude": ["node_modules"]

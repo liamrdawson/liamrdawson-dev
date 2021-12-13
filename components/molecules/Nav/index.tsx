@@ -1,5 +1,4 @@
 import LinkAtom from '../../atoms/Link'
-// import styled from 'styled-components'
 import styled from '@emotion/styled'
 
 interface INavLink {
