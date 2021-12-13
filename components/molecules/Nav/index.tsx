@@ -1,4 +1,5 @@
 import LinkAtom from '../../atoms/Link'
+import styled from 'styled-components'
 
 interface INavLink {
   path: string
@@ -9,8 +10,19 @@ interface Props {
   navLinks: INavLink[]
 }
 
+const StyledNav = styled.nav`
+  width: 100%;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+  }
+`
+
 const Nav = ({ navLinks }: Props) => (
-  <nav>
+  <StyledNav>
     <ul>
       {navLinks.map((navLink) => {
         return (
@@ -20,7 +32,7 @@ const Nav = ({ navLinks }: Props) => (
         )
       })}
     </ul>
-  </nav>
+  </StyledNav>
 )
 
 export default Nav
