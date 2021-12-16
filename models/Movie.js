@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-const MONGODB_URI = process.env.MONGODB_URI
+import { config } from '../utils/config'
 const { Schema } = mongoose
-const connection = mongoose.createConnection(MONGODB_URI)
+const connection = mongoose.createConnection(config.MDB_KEY)
 
 // Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB
 // collection and defines the shape of the documents within that collection.
