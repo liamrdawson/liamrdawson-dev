@@ -1,7 +1,7 @@
 import safeJsonStringify from 'safe-json-stringify'
 import Link from 'next/link'
 import Image from 'next/image'
-import mongooseDBConnect from '../lib/dbConnect'
+import mongooseDBConnect from '../utils/dbConnect'
 import Movie from '../models/Movie'
 
 const HomePage = ({ movies }) => {
