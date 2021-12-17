@@ -6,7 +6,6 @@ import mongooseDBConnect from '../utils/dbConnect'
 import Movie from '../models/Movie'
 
 const HomePage = ({ movies }) => {
-  console.log(movies)
   return (
     <>
       {movies[0].title}
