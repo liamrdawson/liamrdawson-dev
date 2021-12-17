@@ -1,5 +1,9 @@
-import mongoose from 'mongoose'
+import mongoose, { Connection } from 'mongoose'
 import { config } from './config'
+
+// declare global {
+//   var mongoose: any
+// }
 
 if (!config.MDB_KEY) {
   throw new Error('Please define the MONGODB_URI environment variable inside .env.local')
@@ -25,7 +29,6 @@ async function dbConnect() {
     const opts = {
       bufferCommands: false,
     }
-
     cached.promise = mongoose.connect(config.MDB_KEY, opts).then((mongoose) => {
       return mongoose
     })

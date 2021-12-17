@@ -13,7 +13,6 @@ const MovieSchema = new Schema({
   runtime: Number,
   cast: [String],
   num_mflix_comments: Number,
-  title: String,
   fullplot: String,
   countries: [String],
   released: Date,
