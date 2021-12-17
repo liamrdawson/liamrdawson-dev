@@ -1,4 +1,5 @@
 import safeJsonStringify from 'safe-json-stringify'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import mongooseDBConnect from '../utils/dbConnect'
@@ -23,7 +24,7 @@ const HomePage = ({ movies }) => {
 export default HomePage
 
 /* Retrieves movie(s) data from mongodb database */
-export async function getServerSideProps() {
+export const getStaticProps: GetStaticProps = async () => {
   await mongooseDBConnect()
 
   const myArrayOfData = []
@@ -38,5 +39,5 @@ export async function getServerSideProps() {
     return movie
   })
 
-  return { props: { movies: movies } }
+  return { props: { movies: movies }, revalidate: 1 }
 }
