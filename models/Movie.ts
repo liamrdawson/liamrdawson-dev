@@ -6,6 +6,41 @@ const connection = mongoose.createConnection(config.MDB_KEY)
 // Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB
 // collection and defines the shape of the documents within that collection.
 
+export interface IMovie {
+  plot: string
+  title: string // String is shorthand for { type: String }
+  genres: string[]
+  runtime: number
+  cast: string[]
+  num_mflix_comments: number
+  fullplot: string
+  countries: string[]
+  released: string
+  directors: string[]
+  rated: string
+  awards: {
+    wins: number
+    nominations: number
+    text: string
+  }
+  lastupdated: string
+  year: number
+  imdb: {
+    rating: number
+    votes: number
+    id: number
+  }
+  type: string
+  tomatoes: {
+    viewer: {
+      rating: number
+      numReviews: number
+      meter: number
+    }
+    lastupdated: string
+  }
+}
+
 const MovieSchema = new Schema({
   plot: String,
   title: String, // String is shorthand for { type: String }

@@ -3,9 +3,13 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import mongooseDBConnect from '../utils/dbConnect'
-import Movie from '../models/Movie'
+import Movie, { IMovie } from '../models/Movie'
 
-const HomePage = ({ movies }) => {
+type Props = {
+  movies: IMovie[]
+}
+
+const HomePage = ({ movies }: Props) => {
   return (
     <>
       {movies[0].title}
