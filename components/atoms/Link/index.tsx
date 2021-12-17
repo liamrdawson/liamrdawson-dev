@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 
-interface LinkAtomDataTypes {
+interface LinkAtomProps {
   path: string
   name: string
 }
@@ -16,7 +16,7 @@ const StyledAnchor = styled.a`
   }
 `
 
-const LinkAtom = ({ path, name }: LinkAtomDataTypes) => {
+const LinkAtom = ({ path, name }: LinkAtomProps) => {
   const theme = useTheme()
   return (
     <Link href={path} passHref>

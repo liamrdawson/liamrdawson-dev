@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import mongooseDBConnect from '../utils/dbConnect'
 import Movie, { IMovie } from '../models/Movie'
+import { Heading } from '../components/atoms/Heading'
 
 type Props = {
   movies: IMovie[]
@@ -12,7 +13,7 @@ type Props = {
 const HomePage = ({ movies }: Props) => {
   return (
     <>
-      {movies[0].title}
+      <Heading tag={'h1'}>{movies[0].title}</Heading>
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}
