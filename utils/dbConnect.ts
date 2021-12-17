@@ -1,9 +1,5 @@
-import mongoose, { Connection } from 'mongoose'
+import mongoose from 'mongoose'
 import { config } from './config'
-
-// declare global {
-//   var mongoose: any
-// }
 
 if (!config.MDB_KEY) {
   throw new Error('Please define the MONGODB_URI environment variable inside .env.local')
