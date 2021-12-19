@@ -1,6 +1,6 @@
-import { SerializedStyles, CSSObject, css } from '@emotion/react'
+import { SerializedStyles, CSSObject, css, useTheme } from '@emotion/react'
 import React from 'react'
-import { theme, ITheme } from '../../Theme/theme'
+import { ITheme } from '../../Theme/theme'
 
 // ?    Is there a better way of doing this?
 // ?    It kind of feels like assigning tag as a key of IHeading is misrepresenting what it is, as at the end of the day I'm rendering out a component.
@@ -11,13 +11,6 @@ type HeadingProps = {
   children: string
   css?: SerializedStyles
 }
-
-const base = (headingTheme: ITheme = theme): SerializedStyles =>
-  css({
-    fontFamily: headingTheme.typography.secondaryFont,
-    textTransform: 'uppercase',
-  })
-
 interface IHeading {
   h1: {
     color: string
@@ -27,26 +20,33 @@ interface IHeading {
   }
 }
 
-const componentStyles = (element: keyof IHeading): CSSObject => {
+const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
+  const base = css`
+    text-transform: uppercase;
+  `
   const style = {
-    h1: {
-      color: 'red',
-    },
-    h2: {
-      color: 'blue',
-    },
+    h1: css`
+      color: tomato;
+      font-size: ${theme.typography.typeScale.heading1};
+    `,
+    h2: css`
+      color: yellow;
+      font-size: ${theme.typography.typeScale.heading2};
+    `,
   }
-  return style[element]
+  return [base, style[tag]]
 }
 
 export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttributes<HTMLOrSVGElement>> = ({
-  tag,
+  tag = 'h1',
   children,
 }) => {
+  const theme: ITheme = useTheme()
   const CustomHeading = tag
+  const headingStyles = getHeadingStyles(tag, theme)
   return (
     <>
-      <CustomHeading css={[base(), componentStyles(tag)]}> {children} </CustomHeading>
+      <CustomHeading css={headingStyles}> {children} </CustomHeading>
     </>
   )
 }
