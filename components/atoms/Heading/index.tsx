@@ -1,4 +1,4 @@
-import { SerializedStyles, CSSObject, css, useTheme } from '@emotion/react'
+import { SerializedStyles, css, useTheme } from '@emotion/react'
 import React from 'react'
 import { ITheme } from '../../Theme/theme'
 
