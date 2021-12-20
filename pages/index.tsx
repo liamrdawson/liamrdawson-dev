@@ -5,6 +5,7 @@ import Image from 'next/image'
 import getMovieData from '../utils/getMovieData'
 import { IMovie } from '../models/Movie'
 import { Heading } from '../components/atoms/Heading'
+import Introduction from '../components/molecules/Intro'
 
 type Props = {
   movies: IMovie[]
@@ -19,8 +20,8 @@ const HomePage = (movies: Props) => {
   const firstMovie: IMovie = data.movies[0]
   return (
     <>
-      <Heading tag={'h1'}>{firstMovie.title}</Heading>
-      <p>{firstMovie.fullplot}</p>
+      <Heading tag={'h1'}>I Build Things</Heading>
+      <Introduction />
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}

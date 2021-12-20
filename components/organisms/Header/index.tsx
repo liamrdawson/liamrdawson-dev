@@ -7,13 +7,13 @@ interface ILink {
 
 interface Props {
   navigation: ILink[]
-  title: string
+  title?: string
 }
 
 const Header = ({ navigation, title }: Props) => {
   return (
     <header>
-      {/* <h1>{title}</h1> */}
+      <h1>{title}</h1>
       <Nav navLinks={navigation} />
     </header>
   )

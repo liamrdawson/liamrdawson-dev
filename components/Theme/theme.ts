@@ -1,7 +1,6 @@
-const BLACK = '#151C17'
-const RED = '#5A282F'
-const LIGHT = '#E8E3D4'
+import COLOURS from './colours'
 
+const { BLACK, RED, LIGHT } = COLOURS
 export interface ITheme {
   colour: {
     primary: string
@@ -40,7 +39,6 @@ export interface ITheme {
     }
   }
 }
-
 interface ISpacing {
   1: number
   2: number
@@ -69,23 +67,23 @@ interface ILayout {
 
 export const theme: ITheme = {
   colour: {
-    primary: BLACK,
-    primaryHover: BLACK,
-    primaryActive: BLACK,
-    disabled: RED,
-    secondary: LIGHT,
-    secondaryHover: LIGHT,
-    secondaryActive: LIGHT,
-    tertiary: RED,
-    tertiaryHover: RED,
-    tertiaryActive: RED,
-    text: BLACK,
-    textInverted: LIGHT,
-    background: LIGHT,
+    primary: BLACK._5OO,
+    primaryHover: BLACK._5OO,
+    primaryActive: BLACK._5OO,
+    disabled: BLACK._200,
+    secondary: LIGHT._5OO,
+    secondaryHover: LIGHT._5OO,
+    secondaryActive: LIGHT._5OO,
+    tertiary: RED._500,
+    tertiaryHover: RED._500,
+    tertiaryActive: RED._500,
+    text: BLACK._5OO,
+    textInverted: LIGHT._5OO,
+    background: LIGHT._5OO,
   },
   typography: {
     primaryFont: 'Futura,Trebuchet MS,Arial,sans-serif',
-    secondaryFont: 'Playfair Display, serif',
+    secondaryFont: 'Didot, serif',
     typeScale: {
       heading1: '7.594rem',
       heading2: '5.063rem',
@@ -106,7 +104,7 @@ export const theme: ITheme = {
   },
 }
 
-export const SPACING: ILayout = {
+export const SPACING: ISpacing = {
   1: 1,
   2: 2,
   3: 4,

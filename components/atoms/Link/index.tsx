@@ -8,10 +8,10 @@ interface LinkAtomProps {
 }
 
 const StyledAnchor = styled.a`
-  color: ${(props) => props.theme.colour.primary};
+  color: ${(props) => props.theme.colour.tertiary};
   font-family: ${(props) => props.theme.typography.primaryFont};
+  text-decoration: none;
   &:hover {
-    cursor: pointer;
     text-decoration: underline;
   }
 `
