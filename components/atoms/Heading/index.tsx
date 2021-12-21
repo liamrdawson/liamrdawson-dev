@@ -7,9 +7,10 @@ import { ITheme, theme } from '../../Theme/theme'
 // ?    That being said, we are typing Heading as a React Functional Component, I'll need to read more into this to be sure.
 
 type HeadingProps = {
-  tag: keyof IHeading
+  tag?: keyof IHeading
   children: string
   css?: SerializedStyles
+  className?: string
 }
 interface IHeading {
   h1: {
@@ -23,15 +24,14 @@ interface IHeading {
 const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
   const base = css`
     text-transform: uppercase;
+    color: ${theme.colour.text};
     font-family: ${theme.typography.secondaryFont};
   `
   const style = {
     h1: css`
-      color: tomato;
       font-size: ${theme.typography.typeScale.heading1};
     `,
     h2: css`
-      color: yellow;
       font-size: ${theme.typography.typeScale.heading2};
     `,
   }
@@ -40,6 +40,7 @@ const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
 
 export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttributes<HTMLOrSVGElement>> = ({
   tag = 'h1',
+  className,
   children,
 }) => {
   const theme: ITheme = useTheme()
@@ -47,7 +48,9 @@ export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttribute
   const headingStyles = getHeadingStyles(tag, theme)
   return (
     <>
-      <CustomHeading css={headingStyles}> {children} </CustomHeading>
+      <CustomHeading className={className} css={headingStyles}>
+        {children}
+      </CustomHeading>
     </>
   )
 }

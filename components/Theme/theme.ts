@@ -38,6 +38,8 @@ export interface ITheme {
       black: number
     }
   }
+  SPACING: ISpacing
+  LAYOUT: ILayout
 }
 interface ISpacing {
   1: number
@@ -64,7 +66,31 @@ interface ILayout {
   9: number
   10: number
 }
+export const SPACING: ISpacing = {
+  1: 1,
+  2: 2,
+  3: 4,
+  4: 8,
+  5: 12,
+  6: 16,
+  7: 20,
+  8: 24,
+  9: 28,
+  10: 32,
+}
 
+export const LAYOUT: ILayout = {
+  1: 36,
+  2: 40,
+  3: 44,
+  4: 48,
+  5: 52,
+  6: 56,
+  7: 60,
+  8: 64,
+  9: 68,
+  10: 72,
+}
 export const theme: ITheme = {
   colour: {
     primary: BLACK._5OO,
@@ -102,30 +128,32 @@ export const theme: ITheme = {
       black: 600,
     },
   },
+  SPACING,
+  LAYOUT,
 }
 
-export const SPACING: ISpacing = {
-  1: 1,
-  2: 2,
-  3: 4,
-  4: 8,
-  5: 12,
-  6: 16,
-  7: 20,
-  8: 24,
-  9: 28,
-  10: 32,
-}
+// export const SPACING: ISpacing = {
+//   1: 1,
+//   2: 2,
+//   3: 4,
+//   4: 8,
+//   5: 12,
+//   6: 16,
+//   7: 20,
+//   8: 24,
+//   9: 28,
+//   10: 32,
+// }
 
-export const LAYOUT: ILayout = {
-  1: 36,
-  2: 40,
-  3: 44,
-  4: 48,
-  5: 52,
-  6: 56,
-  7: 60,
-  8: 64,
-  9: 68,
-  10: 72,
-}
+// export const LAYOUT: ILayout = {
+//   1: 36,
+//   2: 40,
+//   3: 44,
+//   4: 48,
+//   5: 52,
+//   6: 56,
+//   7: 60,
+//   8: 64,
+//   9: 68,
+//   10: 72,
+// }

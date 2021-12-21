@@ -1,27 +1,16 @@
-import { GetStaticProps } from 'next'
 import Link from 'next/link'
-import useSWR from 'swr'
 import Image from 'next/image'
-import getMovieData from '../utils/getMovieData'
-import { IMovie } from '../models/Movie'
-import { Heading } from '../components/atoms/Heading'
+import { languages } from '../components/Theme/copy'
+import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
+import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 
-type Props = {
-  movies: IMovie[]
-}
-
-const HomePage = (movies: Props) => {
-  const fetcher = (url: string) => fetch(url).then((res) => res.json())
-  const { data } = useSWR('/api/movies', fetcher, {
-    fallbackData: movies,
-    refreshInterval: 30000,
-  })
-  const firstMovie: IMovie = data.movies[0]
+const HomePage = () => {
   return (
     <>
-      <Heading tag={'h1'}>I Build Things</Heading>
+      <HeroHeading>I Build things</HeroHeading>
       <Introduction />
+      <LanguagesBlock languages={languages} />
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}
@@ -34,13 +23,3 @@ const HomePage = (movies: Props) => {
 }
 
 export default HomePage
-
-/* 
-  Use getStaticProps to get inital data from the database, this will be our 
-  initial data. Any new data will be handled client-side as we useSWR to 
-  get fresh data from our API on each page load.
-*/
-export const getStaticProps: GetStaticProps = async () => {
-  const movies = await getMovieData()
-  return { props: { movies: movies }, revalidate: 1 }
-}

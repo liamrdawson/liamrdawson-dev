@@ -20,7 +20,7 @@ const Introduction = () => {
   const theme = useTheme()
   return (
     <StyledSection theme={theme}>
-      <strong>Hey, I&apos;m Liam Dawson</strong>
+      <strong>Hey, I&apos;m Liam Dawson.</strong>
       <Callout>
         <strong>I want to help you build amazing websites and applicataions.</strong>
       </Callout>
