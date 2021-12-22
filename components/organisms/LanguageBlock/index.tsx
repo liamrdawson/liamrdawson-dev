@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import { useState } from 'react'
 import { Heading } from '../../atoms/Heading'
+import { PrimaryButton } from '../../atoms/Button'
 
 interface Props {
   languages: ILanguage[]
@@ -27,19 +28,7 @@ const ListOfLanguages = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
 `
-const LanguageButton = styled.button`
-  font-family: ${(props) => props.theme.typography.primaryFont};
-  color: ${(props) => props.theme.colour.tertiary};
-  font-size: 1rem;
-  font-weight: 600;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
-  &:hover {
-    text-decoration: underline;
-  }
-`
+
 export const LanguagesBlock = ({ languages }: Props) => {
   const [currentLanguage, setCurrentLanguage] = useState<ILanguage>(languages[0])
   return (
@@ -47,14 +36,14 @@ export const LanguagesBlock = ({ languages }: Props) => {
       <Heading tag="h2">Languages</Heading>
       <ListOfLanguages>
         {languages.map((language) => (
-          <LanguageButton
-            css={language.languageName === currentLanguage.languageName ? active : ''}
+          <PrimaryButton
+            style={language.languageName === currentLanguage.languageName ? active : ''}
             onClick={() => setCurrentLanguage(language)}
             value={language.languageName}
             key={languages.indexOf(language)}
           >
             {language.languageName}
-          </LanguageButton>
+          </PrimaryButton>
         ))}
       </ListOfLanguages>
       <p>{currentLanguage.languageDescription}</p>
