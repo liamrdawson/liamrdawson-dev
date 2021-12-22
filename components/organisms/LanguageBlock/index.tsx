@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import { useState } from 'react'
+import { useContext } from 'react'
+import { LanguageContext } from '../../../context'
 import { Heading } from '../../atoms/Heading'
 import { PrimaryButton } from '../../atoms/Button'
 
@@ -9,8 +10,8 @@ interface Props {
 }
 
 interface ILanguage {
-  languageName: string
-  languageDescription: string
+  name: string
+  description: string
 }
 
 const active = css`
@@ -30,23 +31,25 @@ const ListOfLanguages = styled.div`
 `
 
 export const LanguagesBlock = ({ languages }: Props) => {
-  const [currentLanguage, setCurrentLanguage] = useState<ILanguage>(languages[0])
+  const [currentLanguage, setCurrentLanguage] = useContext(LanguageContext)
   return (
     <LanguagesSection>
       <Heading tag="h2">Languages</Heading>
       <ListOfLanguages>
         {languages.map((language) => (
           <PrimaryButton
-            style={language.languageName === currentLanguage.languageName ? active : ''}
-            onClick={() => setCurrentLanguage(language)}
-            value={language.languageName}
+            style={language.name === currentLanguage.name ? active : ''}
+            onClick={() => {
+              setCurrentLanguage(language)
+            }}
+            value={language.name}
             key={languages.indexOf(language)}
           >
-            {language.languageName}
+            {language.name}
           </PrimaryButton>
         ))}
       </ListOfLanguages>
-      <p>{currentLanguage.languageDescription}</p>
+      <p>{currentLanguage.description}</p>
     </LanguagesSection>
   )
 }

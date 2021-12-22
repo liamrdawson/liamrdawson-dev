@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { languages } from '../components/Theme/copy'
+// import { languages } from '../components/Theme/copy'
+import { languages } from '../context'
 import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
 import { LanguagesBlock } from '../components/organisms/LanguageBlock'

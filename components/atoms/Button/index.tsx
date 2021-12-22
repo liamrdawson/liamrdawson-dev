@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 
 interface Props {
   value: string
-  key?: number
   style?: string | SerializedStyles
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   children: string
@@ -23,9 +22,9 @@ const StyledPrimaryButton = styled.button`
   }
 `
 
-export const PrimaryButton = ({ value, key, style, onClick }: Props) => {
+export const PrimaryButton = ({ value, style, onClick }: Props) => {
   return (
-    <StyledPrimaryButton value={value} css={style} onClick={onClick} key={key}>
+    <StyledPrimaryButton value={value} css={style} onClick={onClick}>
       {value}
     </StyledPrimaryButton>
   )
