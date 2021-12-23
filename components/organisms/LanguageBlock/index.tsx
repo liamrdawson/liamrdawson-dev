@@ -1,55 +1,36 @@
 import styled from '@emotion/styled'
-import { css } from '@emotion/react'
-import { useContext } from 'react'
-import { LanguageContext } from '../../../context'
+import { useState } from 'react'
 import { Heading } from '../../atoms/Heading'
-import { PrimaryButton } from '../../atoms/Button'
+import { MenuItems } from '../../molecules/MenuItems'
 
 interface Props {
-  languages: ILanguage[]
+  languages: IItem[]
 }
 
-interface ILanguage {
+interface IItem {
   name: string
-  description: string
+  description?: string
 }
 
-const active = css`
-  text-decoration: underline;
-`
-
-const LanguagesSection = styled.section`
+const Section = styled.section`
   h2 {
     text-align: center;
   }
 `
 
-const ListOfLanguages = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-`
-
 export const LanguagesBlock = ({ languages }: Props) => {
-  const [currentLanguage, setCurrentLanguage] = useContext(LanguageContext)
+  const [activeItem, setActiveItem] = useState<IItem | undefined>(languages[0])
+
+  const clicker = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const obj = languages.find((o) => o.name === e.currentTarget.value)
+    setActiveItem(obj)
+  }
+
   return (
-    <LanguagesSection>
+    <Section>
       <Heading tag="h2">Languages</Heading>
-      <ListOfLanguages>
-        {languages.map((language) => (
-          <PrimaryButton
-            style={language.name === currentLanguage.name ? active : ''}
-            onClick={() => {
-              setCurrentLanguage(language)
-            }}
-            value={language.name}
-            key={languages.indexOf(language)}
-          >
-            {language.name}
-          </PrimaryButton>
-        ))}
-      </ListOfLanguages>
-      <p>{currentLanguage.description}</p>
-    </LanguagesSection>
+      <MenuItems items={languages} clicker={clicker} activeItem={activeItem} />
+      <p>{activeItem && activeItem.description}</p>
+    </Section>
   )
 }

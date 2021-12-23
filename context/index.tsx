@@ -1,10 +1,3 @@
-import React, { createContext, ReactNode, useState } from 'react'
-
-export interface ILanguage {
-  name: string
-  description: string
-}
-
 export const languages = [
   {
     name: `JavaScript`,
@@ -24,17 +17,38 @@ export const languages = [
   },
 ]
 
-// Create Context Object
-export const LanguageContext = createContext<[ILanguage, React.Dispatch<any>]>([languages[0], () => {}])
-
-interface IProviderProps {
-  children: ReactNode
-  languages: ILanguage[]
-}
-
-// Create a provider for components to consume and subscribe to changes
-export const LanguageContextProvider = ({ children, languages }: IProviderProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState(languages[0])
-
-  return <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>{children}</LanguageContext.Provider>
-}
+export const tools = [
+  {
+    name: `React`,
+  },
+  {
+    name: `Redux`,
+  },
+  {
+    name: `Jest`,
+  },
+  {
+    name: `Emotion`,
+  },
+  {
+    name: `Storybook`,
+  },
+  {
+    name: `Node`,
+  },
+  {
+    name: `Docker`,
+  },
+  {
+    name: `MongoDB`,
+  },
+  {
+    name: `SQL`,
+  },
+  {
+    name: `NextJS`,
+  },
+  {
+    name: `GraphQL`,
+  },
+]
