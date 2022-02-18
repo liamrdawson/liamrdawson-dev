@@ -5,8 +5,11 @@ import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
 import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 import { ToolsBlock } from '../components/organisms/ToolsAndLibrariesBlock'
+import { createArticle, getArticles } from '../utils/crud'
 
 const HomePage = () => {
+  createArticle()
+  getArticles()
   return (
     <>
       <HeroHeading>I Build things</HeroHeading>
