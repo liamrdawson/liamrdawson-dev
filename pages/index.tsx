@@ -1,15 +1,27 @@
+import { gql } from '@apollo/client'
 import Link from 'next/link'
 import Image from 'next/image'
 import { languages, tools } from '../context'
+import client from '../graphql/apollo-client'
 import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
 import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 import { ToolsBlock } from '../components/organisms/ToolsAndLibrariesBlock'
 import { createArticle, getArticles } from '../utils/crud'
 
-const HomePage = () => {
-  createArticle()
-  getArticles()
+interface User {
+  name: String
+  bio: String
+}
+
+type HomePageProps = {
+  user: User
+}
+
+const HomePage = ({ user }: HomePageProps) => {
+  // createArticle()
+  // getArticles()
+  console.log(user)
   return (
     <>
       <HeroHeading>I Build things</HeroHeading>
@@ -25,6 +37,25 @@ const HomePage = () => {
       </h1>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`
+      query GetUser {
+        user(login: "liamrdawson") {
+          name
+          bio
+        }
+      }
+    `,
+  })
+
+  return {
+    props: {
+      user: data.user,
+    },
+  }
 }
 
 export default HomePage
