@@ -5,8 +5,8 @@ export const createArticle = async () => {
   try {
     await mongooseDBConnect()
     const article = await Article.create({
-      title: 'Liam has a new job',
-      likes: 2,
+      title: `It's windy!`,
+      likes: 0,
       shares: 0,
     })
     console.log(article)
