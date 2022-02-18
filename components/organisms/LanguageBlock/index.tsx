@@ -13,6 +13,7 @@ interface IItem {
 }
 
 const Section = styled.section`
+  min-height: 400px;
   h2 {
     text-align: center;
   }

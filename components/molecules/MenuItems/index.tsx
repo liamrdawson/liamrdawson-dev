@@ -16,11 +16,22 @@ interface Props {
 const ItemsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+
+const base = css`
+  text-decoration: none;
+  flex: 0 0 calc(16.66% - 20px);
+  padding: 10px;
+  margin: 10px;
 `
 
 const active = css`
   text-decoration: underline;
+  flex: 0 0 calc(16.66% - 20px);
+  padding: 10px;
+  margin: 0 10px;
 `
 
 export const MenuItems = ({ items, clicker, activeItem }: Props) => {
@@ -28,7 +39,7 @@ export const MenuItems = ({ items, clicker, activeItem }: Props) => {
     <ItemsContainer>
       {items.map((item) => (
         <PrimaryButton
-          style={activeItem && item.name === activeItem.name ? active : ''}
+          style={activeItem && item.name === activeItem.name ? active : base}
           onClick={clicker}
           value={item.name}
           key={items.indexOf(item)}

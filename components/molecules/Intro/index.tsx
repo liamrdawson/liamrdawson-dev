@@ -5,6 +5,7 @@ const StyledSection = styled.section`
   color: ${(props) => props.theme.colour.tertiary};
   font-size: 1rem;
   text-align: center;
+  height: 400px;
   p {
     line-height: 2.5;
     margin: 2rem 0;

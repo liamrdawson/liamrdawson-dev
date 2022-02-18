@@ -21,15 +21,15 @@ export interface ITheme {
     primaryFont: string
     secondaryFont: string
     typeScale: {
-      heading1: string
-      heading2: string
-      heading3: string
-      heading4: string
-      large: string
-      medium: string
-      caption: string
-      normal: string
-      small: string
+      _800: string
+      _700: string
+      _600: string
+      _500: string
+      _400: string
+      _300: string
+      _200: string
+      _100: string
+      _050: string
     }
     typeWeight: {
       light: number
@@ -111,15 +111,15 @@ export const theme: ITheme = {
     primaryFont: 'Futura,Trebuchet MS,Arial,sans-serif',
     secondaryFont: 'Didot, serif',
     typeScale: {
-      heading1: '7.594rem',
-      heading2: '5.063rem',
-      heading3: '3.375rem',
-      heading4: '2.25rem',
-      large: '1.5rem',
-      medium: '1.5rem',
-      caption: '1.5rem',
-      normal: '1rem',
-      small: '0.667rem',
+      _800: '7.594rem',
+      _700: '5.063rem',
+      _600: '3.375rem',
+      _500: '2.25rem',
+      _400: '1.5rem',
+      _300: '1.5rem',
+      _200: '1.5rem',
+      _100: '1rem',
+      _050: '0.667rem',
     },
     typeWeight: {
       light: 100,

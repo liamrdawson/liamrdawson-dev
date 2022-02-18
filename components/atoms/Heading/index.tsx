@@ -8,7 +8,7 @@ import { ITheme, theme } from '../../Theme/theme'
 
 type HeadingProps = {
   tag?: keyof IHeading
-  children: string
+  children: React.ReactNode
   css?: SerializedStyles
   className?: string
 }
@@ -17,6 +17,9 @@ interface IHeading {
     color: string
   }
   h2: {
+    color: string
+  }
+  h3: {
     color: string
   }
 }
@@ -29,10 +32,13 @@ const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
   `
   const style = {
     h1: css`
-      font-size: ${theme.typography.typeScale.heading1};
+      font-size: ${theme.typography.typeScale._800};
     `,
     h2: css`
-      font-size: ${theme.typography.typeScale.heading2};
+      font-size: ${theme.typography.typeScale._700};
+    `,
+    h3: css`
+      font-size: ${theme.typography.typeScale._600};
     `,
   }
   return [base, style[tag]]

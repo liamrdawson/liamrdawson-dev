@@ -1,9 +1,27 @@
 import Head from 'next/head'
 import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
-import { navigation } from '../../../pages/api/navigation'
 import { ReactNode } from 'react'
 import { css, useTheme, Global } from '@emotion/react'
+
+export const navigation = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Projects',
+    path: '/projects',
+  },
+  {
+    name: 'About',
+    path: '/about',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+  },
+]
 
 const bodyStyles = css`
   background-color: blue;
