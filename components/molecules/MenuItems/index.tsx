@@ -16,7 +16,7 @@ interface Props {
 const ItemsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 `
 

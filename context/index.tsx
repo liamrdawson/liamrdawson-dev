@@ -1,25 +1,28 @@
 export const languages = [
   {
     name: `JavaScript`,
-    description: `My “native” language, JavaScript is the language I use most at work. I’ve used in on the Front End with React and Redux, and I’m currently using it heavily to build our new Back End codebase with Node.`,
+    description: `My “native” language, JavaScript is the language I first learned. I’ve used it on the Front End with React and Redux, and I used it heavily at 15gifts to build a new product set generation app in Node.`,
   },
   {
     name: `TypeScript`,
-    description: `Some fancy text`,
+    description: `This is the language I use most at the moment, both while wuilding new features at Dunelm and working on my own side projects in my spare time.`,
   },
   {
     name: `Perl`,
-    description: `Some fancy text about what I like about writing in Perl. Look how much I've learned.`,
+    description: `I went from not knowing a whiff of Perl to migrating a legacy codebase Perl to Node while I was at 15gifts. It's not the most widely used language but it's a good example that I can pick up a new language and run with it.`,
   },
   {
     name: `Go`,
-    description: `I've only just started learning about Go, but here's what I think about it.`,
+    description: `I've only just started learning about Go, I've heard loads of great things about it so far and I'm excited to see what it can do.`,
   },
 ]
 
 export const tools = [
   {
     name: `React`,
+  },
+  {
+    name: `AWS`,
   },
   {
     name: `Redux`,

@@ -23,7 +23,7 @@ const Introduction = () => {
     <StyledSection theme={theme}>
       <strong>Hey, I&apos;m Liam Dawson.</strong>
       <Callout>
-        <strong>I want to help you build amazing websites and applicataions.</strong>
+        <strong>I love building amazing websites and applicataions.</strong>
       </Callout>
       <p>
         I&apos;m a <strong>Full Stack Developer</strong> based in <strong>England</strong> who loves building innovative
