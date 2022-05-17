@@ -9,25 +9,54 @@ import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 import { ToolsBlock } from '../components/organisms/ToolsAndLibrariesBlock'
 import { createArticle, getArticles } from '../utils/crud'
 
-interface User {
+interface IUser {
   name: String
   bio: String
+  repositories: {
+    nodes: Repository[]
+  }
+}
+
+type Repository = {
+  name: String
+  description: String
+  languages: {
+    nodes: Language[]
+  }
+  primaryLanguage: Language
+  repositoryTopics: {
+    nodes: Topic[]
+  }
+}
+
+type Language = {
+  name: String
+}
+
+type Topic = {
+  name: String
 }
 
 type HomePageProps = {
-  user: User
+  user: IUser
 }
 
 const HomePage = ({ user }: HomePageProps) => {
   // createArticle()
   // getArticles()
-  console.log(user)
+  const gitHubRepositoryInfo = user.repositories.nodes.filter(
+    (repo: Repository) => repo.repositoryTopics.nodes.length > 0,
+  )
+  console.log(gitHubRepositoryInfo)
   return (
     <>
       <HeroHeading>I Build things</HeroHeading>
       <Introduction />
       <LanguagesBlock languages={languages} />
       <ToolsBlock tools={tools} />
+      {gitHubRepositoryInfo.map((repo: Repository) => (
+        <h1 key={gitHubRepositoryInfo.indexOf(repo)}>{repo.name}</h1>
+      ))}
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}
@@ -42,10 +71,31 @@ const HomePage = ({ user }: HomePageProps) => {
 export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
-      query GetUser {
+      query GetGitHubInfo {
         user(login: "liamrdawson") {
           name
           bio
+          repositories(ownerAffiliations: OWNER, last: 30, isFork: false, privacy: PUBLIC) {
+            nodes {
+              name
+              description
+              languages(last: 10) {
+                nodes {
+                  name
+                }
+              }
+              primaryLanguage {
+                name
+              }
+              repositoryTopics(first: 20) {
+                nodes {
+                  topic {
+                    name
+                  }
+                }
+              }
+            }
+          }
         }
       }
     `,

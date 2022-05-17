@@ -5,7 +5,7 @@ export const languages = [
   },
   {
     name: `TypeScript`,
-    description: `This is the language I use most at the moment, both while wuilding new features at Dunelm and working on my own side projects in my spare time.`,
+    description: `This is the language I use most at the moment, both while building new features at Dunelm and working on my own side projects in my spare time.`,
   },
   {
     name: `Perl`,
