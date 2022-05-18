@@ -55,7 +55,10 @@ const HomePage = ({ user }: HomePageProps) => {
       <LanguagesBlock languages={languages} />
       <ToolsBlock tools={tools} />
       {gitHubRepositoryInfo.map((repo: Repository) => (
-        <h1 key={gitHubRepositoryInfo.indexOf(repo)}>{repo.name}</h1>
+        <section>
+          <h4 key={gitHubRepositoryInfo.indexOf(repo)}>{repo.name}</h4>
+          <p>{repo.description}</p>
+        </section>
       ))}
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>

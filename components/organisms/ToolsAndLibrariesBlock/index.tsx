@@ -43,7 +43,7 @@ export const ToolsBlock = ({ tools }: Props) => {
 
   return (
     <Section>
-      <Heading tag="h2">Tools & Libraries</Heading>
+      <Heading tag="h2">Tools and Libraries</Heading>
       <MenuItems items={tools} clicker={clicker} activeItem={activeItem} />
       <Heading css={headingStyle(theme)} tag="h3">
         <span>Used on these</span>Projects

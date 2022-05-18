@@ -7,24 +7,15 @@ import { ITheme, theme } from '../../Theme/theme'
 // ?    That being said, we are typing Heading as a React Functional Component, I'll need to read more into this to be sure.
 
 type HeadingProps = {
-  tag?: keyof IHeading
+  tag?: Heading
   children: React.ReactNode
   css?: SerializedStyles
   className?: string
 }
-interface IHeading {
-  h1: {
-    color: string
-  }
-  h2: {
-    color: string
-  }
-  h3: {
-    color: string
-  }
-}
 
-const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
+type Heading = 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
+
+const getHeadingStyles = (tag: Heading, theme: ITheme) => {
   const base = css`
     text-transform: uppercase;
     color: ${theme.colour.text};
@@ -40,10 +31,23 @@ const getHeadingStyles = (tag: keyof IHeading, theme: ITheme) => {
     h3: css`
       font-size: ${theme.typography.typeScale._600};
     `,
+    h4: css`
+      font-size: ${theme.typography.typeScale._500};
+    `,
+    h5: css`
+      font-size: ${theme.typography.typeScale._400};
+    `,
   }
   return [base, style[tag]]
 }
 
+/**
+ *  # Heading Atom Component
+ *  Used for rendering headlines.
+ *
+ *  @param tag - Specifies the heading level, e.g. h1, h2, etc.
+ *  @param css - Allows you to pass additional css styles either as object or string literal.
+ */
 export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttributes<HTMLOrSVGElement>> = ({
   tag = 'h1',
   className,
@@ -52,6 +56,8 @@ export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttribute
   const theme: ITheme = useTheme()
   const CustomHeading = tag
   const headingStyles = getHeadingStyles(tag, theme)
+  // adding className enables us to extend the styling of this component via emotions
+  // styled(Heading) API. This is not a required param when calling this component.
   return (
     <>
       <CustomHeading className={className} css={headingStyles}>
