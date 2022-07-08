@@ -4,9 +4,11 @@ import Image from 'next/image'
 import { languages, tools } from '../context'
 import client from '../graphql/apollo-client'
 import HeroHeading from '../components/molecules/HeroHeading'
+import { ProjectListItem, Repository } from '../components/molecules/ProjectListItem'
 import Introduction from '../components/molecules/Intro'
 import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 import { ToolsBlock } from '../components/organisms/ToolsAndLibrariesBlock'
+import { ProjectsBlock } from '../components/organisms/ProjectsBlock'
 import { createArticle, getArticles } from '../utils/crud'
 
 interface IUser {
@@ -15,26 +17,6 @@ interface IUser {
   repositories: {
     nodes: Repository[]
   }
-}
-
-type Repository = {
-  name: String
-  description: String
-  languages: {
-    nodes: Language[]
-  }
-  primaryLanguage: Language
-  repositoryTopics: {
-    nodes: Topic[]
-  }
-}
-
-type Language = {
-  name: String
-}
-
-type Topic = {
-  name: String
 }
 
 type HomePageProps = {
@@ -54,12 +36,7 @@ const HomePage = ({ user }: HomePageProps) => {
       <Introduction />
       <LanguagesBlock languages={languages} />
       <ToolsBlock tools={tools} />
-      {gitHubRepositoryInfo.map((repo: Repository) => (
-        <section>
-          <h4 key={gitHubRepositoryInfo.indexOf(repo)}>{repo.name}</h4>
-          <p>{repo.description}</p>
-        </section>
-      ))}
+      <ProjectsBlock repositories={gitHubRepositoryInfo} />
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}

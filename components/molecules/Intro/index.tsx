@@ -6,6 +6,8 @@ const StyledSection = styled.section`
   font-size: 1rem;
   text-align: center;
   height: 400px;
+  width: 60%;
+  margin: 0 auto;
   p {
     line-height: 2.5;
     margin: 2rem 0;

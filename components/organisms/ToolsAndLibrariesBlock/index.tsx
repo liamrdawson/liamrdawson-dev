@@ -27,6 +27,8 @@ const headingStyle = (theme: ITheme) => css`
 
 const Section = styled.section`
   min-height: 400px;
+  width: 60%;
+  margin: 0 auto;
   h2 {
     text-align: center;
   }

@@ -14,6 +14,8 @@ interface IItem {
 
 const Section = styled.section`
   min-height: 400px;
+  width: 90%;
+  margin: 0 auto;
   h2 {
     text-align: center;
   }

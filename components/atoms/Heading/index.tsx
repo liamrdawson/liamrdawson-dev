@@ -23,19 +23,19 @@ const getHeadingStyles = (tag: Heading, theme: ITheme) => {
   `
   const style = {
     h1: css`
-      font-size: ${theme.typography.typeScale._800};
-    `,
-    h2: css`
       font-size: ${theme.typography.typeScale._700};
     `,
-    h3: css`
+    h2: css`
       font-size: ${theme.typography.typeScale._600};
     `,
-    h4: css`
+    h3: css`
       font-size: ${theme.typography.typeScale._500};
     `,
-    h5: css`
+    h4: css`
       font-size: ${theme.typography.typeScale._400};
+    `,
+    h5: css`
+      font-size: ${theme.typography.typeScale._300};
     `,
   }
   return [base, style[tag]]
