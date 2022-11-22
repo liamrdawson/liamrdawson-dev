@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql, createHttpLink } from '@apollo/client'
+import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = createHttpLink({
@@ -6,7 +6,6 @@ const httpLink = createHttpLink({
 })
 
 const authLink = setContext((_, { headers }) => {
-  // Get auth token
   const githubToken = process.env['GITHUB']
   // Return headers to context so HttpLink can read them
   return {
@@ -17,9 +16,9 @@ const authLink = setContext((_, { headers }) => {
   }
 })
 
-const client = new ApolloClient({
+const githubClient = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
 
-export default client
+export default githubClient

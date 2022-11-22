@@ -4,12 +4,10 @@ import Image from 'next/image'
 import { languages, tools } from '../context'
 import client from '../graphql/apollo-client'
 import HeroHeading from '../components/molecules/HeroHeading'
-import { ProjectListItem, Repository } from '../components/molecules/ProjectListItem'
+import { Repository } from '../components/molecules/ProjectListItem'
 import Introduction from '../components/molecules/Intro'
 import { LanguagesBlock } from '../components/organisms/LanguageBlock'
 import { ToolsBlock } from '../components/organisms/ToolsAndLibrariesBlock'
-import { ProjectsBlock } from '../components/organisms/ProjectsBlock'
-import { createArticle, getArticles } from '../utils/crud'
 
 interface IUser {
   name: String
@@ -24,19 +22,12 @@ type HomePageProps = {
 }
 
 const HomePage = ({ user }: HomePageProps) => {
-  // createArticle()
-  // getArticles()
-  const gitHubRepositoryInfo = user.repositories.nodes.filter(
-    (repo: Repository) => repo.repositoryTopics.nodes.length > 0,
-  )
-  console.log(gitHubRepositoryInfo)
   return (
     <>
       <HeroHeading>I Build things</HeroHeading>
       <Introduction />
       <LanguagesBlock languages={languages} />
       <ToolsBlock tools={tools} />
-      <ProjectsBlock repositories={gitHubRepositoryInfo} />
       <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
       <h1>
         Read{' '}
@@ -74,6 +65,21 @@ export async function getStaticProps() {
                   }
                 }
               }
+              # This brings in about 7MB of data and impacts perfomance
+              # object(expression: "HEAD:") {
+              #   ... on Tree {
+              #     entries {
+              #       name
+              #       type
+              #       mode
+              #       object {
+              #         ... on Blob {
+              #           text
+              #         }
+              #       }
+              #     }
+              #   }
+              # }
             }
           }
         }
