@@ -5,10 +5,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <link
-             href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
-             rel="stylesheet"
-          /> */}
+          <meta name="theme-color" content="#5A282F" media="(prefers-color-scheme: light)" />
+          <meta name="theme-color" content="#5A282F" media="(prefers-color-scheme: dark)" />
         </Head>
         <body>
           <Main />

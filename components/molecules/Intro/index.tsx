@@ -32,7 +32,9 @@ const Introduction = () => {
         apps and solving problems with code. I&apos;m always learning new skills, discovering exciting tools, and
         putting them into practice to build modern and scalable applications.
       </p>
-      <p>Here are the ones I use most:</p>
+      <p>
+        Welcome to my small corner of the internet where I write about work, tech, photography, life, anything else.
+      </p>
     </StyledSection>
   )
 }
