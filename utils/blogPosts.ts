@@ -2,7 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-const postsDirectory = join(process.cwd(), 'pages/blog')
+const postsDirectory = join(process.cwd(), 'pages/_posts')
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory)
@@ -38,7 +38,6 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllPosts(fields: string[] = []) {
-  console.log('hello world!!!')
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
