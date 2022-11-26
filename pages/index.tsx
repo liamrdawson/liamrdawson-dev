@@ -3,6 +3,7 @@ import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
 import { getAllPosts } from '../utils/blogPosts'
 import Post from '../types/post'
+import Link from 'next/link'
 
 type Props = {
   allPosts: Post[]
@@ -18,7 +19,9 @@ const HomePage = ({ allPosts }: Props) => {
 
       {allPosts.map((post) => (
         <article key={allPosts.indexOf(post)}>
-          <h1>{post.title}</h1>
+          <Link as={`/blog/${post.slug}`} href="/blog/[slug]" passHref>
+            <h1>{post.title}</h1>
+          </Link>
           <p>{post.excerpt}</p>
         </article>
       ))}
