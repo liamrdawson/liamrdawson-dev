@@ -1,9 +1,8 @@
-import Image from 'next/image'
 import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
+import ArticlesBlock from '../components/organisms/ArticlesBlock'
 import { getAllPosts } from '../utils/blogPosts'
-import Post from '../types/post'
-import Link from 'next/link'
+import type Post from '../types/post'
 
 type Props = {
   allPosts: Post[]
@@ -15,14 +14,7 @@ const HomePage = ({ allPosts }: Props) => {
     <>
       <HeroHeading>I Build things</HeroHeading>
       <Introduction />
-      {allPosts.map((post) => (
-        <article key={allPosts.indexOf(post)}>
-          <Link as={`/blog/${post.slug}`} href="/blog/[slug]" passHref>
-            <h1>{post.title}</h1>
-          </Link>
-          <p>{post.excerpt}</p>
-        </article>
-      ))}
+      <ArticlesBlock articles={allPosts} />
     </>
   )
 }

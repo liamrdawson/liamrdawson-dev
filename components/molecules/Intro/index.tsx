@@ -7,7 +7,7 @@ const StyledSection = styled.section`
   text-align: center;
   height: 400px;
   width: 60%;
-  margin: 0 auto;
+  margin: 200px auto;
   p {
     line-height: 2.5;
     margin: 2rem 0;
