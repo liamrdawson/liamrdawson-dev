@@ -59,10 +59,8 @@ export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttribute
   // adding className enables us to extend the styling of this component via emotions
   // styled(Heading) API. This is not a required param when calling this component.
   return (
-    <>
-      <CustomHeading className={className} css={headingStyles}>
-        {children}
-      </CustomHeading>
-    </>
+    <CustomHeading className={className} css={headingStyles}>
+      {children}
+    </CustomHeading>
   )
 }

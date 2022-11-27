@@ -4,21 +4,30 @@ import { theme } from '../components/Theme/theme'
 export const globalStyles = (
   <Global
     styles={css`
-      html,
-      body {
-        margin: 0 auto;
-        color: ${theme.colour.text};
-        background: ${theme.colour.background};
-        min-height: 100%;
-        font-family: Futura, Arial, sans-serif;
+      html {
+        height: 100%;
+        margin: 0;
         font-size: 14px;
-        max-width: 100%;
         @media (min-width: 763px) {
           font-size: 16px;
-          max-width: 80%;
         }
         @media (min-width: 1023px) {
           font-size: 18px;
+        }
+      }
+      body {
+        min-height: 100%;
+        margin: 30px auto;
+      }
+      body {
+        color: ${theme.colour.text};
+        background: ${theme.colour.background};
+        font-family: Futura, Arial, sans-serif;
+        max-width: 100%;
+        @media (min-width: 763px) {
+          max-width: 80%;
+        }
+        @media (min-width: 1023px) {
           max-width: 90%;
         }
       }

@@ -19,6 +19,7 @@ export default function Post({ post }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  console.log(post)
   return <article dangerouslySetInnerHTML={{ __html: post.content }} />
 }
 

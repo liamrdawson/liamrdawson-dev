@@ -10,10 +10,6 @@ export const navigation = [
     path: '/',
   },
   {
-    name: 'Projects',
-    path: '/projects',
-  },
-  {
     name: 'About',
     path: '/about',
   },
@@ -22,6 +18,10 @@ export const navigation = [
     path: '/contact',
   },
 ]
+
+const mainStyles = css`
+  min-height: 100vh;
+`
 
 const bodyStyles = css`
   background-color: blue;
@@ -39,7 +39,7 @@ const Layout = ({ children }: Props) => {
       </Head>
       <Global styles={bodyStyles} />
       <Header navigation={navigation} />
-      <main>{children}</main>
+      <main css={mainStyles}>{children}</main>
       <Footer />
     </>
   )

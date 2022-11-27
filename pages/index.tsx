@@ -15,8 +15,6 @@ const HomePage = ({ allPosts }: Props) => {
     <>
       <HeroHeading>I Build things</HeroHeading>
       <Introduction />
-      <Image src="/images/profile.jpg" height={200} width={200} alt="A picture of me having a tea." />
-
       {allPosts.map((post) => (
         <article key={allPosts.indexOf(post)}>
           <Link as={`/blog/${post.slug}`} href="/blog/[slug]" passHref>

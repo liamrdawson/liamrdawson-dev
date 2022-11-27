@@ -25,7 +25,6 @@ const StyledHeader = styled.header`
 const Header = ({ navigation, title }: Props) => {
   return (
     <StyledHeader>
-      <h1>{title}</h1>
       <Nav navLinks={navigation} />
     </StyledHeader>
   )
