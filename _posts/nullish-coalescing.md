@@ -24,7 +24,7 @@ In short, the nullish coalescing operator returns the value of the right hand ex
 
 It can get a little confusing when trying to figure out when to use the nullish coalescing (`??`) operator and when to use the logical OR (`||`) operator. After all, both of these operators behave the same if the left hand value is `null` or `undefined`. The key thing to remember when distinguishing between the two is that the while nullish coalescing uses the value from the right hand expression if the left is `null` or `undefined`, the logical OR operator returns the value from the right if the value on the left is [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy).
 
-Something to keep this in mind when you're handling values that could contain `0`, `false`, or `""`.
+Something to keep in mind when you're handling values that could contain `0`, `false`, or `""`.
 
 ```javascript
 let numberOfTrophies
