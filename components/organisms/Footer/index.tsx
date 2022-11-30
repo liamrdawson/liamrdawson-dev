@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import useHasMounted from '../../../utils/setHasMountedHook'
 import { ITheme } from '../../Theme/theme'
 
 const footerStyles = (theme: ITheme) => `
@@ -13,6 +15,12 @@ const footerStyles = (theme: ITheme) => `
 `
 
 const Footer: React.FunctionComponent = () => {
+  const hasMounted = useHasMounted()
+
+  if (!hasMounted) {
+    return null
+  }
+
   const date = new Date().getFullYear()
   return (
     <footer css={footerStyles}>

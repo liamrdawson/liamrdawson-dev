@@ -15,12 +15,16 @@ type ArticlesInput = {
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
   const heroPost = articles[0]
   const morePosts = articles.slice(1)
+
   return (
     <section css={articlesBlockStyles}>
       <Heading tag="h2">Articles</Heading>
       <HeroPostPreview post={heroPost} />
       {morePosts.map((post) => (
-        <h1 key={morePosts.indexOf(post)}>{post.title}</h1>
+        <div key={morePosts.indexOf(post)}>
+          <h1>{post.title}</h1>
+          <p>{post.excerpt}</p>
+        </div>
       ))}
     </section>
   )
