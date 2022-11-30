@@ -1,5 +1,5 @@
 import { Heading } from '../../atoms/Heading'
-import HeroPost from '../../molecules/HeroPost'
+import HeroPostPreview from '../../molecules/HeroPostPreview'
 import { css } from '@emotion/react'
 import type Post from '../../../types/post'
 
@@ -18,7 +18,7 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
   return (
     <section css={articlesBlockStyles}>
       <Heading tag="h2">Articles</Heading>
-      <HeroPost post={heroPost} />
+      <HeroPostPreview post={heroPost} />
       {morePosts.map((post) => (
         <h1 key={morePosts.indexOf(post)}>{post.title}</h1>
       ))}

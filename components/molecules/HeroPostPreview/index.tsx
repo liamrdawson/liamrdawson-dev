@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   position: relative;
 `
 
-const HeroPost = ({ post }: HeroPostInput) => (
+const HeroPostPreview = ({ post }: HeroPostInput) => (
   <article>
     <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
       <a>
@@ -28,4 +28,4 @@ const HeroPost = ({ post }: HeroPostInput) => (
   </article>
 )
 
-export default HeroPost
+export default HeroPostPreview
