@@ -1,5 +1,6 @@
 import { SerializedStyles, css, useTheme } from '@emotion/react'
 import React from 'react'
+import useHasMounted from '../../../utils/setHasMountedHook'
 import { ITheme, theme } from '../../Theme/theme'
 
 // ?    Is there a better way of doing this?
@@ -53,9 +54,14 @@ export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttribute
   className,
   children,
 }) => {
+  const hasMounted = useHasMounted()
   const theme: ITheme = useTheme()
   const CustomHeading = tag
   const headingStyles = getHeadingStyles(tag, theme)
+
+  if (!hasMounted) {
+    return null
+  }
   // adding className enables us to extend the styling of this component via emotions
   // styled(Heading) API. This is not a required param when calling this component.
   return (

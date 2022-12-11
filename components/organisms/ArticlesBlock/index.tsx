@@ -2,6 +2,7 @@ import { Heading } from '../../atoms/Heading'
 import HeroPostPreview from '../../molecules/HeroPostPreview'
 import { css } from '@emotion/react'
 import type Post from '../../../types/post'
+import useHasMounted from '../../../utils/setHasMountedHook'
 
 const articlesBlockStyles = css`
   margin: 0 auto;
@@ -15,6 +16,10 @@ type ArticlesInput = {
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
   const heroPost = articles[0]
   const morePosts = articles.slice(1)
+  const hasMounted = useHasMounted()
+  if (!hasMounted) {
+    return null
+  }
 
   return (
     <section css={articlesBlockStyles}>

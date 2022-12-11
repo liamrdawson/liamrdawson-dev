@@ -9,12 +9,12 @@ type Props = {
 }
 
 const HomePage = ({ allPosts }: Props) => {
-  console.log(allPosts)
+  const sortedPosts = allPosts.sort((post1, post2) => (Date.parse(post1.date) > Date.parse(post2.date) ? -1 : 1))
   return (
     <>
       <HeroHeading>I Build things</HeroHeading>
       <Introduction />
-      <ArticlesBlock articles={allPosts} />
+      <ArticlesBlock articles={sortedPosts} />
     </>
   )
 }
