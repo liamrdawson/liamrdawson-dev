@@ -34,19 +34,17 @@ const active = css`
   margin: 0 10px;
 `
 
-export const MenuItems = ({ items, clicker, activeItem }: Props) => {
-  return (
-    <ItemsContainer>
-      {items.map((item) => (
-        <PrimaryButton
-          style={activeItem && item.name === activeItem.name ? active : base}
-          onClick={clicker}
-          value={item.name}
-          key={items.indexOf(item)}
-        >
-          {item.name}
-        </PrimaryButton>
-      ))}
-    </ItemsContainer>
-  )
-}
+export const MenuItems = ({ items, clicker, activeItem }: Props) => (
+  <ItemsContainer>
+    {items.map((item) => (
+      <PrimaryButton
+        style={activeItem && item.name === activeItem.name ? active : base}
+        onClick={clicker}
+        value={item.name}
+        key={items.indexOf(item)}
+      >
+        {item.name}
+      </PrimaryButton>
+    ))}
+  </ItemsContainer>
+)
