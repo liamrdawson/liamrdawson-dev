@@ -11,11 +11,24 @@ type HeroPostInput = {
 }
 
 const Article = styled.article`
-  border: solid ${(props) => props.theme.colour.tertiary} 3px;
-  a {
+  border: solid 3px ${(props) => props.theme.colour.secondary};
+  color: ${(props) => props.theme.colour.primary};
+  &:hover {
+    border: solid 3px ${(props) => props.theme.colour.tertiary};
     color: ${(props) => props.theme.colour.tertiary};
+    h3 {
+      background: ${(props) => props.theme.colour.tertiary};
+      color: ${(props) => props.theme.colour.secondary};
+    }
+  }
+  a {
+    color: ${(props) => props.theme.colour.primary};
     text-decoration: none;
     outline: none;
+    &:hover {
+      color: ${(props) => props.theme.colour.tertiary};
+      border-color: ${(props) => props.theme.colour.tertiary};
+    }
   }
 `
 
@@ -29,13 +42,8 @@ const ImageContainer = styled.div`
 `
 
 const headingStyles = (theme: ITheme) => css`
-  color: ${theme.colour.secondary};
-  background: ${theme.colour.tertiary};
+  color: ${theme.colour.primary};
 `
-
-/**
- * TODO: A HeroPostPreview is a post preview with an image on top. Split this out into its own PostPreview component.
- */
 
 const HeroPostPreview = ({ post }: HeroPostInput) => {
   const theme = useTheme()
@@ -45,6 +53,20 @@ const HeroPostPreview = ({ post }: HeroPostInput) => {
         <ImageContainer>
           <Image src={post.coverImage} alt="hero image" sizes="100vw" fill />
         </ImageContainer>
+        <Heading css={headingStyles(theme)} tag="h3">
+          {post.title}
+        </Heading>
+        <p>{post.excerpt}</p>
+      </Link>
+    </Article>
+  )
+}
+
+export const PostPreview = ({ post }: HeroPostInput) => {
+  const theme = useTheme()
+  return (
+    <Article>
+      <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
         <Heading css={headingStyles(theme)} tag="h3">
           {post.title}
         </Heading>

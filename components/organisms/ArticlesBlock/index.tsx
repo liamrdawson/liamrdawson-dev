@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { Heading } from '../../atoms/Heading'
-import HeroPostPreview from '../../molecules/HeroPostPreview'
+import HeroPostPreview, { PostPreview } from '../../molecules/HeroPostPreview'
 import type Post from '../../../types/post'
 import useHasMounted from '../../../utils/setHasMountedHook'
 
@@ -26,10 +26,7 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
       <Heading tag="h2">Articles</Heading>
       <HeroPostPreview post={heroPost} />
       {morePosts.map((post) => (
-        <div key={morePosts.indexOf(post)}>
-          <h1>{post.title}</h1>
-          <p>{post.excerpt}</p>
-        </div>
+        <PostPreview key={morePosts.indexOf(post)} post={post} />
       ))}
     </section>
   )
