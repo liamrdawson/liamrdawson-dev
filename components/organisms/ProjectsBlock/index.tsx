@@ -10,12 +10,10 @@ const Section = styled.section`
   width: 80%;
 `
 
-export const ProjectsBlock = ({ repositories }: Props) => {
-  return (
-    <Section>
-      {repositories.map((repo: Repository) => (
-        <ProjectListItem key={repositories.indexOf(repo)} repository={repo} />
-      ))}
-    </Section>
-  )
-}
+export const ProjectsBlock = ({ repositories }: Props) => (
+  <Section>
+    {repositories.map((repo: Repository) => (
+      <ProjectListItem key={repositories.indexOf(repo)} repository={repo} />
+    ))}
+  </Section>
+)
