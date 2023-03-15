@@ -5,7 +5,6 @@ interface Props {
   value: string
   style?: string | SerializedStyles
   onClick?: React.MouseEventHandler<HTMLButtonElement>
-  children: string
 }
 
 const StyledPrimaryButton = styled.button`
@@ -22,10 +21,6 @@ const StyledPrimaryButton = styled.button`
   }
 `
 
-export const PrimaryButton = ({ value, style, onClick }: Props) => {
-  return (
-    <StyledPrimaryButton value={value} css={style} onClick={onClick}>
-      {value}
-    </StyledPrimaryButton>
-  )
-}
+export const PrimaryButton = ({ value, style, onClick }: Props) => (
+  <StyledPrimaryButton value={value} css={style} onClick={onClick} />
+)
