@@ -8,7 +8,6 @@ interface ILink {
 
 interface Props {
   navigation: ILink[]
-  title?: string
 }
 
 const StyledHeader = styled.header`
@@ -22,12 +21,10 @@ const StyledHeader = styled.header`
   }
 `
 
-const Header = ({ navigation, title }: Props) => {
-  return (
-    <StyledHeader>
-      <Nav navLinks={navigation} />
-    </StyledHeader>
-  )
-}
+const Header = ({ navigation }: Props) => (
+  <StyledHeader>
+    <Nav navLinks={navigation} />
+  </StyledHeader>
+)
 
 export default Header
