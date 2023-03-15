@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import useHasMounted from '../../../utils/setHasMountedHook'
 import { ITheme } from '../../Theme/theme'
 

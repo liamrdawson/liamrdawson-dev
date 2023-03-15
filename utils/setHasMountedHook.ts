@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 /**
+ * # useHasMounted
  *
  * To avoid issues during rehydration, we need to ensure that the rehydrated app matches the original HTML.
  * Use useEffect to trigger a re-render, React should notice that there's some new content to render
