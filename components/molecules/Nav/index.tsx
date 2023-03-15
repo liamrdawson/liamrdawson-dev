@@ -1,5 +1,5 @@
-import LinkAtom from '../../atoms/Link'
 import styled from '@emotion/styled'
+import LinkAtom from '../../atoms/Link'
 
 interface INavLink {
   path: string
@@ -25,13 +25,11 @@ const StyledNav = styled.nav`
 const Nav = ({ navLinks }: Props) => (
   <StyledNav>
     <ul>
-      {navLinks.map((navLink) => {
-        return (
-          <li key={`navLink-${navLinks.indexOf(navLink)}`}>
-            <LinkAtom path={navLink.path} name={navLink.name} />
-          </li>
-        )
-      })}
+      {navLinks.map((navLink) => (
+        <li key={`navLink-${navLinks.indexOf(navLink)}`}>
+          <LinkAtom path={navLink.path} name={navLink.name} />
+        </li>
+      ))}
     </ul>
   </StyledNav>
 )
