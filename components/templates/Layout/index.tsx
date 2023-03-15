@@ -1,8 +1,8 @@
 import Head from 'next/head'
+import { ReactNode } from 'react'
+import { css, Global } from '@emotion/react'
 import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
-import { ReactNode } from 'react'
-import { css, useTheme, Global } from '@emotion/react'
 
 export const navigation = [
   {
@@ -30,8 +30,7 @@ interface Props {
   children: ReactNode
 }
 
-const Layout = ({ children }: Props) => {
-  const theme = useTheme()
+function Layout({ children }: Props) {
   return (
     <>
       <Head>
