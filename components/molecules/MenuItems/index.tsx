@@ -42,9 +42,7 @@ export const MenuItems = ({ items, clicker, activeItem }: Props) => (
         onClick={clicker}
         value={item.name}
         key={items.indexOf(item)}
-      >
-        {item.name}
-      </PrimaryButton>
+      />
     ))}
   </ItemsContainer>
 )
