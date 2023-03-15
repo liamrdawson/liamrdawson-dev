@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { Heading } from '../../atoms/Heading'
 import styled from '@emotion/styled'
-import type Post from '../../../types/post'
 import Image from 'next/image'
 import { css, useTheme } from '@emotion/react'
+import type Post from '../../../types/post'
+import { Heading } from '../../atoms/Heading'
 import { ITheme } from '../../Theme/theme'
 
 type HeroPostInput = {
@@ -17,10 +17,6 @@ const Article = styled.article`
 const ImageContainer = styled.div`
   height: 400px;
   position: relative;
-`
-const headingStyle = (theme: ITheme) => css`
-  background-color: ${theme.colour.tertiary};
-  color: ${theme.colour.textInverted};
 `
 
 const StyledLink = styled.a`
@@ -45,9 +41,9 @@ const HeroPostPreview = ({ post }: HeroPostInput) => {
       <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
         <StyledLink theme={theme}>
           <ImageContainer>
-            <Image src={post.coverImage} layout="fill" objectPosition={'0% 40%'} objectFit="cover" alt="" />
+            <Image src={post.coverImage} layout="fill" objectPosition="0% 40%" objectFit="cover" alt="" />
           </ImageContainer>
-          <Heading css={headingStyles(theme)} tag={'h3'}>
+          <Heading css={headingStyles(theme)} tag="h3">
             {post.title}
           </Heading>
           <p>{post.excerpt}</p>
