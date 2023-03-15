@@ -12,17 +12,20 @@ type HeroPostInput = {
 
 const Article = styled.article`
   border: solid ${(props) => props.theme.colour.tertiary} 3px;
+  a {
+    color: ${(props) => props.theme.colour.tertiary};
+    text-decoration: none;
+    outline: none;
+  }
 `
 
 const ImageContainer = styled.div`
   height: 400px;
   position: relative;
-`
-
-const StyledLink = styled.a`
-  color: ${(props) => props.theme.colour.tertiary};
-  text-decoration: none;
-  outline: none;
+  img {
+    object-position: 0 40%;
+    object-fit: cover;
+  }
 `
 
 const headingStyles = (theme: ITheme) => css`
@@ -39,15 +42,13 @@ const HeroPostPreview = ({ post }: HeroPostInput) => {
   return (
     <Article>
       <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
-        <StyledLink theme={theme}>
-          <ImageContainer>
-            <Image src={post.coverImage} layout="fill" objectPosition="0% 40%" objectFit="cover" alt="" />
-          </ImageContainer>
-          <Heading css={headingStyles(theme)} tag="h3">
-            {post.title}
-          </Heading>
-          <p>{post.excerpt}</p>
-        </StyledLink>
+        <ImageContainer>
+          <Image src={post.coverImage} alt="hero image" sizes="100vw" fill />
+        </ImageContainer>
+        <Heading css={headingStyles(theme)} tag="h3">
+          {post.title}
+        </Heading>
+        <p>{post.excerpt}</p>
       </Link>
     </Article>
   )

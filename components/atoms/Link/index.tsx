@@ -7,23 +7,25 @@ interface LinkAtomProps {
   name: string
 }
 
-const StyledAnchor = styled.a`
-  color: ${(props) => props.theme.colour.tertiary};
-  font-family: ${(props) => props.theme.typography.primaryFont};
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+const StyledSpan = styled.span`
+  a {
+    color: ${(props) => props.theme.colour.tertiary};
+    font-family: ${(props) => props.theme.typography.primaryFont};
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
 const LinkAtom = ({ path, name }: LinkAtomProps) => {
   const theme = useTheme()
   return (
-    <Link href={path} passHref>
-      <StyledAnchor theme={theme}>
-        <span>{name}</span>
-      </StyledAnchor>
-    </Link>
+    <StyledSpan theme={theme}>
+      <Link href={path} passHref>
+        {name}
+      </Link>
+    </StyledSpan>
   )
 }
 
