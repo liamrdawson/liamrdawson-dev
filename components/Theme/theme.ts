@@ -42,54 +42,63 @@ export interface ITheme {
   LAYOUT: ILayout
 }
 interface ISpacing {
-  1: number
-  2: number
-  3: number
-  4: number
-  5: number
-  6: number
-  7: number
-  8: number
-  9: number
-  10: number
+  1: string
+  2: string
+  3: string
+  4: string
+  5: string
+  6: string
+  7: string
+  8: string
+  9: string
+  10: string
 }
 
 interface ILayout {
-  1: number
-  2: number
-  3: number
-  4: number
-  5: number
-  6: number
-  7: number
-  8: number
-  9: number
-  10: number
-}
-export const SPACING: ISpacing = {
-  1: 1,
-  2: 2,
-  3: 4,
-  4: 8,
-  5: 12,
-  6: 16,
-  7: 20,
-  8: 24,
-  9: 28,
-  10: 32,
+  1: string
+  2: string
+  3: string
+  4: string
+  5: string
+  6: string
+  7: string
+  8: string
+  9: string
+  10: string
 }
 
+/**
+ * # Spacing
+ * Use these values to space UI elements within layouts.
+ */
+export const SPACING: ISpacing = {
+  1: '1px',
+  2: '2px',
+  3: '4px',
+  4: '8px',
+  5: '12px',
+  6: '16px',
+  7: '20px',
+  8: '24px',
+  9: '28px',
+  10: '32px',
+}
+
+/**
+ * # Layout
+ * Use these values to space blocks of content.
+ */
 export const LAYOUT: ILayout = {
-  1: 36,
-  2: 40,
-  3: 44,
-  4: 48,
-  5: 52,
-  6: 56,
-  7: 60,
-  8: 64,
-  9: 68,
-  10: 72,
+  1: '36px',
+  2: '40px',
+  3: '44px',
+  4: '48px',
+  5: '52px',
+  6: '56px',
+  7: '60px',
+  8: '64px',
+  9: '68px',
+  10: '72px',
 }
 export const theme: ITheme = {
   colour: {

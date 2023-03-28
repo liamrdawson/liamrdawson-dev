@@ -13,6 +13,7 @@ type HeroPostInput = {
 const Article = styled.article`
   border: solid 3px ${(props) => props.theme.colour.secondary};
   color: ${(props) => props.theme.colour.primary};
+  margin-top: ${(props) => props.theme.SPACING[3]};
   &:hover {
     border: solid 3px ${(props) => props.theme.colour.tertiary};
     color: ${(props) => props.theme.colour.tertiary};
@@ -43,6 +44,7 @@ const ImageContainer = styled.div`
 
 const headingStyles = (theme: ITheme) => css`
   color: ${theme.colour.primary};
+  margin-top: 0;
 `
 
 const HeroPostPreview = ({ post }: HeroPostInput) => {
