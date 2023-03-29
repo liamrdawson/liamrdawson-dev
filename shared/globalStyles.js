@@ -24,12 +24,6 @@ export const globalStyles = (
         background: ${theme.colour.background};
         font-family: Futura, Arial, sans-serif;
         max-width: 100%;
-        @media (min-width: 763px) {
-          max-width: 80%;
-        }
-        @media (min-width: 1023px) {
-          max-width: 90%;
-        }
       }
     `}
   />

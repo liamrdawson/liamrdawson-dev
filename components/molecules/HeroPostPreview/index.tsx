@@ -13,7 +13,9 @@ type HeroPostInput = {
 const Article = styled.article`
   border: solid 3px ${(props) => props.theme.colour.secondary};
   color: ${(props) => props.theme.colour.primary};
-  margin-top: ${(props) => props.theme.SPACING[3]};
+  background: none;
+  margin-top: ${(props) => props.theme.LAYOUT[1]};
+  min-height: 160px;
   &:hover {
     border: solid 3px ${(props) => props.theme.colour.tertiary};
     color: ${(props) => props.theme.colour.tertiary};

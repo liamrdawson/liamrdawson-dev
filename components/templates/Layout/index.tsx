@@ -25,6 +25,7 @@ const mainStyles = css`
 
 const bodyStyles = css`
   background-color: blue;
+  position: relative;
 `
 interface Props {
   children: ReactNode

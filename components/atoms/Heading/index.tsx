@@ -3,10 +3,6 @@ import React from 'react'
 import useHasMounted from '../../../utils/setHasMountedHook'
 import { ITheme } from '../../Theme/theme'
 
-// ?    Is there a better way of doing this?
-// ?    It kind of feels like assigning tag as a key of IHeading is misrepresenting what it is, as at the end of the day I'm rendering out a component.
-// ?    That being said, we are typing Heading as a React Functional Component, I'll need to read more into this to be sure.
-
 type HeadingProps = {
   tag?: HeadingLevel
   children: React.ReactNode
@@ -20,6 +16,8 @@ const getHeadingStyles = (tag: HeadingLevel, theme: ITheme) => {
     text-transform: uppercase;
     color: ${theme.colour.text};
     font-family: ${theme.typography.secondaryFont};
+    margin: 3rem 0 1.38rem;
+    line-height: 1.3;
   `
   const style = {
     h1: css`
@@ -61,7 +59,7 @@ export const Heading: React.FunctionComponent<HeadingProps & React.HTMLAttribute
   if (!hasMounted) {
     return null
   }
-  // adding className enables us to extend the styling of this component via emotions
+  // adding className enables us to extend the styling of this component via emotion's
   // styled(Heading) API. This is not a required param when calling this component.
   return (
     <CustomHeading className={className} css={headingStyles}>
