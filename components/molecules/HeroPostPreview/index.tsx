@@ -55,7 +55,7 @@ const HeroPostPreview = ({ post }: HeroPostInput) => {
     <Article>
       <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
         <ImageContainer>
-          <Image src={post.coverImage} alt="hero image" sizes="100vw" fill />
+          <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
         </ImageContainer>
         <Heading css={headingStyles(theme)} tag="h3">
           {post.title}

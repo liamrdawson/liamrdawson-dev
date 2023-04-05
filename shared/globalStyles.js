@@ -17,7 +17,7 @@ export const globalStyles = (
       }
       body {
         min-height: 100%;
-        margin: 30px auto;
+        margin: 0 auto;
       }
       body {
         color: ${theme.colour.text};
