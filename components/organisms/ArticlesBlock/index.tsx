@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { Heading } from '../../atoms/Heading'
-import HeroPostPreview, { PostPreview } from '../../molecules/HeroPostPreview'
+import { PostPreview } from '../../molecules/HeroPostPreview'
 import type Post from '../../../types/post'
 import useHasMounted from '../../../utils/setHasMountedHook'
 
@@ -14,8 +14,6 @@ type ArticlesInput = {
 }
 
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
-  const heroPost = articles[0]
-  const morePosts = articles.slice(1)
   const hasMounted = useHasMounted()
   if (!hasMounted) {
     return null
@@ -24,9 +22,8 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
   return (
     <section css={articlesBlockStyles}>
       <Heading tag="h2">Articles</Heading>
-      <HeroPostPreview post={heroPost} />
-      {morePosts.map((post) => (
-        <PostPreview key={morePosts.indexOf(post)} post={post} />
+      {articles.map((post) => (
+        <PostPreview showHeroPost={true} index={articles.indexOf(post)} key={articles.indexOf(post)} post={post} />
       ))}
     </section>
   )
