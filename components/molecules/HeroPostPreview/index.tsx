@@ -6,8 +6,10 @@ import type Post from '../../../types/post'
 import { Heading } from '../../atoms/Heading'
 import { ITheme } from '../../Theme/theme'
 
-type HeroPostInput = {
+type PostPreviewInput = {
   post: Post
+  index: number
+  showHeroPost: boolean
 }
 
 const Article = styled.article`
@@ -49,14 +51,16 @@ const headingStyles = (theme: ITheme) => css`
   margin-top: 0;
 `
 
-const HeroPostPreview = ({ post }: HeroPostInput) => {
+export const PostPreview = ({ post, index, showHeroPost }: PostPreviewInput) => {
   const theme = useTheme()
   return (
     <Article>
       <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
-        <ImageContainer>
-          <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
-        </ImageContainer>
+        {index === 0 && showHeroPost && (
+          <ImageContainer>
+            <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
+          </ImageContainer>
+        )}
         <Heading css={headingStyles(theme)} tag="h3">
           {post.title}
         </Heading>
@@ -65,19 +69,3 @@ const HeroPostPreview = ({ post }: HeroPostInput) => {
     </Article>
   )
 }
-
-export const PostPreview = ({ post }: HeroPostInput) => {
-  const theme = useTheme()
-  return (
-    <Article>
-      <Link as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
-        <Heading css={headingStyles(theme)} tag="h3">
-          {post.title}
-        </Heading>
-        <p>{post.excerpt}</p>
-      </Link>
-    </Article>
-  )
-}
-
-export default HeroPostPreview
