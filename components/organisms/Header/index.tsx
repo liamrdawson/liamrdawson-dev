@@ -11,7 +11,7 @@ interface Props {
 }
 
 const StyledHeader = styled.header`
-  margin: 0 auto;
+  margin: 0 auto ${(props) => props.theme.LAYOUT[10]};
   max-width: 90%;
   @media (min-width: 1023px) {
     max-width: 80%;

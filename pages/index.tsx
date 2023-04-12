@@ -1,4 +1,3 @@
-import HeroHeading from '../components/molecules/HeroHeading'
 import Introduction from '../components/molecules/Intro'
 import ArticlesBlock from '../components/organisms/ArticlesBlock'
 import { getAllPosts } from '../utils/blogPosts'

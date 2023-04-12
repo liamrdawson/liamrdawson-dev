@@ -22,7 +22,7 @@ export const globalStyles = (
       body {
         color: ${theme.colour.text};
         background: ${theme.colour.background};
-        font-family: Futura, Arial, sans-serif;
+        font-family: Jost, Arial, sans-serif;
         max-width: 100%;
       }
     `}

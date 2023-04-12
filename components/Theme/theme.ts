@@ -1,4 +1,7 @@
+import { Jost } from 'next/font/google'
 import COLOURS from './colours'
+
+const jost = Jost({ subsets: ['latin'] })
 
 const { BLACK, RED, LIGHT } = COLOURS
 export interface ITheme {
@@ -89,16 +92,16 @@ export const SPACING: ISpacing = {
  * Use these values to space blocks of content.
  */
 export const LAYOUT: ILayout = {
-  1: '36px',
-  2: '40px',
-  3: '44px',
-  4: '48px',
-  5: '52px',
-  6: '56px',
-  7: '60px',
-  8: '64px',
-  9: '68px',
-  10: '72px',
+  1: '64px',
+  2: '72px',
+  3: '80px',
+  4: '88px',
+  5: '96px',
+  6: '104px',
+  7: '112px',
+  8: '120px',
+  9: '128px',
+  10: '136px',
 }
 export const theme: ITheme = {
   colour: {
@@ -117,7 +120,7 @@ export const theme: ITheme = {
     background: LIGHT._5OO,
   },
   typography: {
-    primaryFont: 'Futura,Trebuchet MS,Arial,sans-serif',
+    primaryFont: jost.style.fontFamily,
     secondaryFont: 'Didot, serif',
     typeScale: {
       _800: '7.594rem',
@@ -140,29 +143,3 @@ export const theme: ITheme = {
   SPACING,
   LAYOUT,
 }
-
-// export const SPACING: ISpacing = {
-//   1: 1,
-//   2: 2,
-//   3: 4,
-//   4: 8,
-//   5: 12,
-//   6: 16,
-//   7: 20,
-//   8: 24,
-//   9: 28,
-//   10: 32,
-// }
-
-// export const LAYOUT: ILayout = {
-//   1: 36,
-//   2: 40,
-//   3: 44,
-//   4: 48,
-//   5: 52,
-//   6: 56,
-//   7: 60,
-//   8: 64,
-//   9: 68,
-//   10: 72,
-// }

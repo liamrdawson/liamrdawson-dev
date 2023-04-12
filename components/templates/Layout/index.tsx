@@ -16,6 +16,10 @@ export const navigation = [
     path: '/about',
   },
   {
+    name: 'Articles',
+    path: '/articles',
+  },
+  {
     name: 'Contact',
     path: '/contact',
   },
@@ -23,6 +27,8 @@ export const navigation = [
 
 const mainStyles = css`
   min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 `
 
 const bodyStyles = css`
