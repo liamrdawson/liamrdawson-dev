@@ -3,7 +3,7 @@ import COLOURS from './colours'
 
 const jost = Jost({ subsets: ['latin'] })
 
-const { BLACK, RED, LIGHT } = COLOURS
+const { black200, black5OO, red500, light5OO } = COLOURS
 export interface ITheme {
   colour: {
     primary: string
@@ -105,19 +105,19 @@ export const LAYOUT: ILayout = {
 }
 export const theme: ITheme = {
   colour: {
-    primary: BLACK._5OO,
-    primaryHover: BLACK._5OO,
-    primaryActive: BLACK._5OO,
-    disabled: BLACK._200,
-    secondary: LIGHT._5OO,
-    secondaryHover: LIGHT._5OO,
-    secondaryActive: LIGHT._5OO,
-    tertiary: RED._500,
-    tertiaryHover: RED._500,
-    tertiaryActive: RED._500,
-    text: BLACK._5OO,
-    textInverted: LIGHT._5OO,
-    background: LIGHT._5OO,
+    primary: black5OO,
+    primaryHover: black5OO,
+    primaryActive: black5OO,
+    disabled: black200,
+    secondary: light5OO,
+    secondaryHover: light5OO,
+    secondaryActive: light5OO,
+    tertiary: red500,
+    tertiaryHover: red500,
+    tertiaryActive: red500,
+    text: black5OO,
+    textInverted: light5OO,
+    background: light5OO,
   },
   typography: {
     primaryFont: jost.style.fontFamily,
