@@ -1,14 +1,8 @@
-import { css } from '@emotion/react'
-import { ITheme } from '../../Theme/theme'
+import styled from '@emotion/styled'
 
-const calloutStyles = (theme: ITheme) => css`
-  color: ${theme.colour.textInverted};
-  background-color: ${theme.colour.tertiary};
-  padding: ${theme.SPACING[6]};
-  margin: ${theme.SPACING[10]} 0;
+export const Callout = styled.p`
+  color: ${(props) => props.theme.colour.secondary};
+  background-color: ${(props) => props.theme.colour.tertiary};
+  padding: ${(props) => props.theme.SPACING[6]};
+  margin: ${(props) => props.theme.SPACING[10]} 0;
 `
-type CalloutProps = {
-  children: React.ReactNode
-}
-
-export const Callout = ({ children }: CalloutProps) => <p css={calloutStyles}>{children}</p>

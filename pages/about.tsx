@@ -46,7 +46,7 @@ function About() {
       <Section>
         <p>Hey, I&apos;m Liam Dawson.</p>
         <ImageContainer>
-          <Image src={aboutMePic} alt="hero image" fill />
+          <Image src={aboutMePic} alt="hero image" placeholder="blur" fill />
         </ImageContainer>
         <Text>
           I&apos;m a web developer from Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿, based in Hampshire, England. I&apos;m {age} years old, speak two
@@ -72,8 +72,8 @@ function About() {
           the car in as few trips as possible 💪.
         </Text>
         <ImageRow>
-          <Image src={photo1} alt="photo 1" />
-          <Image src={photo2} alt="photo 2" />
+          <Image src={photo1} alt="photo 1" placeholder="blur" />
+          <Image src={photo2} alt="photo 2" placeholder="blur" />
         </ImageRow>
       </Section>
     </>
