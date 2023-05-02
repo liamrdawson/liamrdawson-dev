@@ -1,7 +1,13 @@
-import { Jost } from 'next/font/google'
+import { NextFont } from 'next/dist/compiled/@next/font'
+import { Jost, Inter } from 'next/font/google'
 import COLOURS from './colours'
 
 const jost = Jost({ subsets: ['latin'] })
+const inter = Inter({
+  weight: ['100', '400', '600', '900'],
+  subsets: ['latin'],
+  fallback: ['arial'],
+})
 
 const { black200, black5OO, red500, light5OO } = COLOURS
 export interface ITheme {
@@ -21,6 +27,7 @@ export interface ITheme {
     background: string
   }
   typography: {
+    heroFont: NextFont
     primaryFont: string
     secondaryFont: string
     typeScale: {
@@ -35,10 +42,11 @@ export interface ITheme {
       _050: string
     }
     typeWeight: {
-      light: number
-      medium: number
-      bold: number
-      black: number
+      light: string
+      medium: string
+      bold: string
+      black: string
+      interBlack?: string
     }
   }
   SPACING: ISpacing
@@ -120,6 +128,7 @@ export const theme: ITheme = {
     background: light5OO,
   },
   typography: {
+    heroFont: inter,
     primaryFont: jost.style.fontFamily,
     secondaryFont: 'Didot, serif',
     typeScale: {
@@ -134,10 +143,11 @@ export const theme: ITheme = {
       _050: '0.667rem',
     },
     typeWeight: {
-      light: 100,
-      medium: 500,
-      bold: 400,
-      black: 600,
+      light: '100',
+      medium: '500',
+      bold: '400',
+      black: '600',
+      interBlack: '900',
     },
   },
   SPACING,

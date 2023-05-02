@@ -11,13 +11,13 @@ interface Props {
 }
 
 const StyledHeader = styled.header`
-  margin: 0 auto ${(props) => props.theme.LAYOUT[10]};
-  max-width: 90%;
-  @media (min-width: 1023px) {
-    max-width: 80%;
-  }
-  @media (min-width: 767px) {
-    max-width: 75%;
+  width: 100%;
+  background-color: ${(props) => props.theme.colour.primary};
+  overflow: hidden;
+  nav {
+    color: ${(props) => props.theme.colour.background};
+    width: 30%;
+    margin: ${(props) => props.theme.SPACING[9]} auto ${(props) => props.theme.LAYOUT[5]};
   }
 `
 

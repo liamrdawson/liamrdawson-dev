@@ -9,7 +9,7 @@ interface LinkAtomProps {
 
 const StyledSpan = styled.span`
   a {
-    color: ${(props) => props.theme.colour.tertiary};
+    color: ${(props) => props.theme.colour.background};
     font-family: ${(props) => props.theme.typography.primaryFont};
     text-decoration: none;
     &:hover {

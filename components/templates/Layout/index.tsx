@@ -4,7 +4,7 @@ import { css, Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
-import grain from '../../../35mm-Dirty-Film-Grain.jpeg'
+import grain from '../../../public/images/noise-1-small-2.jpeg'
 
 export const navigation = [
   {
@@ -25,12 +25,6 @@ export const navigation = [
   },
 ]
 
-const mainStyles = css`
-  min-height: 100vh;
-  max-width: 800px;
-  margin: 0 auto;
-`
-
 const bodyStyles = css`
   background-color: blue;
 `
@@ -41,7 +35,6 @@ interface Props {
 
 const TextureWrapper = styled.div`
   position: relative;
-  padding-top: 30px;
 `
 
 const GrainOverlay = styled.div`
@@ -52,8 +45,8 @@ const GrainOverlay = styled.div`
   right: 0;
   background-repeat: repeat;
   background-image: url(${grain.src});
-  opacity: 0.4;
-  mix-blend-mode: hard-light;
+  background-size: 125vw;
+  mix-blend-mode: screen;
   pointer-events: none;
 `
 
@@ -66,7 +59,7 @@ function Layout({ children }: Props) {
       <Global styles={bodyStyles} />
       <TextureWrapper>
         <Header navigation={navigation} />
-        <main css={mainStyles}>{children}</main>
+        {children}
         <Footer />
         <GrainOverlay />
       </TextureWrapper>

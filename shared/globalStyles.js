@@ -14,6 +14,9 @@ export const globalStyles = (
         @media (min-width: 1023px) {
           font-size: 18px;
         }
+        * {
+          box-sizing: border-box;
+        }
       }
       body {
         min-height: 100%;
