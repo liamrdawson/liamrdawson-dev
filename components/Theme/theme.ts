@@ -76,6 +76,16 @@ interface ILayout {
   8: string
   9: string
   10: string
+  11: string
+  12: string
+  13: string
+  14: string
+  15: string
+  16: string
+  17: string
+  18: string
+  19: string
+  20: string
 }
 
 /**
@@ -110,6 +120,16 @@ export const LAYOUT: ILayout = {
   8: '120px',
   9: '128px',
   10: '136px',
+  11: '142px',
+  12: '150px',
+  13: '158px',
+  14: '166px',
+  15: '174px',
+  16: '182px',
+  17: '190px',
+  18: '198px',
+  19: '206px',
+  20: '214px',
 }
 export const theme: ITheme = {
   colour: {

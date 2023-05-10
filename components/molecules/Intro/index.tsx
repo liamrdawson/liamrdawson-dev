@@ -6,8 +6,8 @@ const StyledSection = styled.section`
   color: ${(props) => props.theme.colour.tertiary};
   font-size: 1rem;
   text-align: center;
-  height: 400px;
-  margin: ${(props) => props.theme.LAYOUT[10]} auto;
+  margin: ${(props) => props.theme.LAYOUT[20]} auto;
+  max-width: 800px;
   p {
     line-height: 2.5;
   }
@@ -27,7 +27,7 @@ const Introduction = () => {
         audience by creating unforgettable digital e-commerce experiences rooted in culture.
       </p>
       <p>Welcome to my small corner of the internet.</p>
-      <p>If you think we could work together to enhance your business, or just want to say hi -</p>
+      <p>If you think we could work together to enhance your business, or just want to say hi;</p>
       <p>
         <strong>Let&apos;s Talk</strong>
       </p>

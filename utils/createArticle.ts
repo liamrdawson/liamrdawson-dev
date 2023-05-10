@@ -9,7 +9,6 @@ const createArticle = async () => {
       likes: 2,
       shares: 0,
     })
-    console.log(article)
   } catch (e) {
     console.error(e)
   }

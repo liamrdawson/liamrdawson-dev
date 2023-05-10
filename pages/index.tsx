@@ -4,6 +4,7 @@ import ArticlesBlock from '../components/organisms/ArticlesBlock'
 import { getAllPosts } from '../utils/blogPosts'
 import type Post from '../types/post'
 import { HeroBanner } from '../components/organisms/HeroBanner'
+import { markdownToHtml } from './blog/[slug]'
 
 type Props = {
   allPosts: Post[]
@@ -11,7 +12,6 @@ type Props = {
 
 const mainStyles = css`
   min-height: 100vh;
-  max-width: 800px;
   margin: 0 auto;
 `
 
@@ -29,8 +29,19 @@ const HomePage = ({ allPosts }: Props) => {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt'])
-
+  const allPosts = await Promise.all(
+    getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt', 'content']).map(async (post) => {
+      try {
+        const htmlContent = await markdownToHtml(post.content || '')
+        return {
+          ...post,
+          htmlContent,
+        }
+      } catch (error) {
+        return error
+      }
+    }),
+  )
   return {
     props: { allPosts },
   }

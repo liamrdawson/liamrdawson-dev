@@ -5,11 +5,14 @@ import { VideoPlayer } from '../../molecules/VideoPlayer'
 import { ITheme } from '../../Theme/theme'
 
 const BannerContainer = styled.div`
-  min-height: 800px;
+  min-height: 700px;
   height: 90vh;
   width: 100%;
   background: ${(props) => props.theme.colour.primary};
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 const heroHeadingStyle = (theme: ITheme) => css`
@@ -30,6 +33,9 @@ const iCreateStyles = css`
   font-size: clamp(50px, 8vw, 125px);
   padding-left: 1vw;
   justify-content: space-between;
+  span {
+    white-space: nowrap;
+  }
 `
 
 const memorableStyles = css`

@@ -10,8 +10,6 @@ ofImage:
   url: '../../public/images/profile.jpg'
 ---
 
-# Nullish Coalescing
-
 **TLDR: Gives you the right hand value if the left hand is `null` or `undefined`, otherwise gives you the left hand value.**
 
 Nullish coalescing can be a tricky operator to get your head around, let's take a look at what it does and how it differs from the optional OR operator.

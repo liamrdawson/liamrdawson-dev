@@ -61,7 +61,7 @@ function Layout({ children }: Props) {
         <Header navigation={navigation} />
         {children}
         <Footer />
-        <GrainOverlay />
+        {/* <GrainOverlay /> */}
       </TextureWrapper>
     </>
   )
