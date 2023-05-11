@@ -14,6 +14,7 @@ const articlesBlockStyles = (theme: ITheme) => css`
   margin: 0 ${theme.LAYOUT[1]};
   display: flex;
   flex-direction: column;
+  position: relative;
   h2 {
     display: flex;
     flex-direction: column;
@@ -36,7 +37,6 @@ const HeroPostContainer = styled.div`
   align-content: flex-start;
   column-gap: ${(props) => props.theme.SPACING[10]};
   div {
-    width: 100%;
     overflow: hidden;
   }
 `
@@ -47,20 +47,26 @@ const ArticlesContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 48%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
   a:nth-of-type(1) {
-    flex-grow: 6;
+    height: 200%;
   }
   :hover a:nth-of-type(1):not(:hover) {
-    flex-grow: 1;
+    height: 100%;
   }
   a {
-    flex-grow: 1;
-    transition: all 0.8s ease-in-out 0.1s;
+    height: 100%;
+    transition: height 0.8s ease-in-out;
+    overflow: hidden;
     article {
       height: 100%;
     }
     :hover {
-      flex-grow: 6;
+      height: 200%;
     }
   }
 `
@@ -90,7 +96,12 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
         </Heading>
         <ArticlesContainer>
           {articles.map((post) => (
-            <PostPreview showHeroPost={false} key={articles.indexOf(post)} post={post} />
+            <PostPreview
+              showHeroPost={false}
+              isHeroPost={articles.indexOf(post) === 0}
+              key={articles.indexOf(post)}
+              post={post}
+            />
           ))}
         </ArticlesContainer>
       </HeroPostContainer>

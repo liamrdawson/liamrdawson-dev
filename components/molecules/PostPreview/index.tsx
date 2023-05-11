@@ -16,7 +16,6 @@ const Article = styled.article`
   border: solid 3px ${(props) => props.theme.colour.secondary};
   color: ${(props) => props.theme.colour.primary};
   background: none;
-  min-height: 160px;
   border: solid 3px ${(props) => props.theme.colour.tertiary};
   color: ${(props) => props.theme.colour.tertiary};
 `
