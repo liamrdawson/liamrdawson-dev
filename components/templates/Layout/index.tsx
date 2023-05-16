@@ -4,7 +4,7 @@ import { css, Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
-import grain from '../../../public/images/noise-1-small-2.jpeg'
+import grain from '../../../public/images/noise-1-small-3.jpg'
 
 export const navigation = [
   {
@@ -34,6 +34,7 @@ interface Props {
 }
 
 const TextureWrapper = styled.div`
+  overflow-x: hidden;
   position: relative;
 `
 

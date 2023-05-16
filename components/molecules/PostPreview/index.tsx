@@ -13,21 +13,22 @@ type PostPreviewInput = {
 }
 
 const Article = styled.article`
-  border: solid 3px ${(props) => props.theme.colour.secondary};
-  color: ${(props) => props.theme.colour.primary};
+  color: var(--red);
   background: none;
-  border: solid 3px ${(props) => props.theme.colour.tertiary};
   color: ${(props) => props.theme.colour.tertiary};
 `
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colour.primary};
+  margin-top: ${(props) => props.theme.SPACING[6]};
+  margin-bottom: ${(props) => props.theme.LAYOUT[10]};
   text-decoration: none;
   outline: none;
 `
 
 const ImageContainer = styled.div`
   height: 400px;
+  aspect-ratio: 7/5;
   position: relative;
   img {
     object-position: 0 40%;
@@ -39,23 +40,28 @@ function truncate(str: string, n: number) {
 }
 
 const headingStyles = (theme: ITheme) => css`
-  color: ${theme.colour.primary};
   margin-top: 0;
-  font-size: ${theme.typography.typeScale._300};
+  font-family: ${theme.typography.primaryFont};
+  font-size: ${theme.typography.typeScale._500};
+  font-weight: ${theme.typography.typeWeight.black};
 `
 
 const headingContainerStyles = (theme: ITheme) => css`
-  background-color: ${theme.colour.tertiary};
+  height: 100%;
+  display: flex;
+  /* align-items: flex-end; */
+  flex-direction: row;
   padding: ${theme.SPACING[3]};
+  width: 100%;
   h3 {
     margin-bottom: 0;
-    padding: 0 ${theme.SPACING[3]};
-    color: ${theme.colour.secondary};
+    color: ${theme.colour.tertiary};
   }
 `
 
-const postPreviewArticleStyles = (theme: ITheme) => css`
-  padding: 0 ${theme.SPACING[5]};
+const PostDescription = styled.div`
+  flex-grow: 1;
+  margin-left: ${(props) => props.theme.SPACING[8]};
 `
 
 export const PostPreview = ({ post, isHeroPost, showHeroPost }: PostPreviewInput) => {
@@ -65,21 +71,15 @@ export const PostPreview = ({ post, isHeroPost, showHeroPost }: PostPreviewInput
     <StyledLink as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
       <Article>
         <div css={headingContainerStyles}>
-          {isHeroPost === true && showHeroPost && (
-            <ImageContainer>
-              <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
-            </ImageContainer>
-          )}
-          <Heading css={headingStyles(theme)} tag="h3">
-            {post.title}
-          </Heading>
-        </div>
-        <div>
-          {isHeroPost ? (
-            <article css={postPreviewArticleStyles} dangerouslySetInnerHTML={{ __html: truncatedContent }} />
-          ) : (
-            <p css={postPreviewArticleStyles}>{post.excerpt}</p>
-          )}
+          <ImageContainer>
+            <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
+          </ImageContainer>
+          <PostDescription>
+            <Heading css={headingStyles(theme)} tag="h3">
+              {post.title}
+            </Heading>
+            <p>01.02.23</p>
+          </PostDescription>
         </div>
       </Article>
     </StyledLink>
