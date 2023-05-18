@@ -3,7 +3,7 @@ import { PostPreview } from '../../molecules/PostPreview'
 import type Post from '../../../types/post'
 import useHasMounted from '../../../utils/setHasMountedHook'
 import styled from 'styled-components'
-import { ITheme } from '../../Theme/theme'
+import React from 'react'
 
 type ArticlesInput = {
   articles: Post[]
@@ -17,6 +17,7 @@ const HeadingAndArticlesContainer = styled.section`
   flex-direction: column;
   position: relative;
   h2 {
+    font-family: ${(props) => props.theme.typography.secondaryFont};
     text-transform: uppercase;
     margin-top: 0;
     font-size: ${(props) => props.theme.typography.typeScale._700};
@@ -99,16 +100,11 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
           </TagLine>
         </Heading>
         <ArticlesContainer>
-          {articles.map((post) => (
-            <>
+          {articles.map((post, index) => (
+            <React.Fragment key={index}>
               <Divider />
-              <PostPreview
-                showHeroPost={true}
-                isHeroPost={getIsHeroPost(articles.indexOf(post))}
-                key={articles.indexOf(post)}
-                post={post}
-              />
-            </>
+              <PostPreview showHeroPost={true} isHeroPost={getIsHeroPost(articles.indexOf(post))} post={post} />
+            </React.Fragment>
           ))}
         </ArticlesContainer>
       </HeroPostContainer>
