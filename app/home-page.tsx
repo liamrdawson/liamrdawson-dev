@@ -1,5 +1,5 @@
 'use client'
-import { css } from '@emotion/react'
+import styled from 'styled-components'
 import Introduction from '../components/molecules/Intro'
 import ArticlesBlock from '../components/organisms/ArticlesBlock'
 import { HeroBanner } from '../components/organisms/HeroBanner'
@@ -13,7 +13,7 @@ type Props = {
   allPosts: Post[]
 }
 
-const mainStyles = css`
+const StyledMain = styled.main`
   min-height: 100vh;
   margin: 0 auto;
 `
@@ -23,10 +23,10 @@ const HomePage = ({ allPosts }: Props) => {
   return (
     <>
       <HeroBanner />
-      <main css={mainStyles}>
+      <StyledMain>
         <Introduction />
         <ArticlesBlock articles={sortedPosts} />
-      </main>
+      </StyledMain>
     </>
   )
 }

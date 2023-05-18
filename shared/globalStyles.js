@@ -1,9 +1,7 @@
-import { css, Global } from '@emotion/react'
 import { theme } from '../components/Theme/theme'
+import { createGlobalStyle } from 'styled-components'
 
-export const globalStyles = (
-  <Global
-    styles={css`
+export const Global = createGlobalStyle`
       html {
         height: 100%;
         margin: 0;
@@ -28,6 +26,4 @@ export const globalStyles = (
         font-family: Jost, Arial, sans-serif;
         max-width: 100%;
       }
-    `}
-  />
-)
+    `

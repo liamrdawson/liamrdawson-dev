@@ -1,24 +1,24 @@
 import useHasMounted from '../../../utils/setHasMountedHook'
-import { ITheme } from '../../Theme/theme'
+import styled from 'styled-components'
 
-const footerStyles = (theme: ITheme) => `
+const StyledFooter = styled.footer`
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${theme.colour.tertiary};
-  color: ${theme.colour.secondary};
-  margin: ${theme.LAYOUT[10]} auto 0;
-    a {
-      text-decoration: none;
-      text-align: center;
-      color: ${theme.colour.secondary};
-    }
-    p {
-        font-size: ${theme.typography.typeScale._050};
-        height: 16px;
-        text-align: center;
-    }
+  background-color: ${(props) => props.theme.colour.tertiary};
+  color: ${(props) => props.theme.colour.secondary};
+  margin: ${(props) => props.theme.LAYOUT[10]} auto 0;
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: ${(props) => props.theme.colour.secondary};
+  }
+  p {
+    font-size: ${(props) => props.theme.typography.typeScale._050};
+    height: 16px;
+    text-align: center;
+  }
 `
 
 const Footer: React.FunctionComponent = () => {
@@ -30,10 +30,10 @@ const Footer: React.FunctionComponent = () => {
 
   const date = new Date().getFullYear()
   return (
-    <footer css={footerStyles}>
+    <StyledFooter>
       <a href="mailto:hello@liamrdawson.com">hello@liamrdawson.com</a>
       <p>Copyright &copy; {date} Liam Dawson</p>
-    </footer>
+    </StyledFooter>
   )
 }
 

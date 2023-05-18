@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import styled from '@emotion/styled'
+import styled, { useTheme } from 'styled-components'
 import Image from 'next/image'
-import { css, useTheme } from '@emotion/react'
 import type PostType from '../../../types/post'
 import { Heading } from '../../atoms/Heading'
-import { ITheme } from '../../Theme/theme'
 
 type PostPreviewInput = {
   post: PostType
@@ -39,23 +37,23 @@ function truncate(str: string, n: number) {
   return str.length > n ? str.slice(0, n - 1) + '&hellip;' : str
 }
 
-const headingStyles = (theme: ITheme) => css`
+const PostPreviewHeading = styled(Heading)`
   margin-top: 0;
-  font-family: ${theme.typography.primaryFont};
-  font-size: ${theme.typography.typeScale._500};
-  font-weight: ${theme.typography.typeWeight.black};
+  font-family: ${(props) => props.theme.typography.primaryFont};
+  font-size: ${(props) => props.theme.typography.typeScale._500};
+  font-weight: ${(props) => props.theme.typography.typeWeight.black};
 `
 
-const headingContainerStyles = (theme: ITheme) => css`
+const HeadingContainer = styled.div`
   height: 100%;
   display: flex;
-  /* align-items: flex-end; */
+  align-items: flex-end;
   flex-direction: row;
-  padding: ${theme.SPACING[3]};
+  padding: ${(props) => props.theme.SPACING[3]};
   width: 100%;
   h3 {
     margin-bottom: 0;
-    color: ${theme.colour.tertiary};
+    color: ${(props) => props.theme.colour.tertiary};
   }
 `
 
@@ -66,21 +64,19 @@ const PostDescription = styled.div`
 
 export const PostPreview = ({ post, isHeroPost, showHeroPost }: PostPreviewInput) => {
   const theme = useTheme()
-  const truncatedContent = truncate(post.htmlContent, 2000)
+  // const truncatedContent = truncate(post.htmlContent, 2000)
   return (
-    <StyledLink as={`/blog/${post.slug}`} href="blog/[slug]" passHref>
+    <StyledLink href={`blog/${post.slug}`} passHref>
       <Article>
-        <div css={headingContainerStyles}>
+        <HeadingContainer>
           <ImageContainer>
             <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
           </ImageContainer>
           <PostDescription>
-            <Heading css={headingStyles(theme)} tag="h3">
-              {post.title}
-            </Heading>
+            <PostPreviewHeading as="h3">{post.title}</PostPreviewHeading>
             <p>01.02.23</p>
           </PostDescription>
-        </div>
+        </HeadingContainer>
       </Article>
     </StyledLink>
   )

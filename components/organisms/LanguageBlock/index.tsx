@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { useState } from 'react'
 import { Heading } from '../../atoms/Heading'
 import { MenuItems } from '../../molecules/MenuItems'
@@ -31,7 +31,7 @@ export const LanguagesBlock = ({ languages }: Props) => {
 
   return (
     <Section>
-      <Heading tag="h2">Languages</Heading>
+      <Heading as="h2">Languages</Heading>
       <MenuItems items={languages} clicker={clicker} activeItem={activeItem} />
       <p>{activeItem && activeItem.description}</p>
     </Section>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
+import { useTheme } from 'styled-components'
+import styled from 'styled-components'
 
 interface LinkAtomProps {
   path: string

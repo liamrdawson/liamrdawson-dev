@@ -1,5 +1,4 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import styled from 'styled-components'
 import { PrimaryButton } from '../../atoms/Button'
 
 interface IItem {
@@ -20,29 +19,30 @@ const ItemsContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const base = css`
-  text-decoration: none;
+const MenuItemButton = styled(PrimaryButton)<{ isActiveItem: boolean }>`
+  text-decoration: ${(props) => (props.isActiveItem ? 'underline' : 'none')};
   flex: 0 0 calc(16.66% - 20px);
   padding: 10px;
   margin: 10px;
 `
 
-const active = css`
-  text-decoration: underline;
-  flex: 0 0 calc(16.66% - 20px);
-  padding: 10px;
-  margin: 0 10px;
-`
+type GetIsActiveItemProps = {
+  activeItem?: IItem
+  item: IItem
+}
 
-export const MenuItems = ({ items, clicker, activeItem }: Props) => (
-  <ItemsContainer>
-    {items.map((item) => (
-      <PrimaryButton
-        style={activeItem && item.name === activeItem.name ? active : base}
-        onClick={clicker}
-        value={item.name}
-        key={items.indexOf(item)}
-      />
-    ))}
-  </ItemsContainer>
-)
+export const MenuItems = ({ items, clicker, activeItem }: Props) => {
+  const getIsActiveItem = ({ activeItem, item }: GetIsActiveItemProps) => activeItem && item.name === activeItem.name
+  return (
+    <ItemsContainer>
+      {items.map((item) => (
+        <MenuItemButton
+          isActiveItem={getIsActiveItem({ activeItem, item }) || false}
+          onClick={clicker}
+          value={item.name}
+          key={items.indexOf(item)}
+        />
+      ))}
+    </ItemsContainer>
+  )
+}

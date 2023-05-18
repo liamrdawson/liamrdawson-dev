@@ -1,10 +1,13 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
   images: {
     domains: ['images.unsplash.com'],
-    formats: ['image/avif'],
   },
-  // compiler: {
-  //   // Enables the styled-components SWC transform
-  //   styledComponents: true,
-  // },
 }
+
+module.exports = nextConfig

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { Heading } from '../../atoms/Heading'
 
 type Props = {
@@ -26,7 +26,7 @@ type GitObject = {
   mode: number
   object: {
     text: string
-  } 
+  }
 }
 
 type Language = {
@@ -43,9 +43,8 @@ const Section = styled.section`
 `
 
 export const ProjectListItem = ({ repository }: Props) => (
-    <Section>
-      <Heading tag="h4">{repository.name}</Heading>
-      <p>{repository.description}</p>
-    </Section>
-  )
-
+  <Section>
+    <Heading as="h4">{repository.name}</Heading>
+    <p>{repository.description}</p>
+  </Section>
+)

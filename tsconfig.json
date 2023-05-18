@@ -7,7 +7,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["@emotion/react/types/css-prop"],
+    "types": [],
     "allowJs": true,
     "skipLibCheck": true, // Skip type checking all .d.ts files.
     "strict": true,
@@ -20,7 +20,6 @@
     "resolveJsonModule": true, //* Enable importing .json files.
     "isolatedModules": true, //* Ensure that each file can be safely transpiled without relying on other imports.
     "jsx": "preserve", //* Specify what JSX code is generated.
-    "jsxImportSource": "@emotion/react",
     "plugins": [
       {
         "name": "next"

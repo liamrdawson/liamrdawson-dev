@@ -1,19 +1,17 @@
-import { css } from '@emotion/react'
 import { Heading } from '../../atoms/Heading'
 import { PostPreview } from '../../molecules/PostPreview'
 import type Post from '../../../types/post'
 import useHasMounted from '../../../utils/setHasMountedHook'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { ITheme } from '../../Theme/theme'
 
 type ArticlesInput = {
   articles: Post[]
 }
 
-const articlesBlockStyles = (theme: ITheme) => css`
-  margin: 0 ${theme.SPACING[5]};
+const HeadingAndArticlesContainer = styled.section`
   @media (min-width: 820px) {
-    margin: 0 ${theme.LAYOUT[1]};
+    margin: 0 ${(props) => props.theme.LAYOUT[1]};
   }
   display: flex;
   flex-direction: column;
@@ -21,13 +19,13 @@ const articlesBlockStyles = (theme: ITheme) => css`
   h2 {
     text-transform: uppercase;
     margin-top: 0;
-    font-size: ${theme.typography.typeScale._700};
-    margin-bottom: ${theme.LAYOUT[5]};
+    font-size: ${(props) => props.theme.typography.typeScale._700};
+    margin-bottom: ${(props) => props.theme.LAYOUT[5]};
   }
 `
 
-const tagLineStyles = (theme: ITheme) => css`
-  font-size: ${theme.typography.typeScale._400};
+const TagLine = styled.p`
+  font-size: ${(props) => props.theme.typography.typeScale._400};
   font-weight: 400;
   text-transform: none;
 `
@@ -69,10 +67,6 @@ const ArticlesContainer = styled.div`
   }
 `
 
-const headingInitialLineHeight = css`
-  line-height: 0.8;
-`
-
 const Divider = styled.div`
   border: ${(props) => props.theme.colour.tertiary} 1px solid;
 `
@@ -96,14 +90,13 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
   }
 
   return (
-    <section css={articlesBlockStyles}>
+    <HeadingAndArticlesContainer>
       <HeroPostContainer>
-        <Heading tag="h2">
-          <span css={[headingInitialLineHeight]}>Flowing </span>Stream of Thoughts,
-          <span>Ideas &</span>Opinions{' '}
-          <p css={tagLineStyles}>
+        <Heading as="h2">
+          Flowing Stream of Thoughts, Ideas & Opinions
+          <TagLine>
             or: How I learned to stop worrying and love the <strong>current</strong>.
-          </p>
+          </TagLine>
         </Heading>
         <ArticlesContainer>
           {articles.map((post) => (
@@ -119,7 +112,7 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
           ))}
         </ArticlesContainer>
       </HeroPostContainer>
-    </section>
+    </HeadingAndArticlesContainer>
   )
 }
 

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import Image from 'next/image'
 import { DateTime, Interval } from 'luxon'
 import Link from 'next/link'
@@ -59,7 +59,7 @@ function About() {
       </Section>
 
       <Section>
-        <Heading tag="h3">A Bit More...</Heading>
+        <Heading as="h3">A Bit More...</Heading>
         <Text>
           I live near Winchester, in the beautiful South Downs with my wife Louise and our tortoise called Olive.
         </Text>

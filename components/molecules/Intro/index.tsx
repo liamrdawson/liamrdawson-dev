@@ -1,5 +1,5 @@
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
+import { useTheme } from 'styled-components'
+import styled from 'styled-components'
 import { Callout } from '../../atoms/Callout/Callout'
 
 const StyledSection = styled.section`
@@ -18,7 +18,7 @@ const Introduction = () => {
   return (
     <StyledSection theme={theme}>
       <strong>Hey, I&apos;m Liam Dawson.</strong>
-      <Callout>
+      <Callout theme={theme}>
         <strong>I love building amazing websites and applicataions.</strong>
       </Callout>
       <p>

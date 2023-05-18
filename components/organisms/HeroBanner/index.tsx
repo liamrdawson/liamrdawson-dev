@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
+import { Heading } from '../../atoms/Heading'
 import { VideoPlayer } from '../../molecules/VideoPlayer'
-import { ITheme } from '../../Theme/theme'
 
 const BannerContainer = styled.div`
   min-height: 700px;
@@ -15,19 +14,19 @@ const BannerContainer = styled.div`
   justify-content: center;
 `
 
-const heroHeadingStyle = (theme: ITheme) => css`
-  color: ${theme.colour.secondary};
+const HeroHeading = styled(Heading)`
+  color: ${(props) => props.theme.colour.secondary};
+  font-family: ${(props) => props.theme.typography.heroFont.style.fontFamily};
+  font-weight: ${(props) => props.theme.typography.typeWeight.interBlack};
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   width: 75%;
   margin: 0 auto;
   font-style: italic;
-  font-family: ${theme.typography.heroFont.style.fontFamily};
-  font-weight: ${theme.typography.typeWeight.interBlack};
 `
 
-const iCreateStyles = css`
+const RowOne = styled.span`
   display: flex;
   flex-direction: row;
   font-size: clamp(50px, 8vw, 125px);
@@ -38,7 +37,7 @@ const iCreateStyles = css`
   }
 `
 
-const memorableStyles = css`
+const RowTwo = styled.span`
   margin: 0 auto;
   font-size: clamp(90px, 12vw, 188px);
   margin-top: 49;
@@ -46,7 +45,7 @@ const memorableStyles = css`
   width: 100%;
 `
 
-const experiencesStyles = css`
+const RowThree = styled.span`
   display: flex;
   flex-direction: row;
   font-size: clamp(50px, 8vw, 125px);
@@ -58,17 +57,17 @@ const experiencesStyles = css`
 
 export const HeroBanner = () => (
   <BannerContainer>
-    <h1 tabIndex={0} css={heroHeadingStyle}>
-      <span css={iCreateStyles}>
+    <HeroHeading tabIndex={0}>
+      <RowOne>
         <span>I create </span>
         <VideoPlayer src="/aboutVid.mp4" />
         <VideoPlayer src="/aboutVid.mp4" />
-      </span>
-      <span css={memorableStyles}>memorable</span>
-      <span css={experiencesStyles}>
+      </RowOne>
+      <RowTwo>memorable</RowTwo>
+      <RowThree>
         <VideoPlayer src="/aboutVid.mp4" />
         <span> experiences</span>
-      </span>
-    </h1>
+      </RowThree>
+    </HeroHeading>
   </BannerContainer>
 )

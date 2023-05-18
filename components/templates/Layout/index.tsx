@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { css, Global } from '@emotion/react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
 import grain from '../../../public/images/noise-1-small-3.jpg'
@@ -24,10 +23,6 @@ export const navigation = [
     path: '/contact',
   },
 ]
-
-const bodyStyles = css`
-  background-color: blue;
-`
 
 interface Props {
   children: ReactNode
@@ -57,7 +52,6 @@ function Layout({ children }: Props) {
       <Head>
         <title>Liam&apos;s Site</title>
       </Head>
-      <Global styles={bodyStyles} />
       <TextureWrapper>
         <Header navigation={navigation} />
         {children}

@@ -1,9 +1,7 @@
-import { SerializedStyles } from '@emotion/react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 interface Props {
   value: string
-  style?: string | SerializedStyles
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -21,6 +19,4 @@ const StyledPrimaryButton = styled.button`
   }
 `
 
-export const PrimaryButton = ({ value, style, onClick }: Props) => (
-  <StyledPrimaryButton value={value} css={style} onClick={onClick} />
-)
+export const PrimaryButton = ({ value, onClick }: Props) => <StyledPrimaryButton value={value} onClick={onClick} />

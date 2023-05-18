@@ -23,8 +23,6 @@
   "homepage": "https://github.com/liamrdawson/liamrdawson-dev#readme",
   "dependencies": {
     "@apollo/client": "^3.5.9",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^17.0.0",
     "@types/safe-json-stringify": "^1.1.2",
@@ -41,12 +39,13 @@
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "safe-json-stringify": "^1.2.0",
+    "styled-components": "^6.0.0-rc.1",
     "swr": "^1.1.1"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "^11.10.5",
     "@types/luxon": "^3.3.0",
     "@types/react": "^17.0.37",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.2.0",
