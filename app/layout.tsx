@@ -20,7 +20,7 @@ export default function RootLayout({
   // This will be populated with nested layouts or pages
   children,
 }: {
-  children: React.ReactNode
+  children: any
 }) {
   return (
     <ThemeProvider>

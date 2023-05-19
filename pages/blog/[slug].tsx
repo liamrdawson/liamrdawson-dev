@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import { useRouter } from 'next/navigation'
 import ErrorPage from 'next/error'
 import { remark } from 'remark'
 import html from 'remark-html'
@@ -16,7 +18,7 @@ type Props = {
 
 export default function Post({ post }: Props) {
   const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
+  if (!router && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return <article dangerouslySetInnerHTML={{ __html: post.content }} />
