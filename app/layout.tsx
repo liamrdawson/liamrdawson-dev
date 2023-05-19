@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { ThemeProvider } from './providers'
 
 /**
  *
@@ -22,11 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        <h1>Test</h1>
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <head />
+        <body>
+          <h1>Test</h1>
+          {children}
+        </body>
+      </html>
+    </ThemeProvider>
   )
 }
