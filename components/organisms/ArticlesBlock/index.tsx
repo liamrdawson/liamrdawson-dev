@@ -1,9 +1,10 @@
+import styled from 'styled-components'
+import React from 'react'
+import { nanoid } from 'nanoid'
 import { Heading } from '../../atoms/Heading'
 import { PostPreview } from '../../molecules/PostPreview'
 import type Post from '../../../types/post'
 import useHasMounted from '../../../utils/setHasMountedHook'
-import styled from 'styled-components'
-import React from 'react'
 
 type ArticlesInput = {
   articles: Post[]
@@ -74,17 +75,6 @@ const Divider = styled.div`
 
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
   const hasMounted = useHasMounted()
-  const getViewPortWidth = (): number | null => {
-    if (typeof window !== undefined) {
-      return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    }
-    return null
-  }
-
-  const getIsHeroPost = (index: number) => {
-    const vw = getViewPortWidth()
-    return vw && vw > 820 ? index === 0 : false
-  }
 
   if (!hasMounted) {
     return null
@@ -100,10 +90,10 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
           </TagLine>
         </Heading>
         <ArticlesContainer>
-          {articles.map((post, index) => (
-            <React.Fragment key={index}>
+          {articles.map((post) => (
+            <React.Fragment key={nanoid()}>
               <Divider />
-              <PostPreview showHeroPost={true} isHeroPost={getIsHeroPost(articles.indexOf(post))} post={post} />
+              <PostPreview post={post} />
             </React.Fragment>
           ))}
         </ArticlesContainer>

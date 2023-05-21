@@ -1,12 +1,14 @@
+'use client'
+
 import styled from 'styled-components'
 import Image from 'next/image'
 import { DateTime, Interval } from 'luxon'
 import Link from 'next/link'
-import aboutMePic from '../assets/about-image-1.jpg'
-import photo1 from '../assets/about-image-2.jpg'
-import photo2 from '../assets/about-image-3.jpg'
-import { Heading } from '../components/atoms/Heading'
-import { Callout } from '../components/atoms/Callout/Callout'
+import aboutMePic from '../../assets/about-image-1.jpg'
+import photo1 from '../../assets/about-image-2.jpg'
+import photo2 from '../../assets/about-image-3.jpg'
+import { Heading } from '../../components/atoms/Heading'
+import { Callout } from '../../components/atoms/Callout/Callout'
 
 const ImageContainer = styled.div`
   height: 500px;

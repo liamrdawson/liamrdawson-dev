@@ -2,24 +2,36 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import Post from '../types/post'
+import Author from '../types/author'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory)
 }
+type Items = {
+  slug: string
+  title?: string
+  date: string
+  author?: Author
+  content?: string
+  ogImage?: {
+    url: string
+  }
+  coverImage?: string
+  excerpt?: string
+}
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getPostBySlug(slug: string, fields: string[] = []): Items {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  type Items = {
-    [key: string]: string
+  const items: Items = {
+    slug: '',
+    date: '',
   }
-
-  const items: Items = {}
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {

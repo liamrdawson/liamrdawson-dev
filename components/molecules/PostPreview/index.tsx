@@ -1,13 +1,11 @@
 import Link from 'next/link'
-import styled, { useTheme } from 'styled-components'
+import styled from 'styled-components'
 import Image from 'next/image'
 import type PostType from '../../../types/post'
 import { Heading } from '../../atoms/Heading'
 
 type PostPreviewInput = {
   post: PostType
-  showHeroPost: boolean
-  isHeroPost?: boolean
 }
 
 const Article = styled.article`
@@ -33,9 +31,6 @@ const ImageContainer = styled.div`
     object-fit: cover;
   }
 `
-function truncate(str: string, n: number) {
-  return str.length > n ? str.slice(0, n - 1) + '&hellip;' : str
-}
 
 const PostPreviewHeading = styled(Heading)`
   margin-top: 0;
@@ -62,15 +57,13 @@ const PostDescription = styled.div`
   margin-left: ${(props) => props.theme.SPACING[8]};
 `
 
-export const PostPreview = ({ post, isHeroPost, showHeroPost }: PostPreviewInput) => {
-  const theme = useTheme()
-  // const truncatedContent = truncate(post.htmlContent, 2000)
+export function PostPreview({ post }: PostPreviewInput) {
   return (
-    <StyledLink href={`blog/${post.slug}`} passHref>
+    <StyledLink href={`articles/${post.slug}`} passHref>
       <Article>
         <HeadingContainer>
           <ImageContainer>
-            <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />
+            {post.coverImage && <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />}
           </ImageContainer>
           <PostDescription>
             <PostPreviewHeading as="h3">{post.title}</PostPreviewHeading>

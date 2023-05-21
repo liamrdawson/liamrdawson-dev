@@ -27,7 +27,7 @@ export const navigation = [
   },
   {
     name: 'Articles',
-    path: '/articles',
+    path: '/artiles',
   },
   {
     name: 'Contact',
