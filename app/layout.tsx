@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { ThemeProvider } from './providers'
+import Header from '../components/organisms/Header'
 
 /**
  *
@@ -15,6 +16,25 @@ export const metadata: Metadata = {
   description: 'Welcome to Next.js',
 }
 
+export const navigation = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'About',
+    path: '/about',
+  },
+  {
+    name: 'Articles',
+    path: '/articles',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+  },
+]
+
 export default function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
@@ -27,7 +47,7 @@ export default function RootLayout({
       <html lang="en">
         <head />
         <body>
-          <h1>Test</h1>
+          <Header navigation={navigation} />
           {children}
         </body>
       </html>

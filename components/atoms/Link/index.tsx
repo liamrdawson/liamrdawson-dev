@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useTheme } from 'styled-components'
 import styled from 'styled-components'
 
 interface LinkAtomProps {
@@ -18,15 +17,12 @@ const StyledSpan = styled.span`
   }
 `
 
-const LinkAtom = ({ path, name }: LinkAtomProps) => {
-  const theme = useTheme()
-  return (
-    <StyledSpan theme={theme}>
-      <Link href={path} passHref>
-        {name}
-      </Link>
-    </StyledSpan>
-  )
-}
+const LinkAtom = ({ path, name }: LinkAtomProps) => (
+  <StyledSpan>
+    <Link href={path} passHref>
+      {name}
+    </Link>
+  </StyledSpan>
+)
 
 export default LinkAtom
