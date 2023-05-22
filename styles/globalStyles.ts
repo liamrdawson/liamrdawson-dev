@@ -1,4 +1,3 @@
-import { theme } from '../components/Theme/theme'
 import { createGlobalStyle } from 'styled-components'
 
 export const Global = createGlobalStyle`
@@ -21,8 +20,8 @@ export const Global = createGlobalStyle`
         margin: 0 auto;
       }
       body {
-        color: ${theme.colour.text};
-        background: ${theme.colour.background};
+        color: ${(props) => props.theme.colour.text};
+        background: ${(props) => props.theme.colour.background};
         font-family: Jost, Arial, sans-serif;
         max-width: 100%;
       }
