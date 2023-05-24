@@ -1,7 +1,7 @@
 ---
 title: 'Nullish Coalescing'
 excerpt: 'Nullish coalescing (`??`) can be a tricky operator to get your head around, here I take a look at what it does and how it differs from the logical OR operator.'
-coverImage: '/images/astronaut.avif'
+coverImage: '/assets/images/astronaut.avif'
 date: '2022-11-29T22:17:46.950Z'
 author:
   name: 'Liam Dawson'
