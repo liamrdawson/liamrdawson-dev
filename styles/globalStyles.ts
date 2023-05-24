@@ -1,7 +1,49 @@
 import { createGlobalStyle } from 'styled-components'
+import theme from './theme'
 
 export const Global = createGlobalStyle`
+      ${theme}
+
+      :root {
+
+        @media only screen and (min-width: 1280px) {
+            :root {
+                --font-size-small:var(--font-text-body-sm-desktop-font-size);
+                --font-size-body: var(--font-text-body-base-desktop-font-size);
+                --font-size-large: var(--font-text-body-lg-desktop-font-size);
+            }
+        }
+
+        @media only screen and (min-width: 1920px) {
+            :root {
+                --rem-base:0.5vw;
+            }
+        }
+
+        @media only screen and (min-width: 480px) {
+            :root {
+                --font-size-h1:var(--font-text-heading-xxl-portrait-font-size);
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            :root {
+                --font-size-h1:var(--font-text-heading-xxl-desktop-font-size);
+            }
+        }
+
+        @media only screen and (min-width: 1280px) {
+            :root {
+                --font-size-h2:var(--font-text-heading-xl-desktop-font-size);
+                --font-size-h3: var(--font-text-heading-lg-desktop-font-size);
+                --font-size-h4: var(--font-text-heading-md-desktop-font-size);
+                --font-size-h5: var(--font-text-heading-sm-desktop-font-size);
+                --font-size-h6: var(--font-text-heading-xs-desktop-font-size);
+            }
+        }
+      }
       html {
+        --tester: red;
         height: 100%;
         margin: 0;
         font-size: 14px;

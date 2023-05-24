@@ -37,6 +37,7 @@ const PostPreviewHeading = styled(Heading)`
   font-family: ${(props) => props.theme.typography.primaryFont};
   font-size: ${(props) => props.theme.typography.typeScale._500};
   font-weight: ${(props) => props.theme.typography.typeWeight.black};
+  border: var(--testing) solid 1px;
 `
 
 const HeadingContainer = styled.div`
