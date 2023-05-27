@@ -1,6 +1,3 @@
-import { css } from 'styled-components'
-
-const palette = css`
   :root {
     /*    COLOUR
     ======================================================*/
@@ -71,7 +68,9 @@ const palette = css`
     /*    TYPOGRAPHY
     ======================================================*/
 
-    --ds-font-family-sctogroteska: SctoGroteskA;
+    --ds-font-family-inter: ${inter.style.fontFamily};
+    --ds-font-family-jost: ${jost.style.fontFamily};
+
     --ds-font-family-body: 'SctoGroteskA', sans-serif;
     --ds-font-weight-regular: 300;
     --ds-font-weight-medium: 400;
@@ -92,6 +91,3 @@ const palette = css`
     --ds-size-font-8xl: 4.6rem;
     --ds-size-font-9xl: 6.25vw;
   }
-`
-
-export default palette

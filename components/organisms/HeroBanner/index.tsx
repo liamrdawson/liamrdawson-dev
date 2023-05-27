@@ -7,7 +7,7 @@ const BannerContainer = styled.div`
   min-height: 700px;
   height: 90vh;
   width: 100%;
-  background: ${(props) => props.theme.colour.primary};
+  background: var(--color-background-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,9 +15,9 @@ const BannerContainer = styled.div`
 `
 
 const HeroHeading = styled(Heading)`
-  color: ${(props) => props.theme.colour.secondary};
-  font-family: ${(props) => props.theme.typography.heroFont.style.fontFamily};
-  font-weight: ${(props) => props.theme.typography.typeWeight.interBlack};
+  color: var(--color-text-inverse-base);
+  font-family: var(--font-family-hero);
+  font-weight: var(--font-weight-hero);
   text-transform: uppercase;
   display: flex;
   flex-direction: column;

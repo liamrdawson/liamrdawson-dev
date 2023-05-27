@@ -23,6 +23,10 @@
     "plugins": [
       {
         "name": "next"
+      },
+      {
+        "name": "@styled/typescript-styled-plugin",
+        "tags": ["styled", "css", "sty"]
       }
     ]
   },
