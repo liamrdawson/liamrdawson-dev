@@ -12,16 +12,16 @@ type ArticlesInput = {
 
 const HeadingAndArticlesContainer = styled.section`
   @media (min-width: 820px) {
-    margin: 0 ${(props) => props.theme.LAYOUT[1]};
+    margin: 0 var(--page-section);
   }
   display: flex;
   flex-direction: column;
   position: relative;
   h2 {
-    font-family: ${(props) => props.theme.typography.secondaryFont};
+    font-family: var(--font-family-header);
     text-transform: uppercase;
     margin-top: 0;
-    font-size: ${(props) => props.theme.typography.typeScale._700};
+    font-size: var(--font-size-h2);
     margin-bottom: ${(props) => props.theme.LAYOUT[5]};
   }
 `

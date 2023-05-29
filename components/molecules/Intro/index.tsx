@@ -3,9 +3,8 @@ import { Callout } from '../../atoms/Callout/Callout'
 
 const StyledSection = styled.section`
   color: var(--color-text-inverse-secondary);
-  font-size: 1rem;
   text-align: center;
-  margin: ${(props) => props.theme.LAYOUT[20]} auto;
+  margin: var(--page-section) auto;
   max-width: 800px;
   p {
     line-height: 2.5;
