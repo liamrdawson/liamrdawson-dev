@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function markdownToHtml(markdown: string) {
+async function markdownToHtml(markdown: string) {
   const result = await remark().use(html).process(markdown)
   return result.toString()
 }

@@ -9,7 +9,7 @@ interface IItem {
 interface Props {
   items: IItem[]
   clicker: React.MouseEventHandler<HTMLButtonElement>
-  activeItem: IItem | undefined
+  activeItem?: IItem
 }
 
 const ItemsContainer = styled.div`
@@ -31,18 +31,19 @@ type GetIsActiveItemProps = {
   item: IItem
 }
 
-export const MenuItems = ({ items, clicker, activeItem }: Props) => {
-  const getIsActiveItem = ({ activeItem, item }: GetIsActiveItemProps) => activeItem && item.name === activeItem.name
-  return (
-    <ItemsContainer>
-      {items.map((item) => (
-        <MenuItemButton
-          isActiveItem={getIsActiveItem({ activeItem, item }) || false}
-          onClick={clicker}
-          value={item.name}
-          key={items.indexOf(item)}
-        />
-      ))}
-    </ItemsContainer>
-  )
+function getIsActiveItem({ activeItem, item }: GetIsActiveItemProps) {
+  return activeItem && item.name === activeItem.name
 }
+
+export const MenuItems = ({ items, clicker, activeItem }: Props) => (
+  <ItemsContainer>
+    {items.map((item) => (
+      <MenuItemButton
+        isActiveItem={getIsActiveItem({ activeItem, item }) || false}
+        onClick={clicker}
+        value={item.name}
+        key={items.indexOf(item)}
+      />
+    ))}
+  </ItemsContainer>
+)

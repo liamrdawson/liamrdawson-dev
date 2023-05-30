@@ -1,5 +1,5 @@
-import useHasMounted from '../../../utils/setHasMountedHook'
 import styled from 'styled-components'
+import useHasMounted from '../../../utils/setHasMountedHook'
 
 const StyledFooter = styled.footer`
   height: 100vh;
