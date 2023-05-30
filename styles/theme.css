@@ -1,4 +1,4 @@
-@use './palette.scss';
+@import './palette.css';
 
 :root {
   --color-border-base: var(--ds-color-brand-primary-black);

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import './theme.scss'
+import './theme.css'
 
 import { Jost, Inter } from 'next/font/google'
 
