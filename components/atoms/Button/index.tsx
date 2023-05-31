@@ -6,8 +6,8 @@ interface Props {
 }
 
 const StyledPrimaryButton = styled.button`
-  font-family: ${(props) => props.theme.typography.primaryFont};
-  color: ${(props) => props.theme.colour.tertiary};
+  font-family: var(--font-family-primary);
+  color: var(--color-border-button-primary-base);
   font-size: 1rem;
   font-weight: 600;
   background: none;

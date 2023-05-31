@@ -32,11 +32,11 @@ const ImageRow = styled.div`
 `
 
 const Text = styled.p`
-  margin: ${(props) => props.theme.SPACING[10]} 0;
+  margin-top: var(--page-paragraph);
 `
 
 const Section = styled.section`
-  margin: ${(props) => props.theme.LAYOUT[4]} 0;
+  margin-top: var(--page-section);
 `
 
 function About() {

@@ -42,8 +42,12 @@
   /*    SPACING
     ======================================================*/
 
+  --ds-size-grid-gutter-mobile: 1.6rem;
+  --ds-size-grid-gutter-desktop: 2rem;
+
   --ds-size-grid-padding-mobile: 5.4vw;
   --ds-size-grid-padding-desktop: 8rem;
+
   --ds-size-spacing-section-fixed-sm: 6rem;
   --ds-size-spacing-section-fixed-md: 8rem;
   --ds-size-spacing-section-fixed-lg: 14rem;
@@ -53,6 +57,10 @@
   --ds-size-spacing-section-variable-md: 10.4vw;
   --ds-size-spacing-section-variable-lg: 12.5vw;
   --ds-size-spacing-section-variable-xl: 18.2vw;
+
+  --ds-size-spacig-nav-sm-desktop: 6rem;
+
+  --ds-size-spacing-paragraph-sm-desktop: 3.8rem;
 
   --ds-size-spacing-section-intro-sm-mobile: 6rem;
   --ds-size-spacing-section-intro-sm-desktop: 4.1vw;

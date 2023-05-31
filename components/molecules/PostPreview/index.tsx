@@ -9,15 +9,10 @@ type PostPreviewInput = {
 }
 
 const Article = styled.article`
-  color: var(--red);
   background: none;
-  color: ${(props) => props.theme.colour.tertiary};
 `
 
 const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colour.primary};
-  margin-top: ${(props) => props.theme.SPACING[6]};
-  margin-bottom: ${(props) => props.theme.LAYOUT[10]};
   text-decoration: none;
   outline: none;
 `
@@ -26,6 +21,7 @@ const ImageContainer = styled.div`
   height: 400px;
   aspect-ratio: 7/5;
   position: relative;
+  margin-right: var(--grid-gutter);
   img {
     object-position: 0 40%;
     object-fit: cover;
@@ -34,10 +30,7 @@ const ImageContainer = styled.div`
 
 const PostPreviewHeading = styled(Heading)`
   margin-top: 0;
-  font-family: ${(props) => props.theme.typography.primaryFont};
-  font-size: ${(props) => props.theme.typography.typeScale._500};
-  font-weight: ${(props) => props.theme.typography.typeWeight.black};
-  border: var(--testing) solid 1px;
+  font-family: var(--font-family-primary);
 `
 
 const HeadingContainer = styled.div`
@@ -45,17 +38,16 @@ const HeadingContainer = styled.div`
   display: flex;
   align-items: flex-end;
   flex-direction: row;
-  padding: ${(props) => props.theme.SPACING[3]};
   width: 100%;
   h3 {
     margin-bottom: 0;
-    color: ${(props) => props.theme.colour.tertiary};
+    color: var(--color-text-inverse-secondary);
   }
 `
 
 const PostDescription = styled.div`
   flex-grow: 1;
-  margin-left: ${(props) => props.theme.SPACING[8]};
+  color: var(--color-text-inverse-secondary);
 `
 
 export function PostPreview({ post }: PostPreviewInput) {

@@ -14,12 +14,12 @@ interface Props {
 
 const StyledHeader = styled.header`
   width: 100%;
-  background-color: ${(props) => props.theme.colour.primary};
+  background-color: var(--color-background-primary);
   overflow: hidden;
   nav {
-    color: ${(props) => props.theme.colour.background};
+    color: var(--color-text-inverse-base);
     width: 30%;
-    margin: ${(props) => props.theme.SPACING[9]} auto ${(props) => props.theme.LAYOUT[5]};
+    margin: 0 auto;
   }
 `
 

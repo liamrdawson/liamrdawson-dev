@@ -8,8 +8,8 @@ interface LinkAtomProps {
 
 const StyledSpan = styled.span`
   a {
-    color: ${(props) => props.theme.colour.background};
-    font-family: ${(props) => props.theme.typography.primaryFont};
+    color: var(--color-text-inverse-base);
+    font-family: var(--font-family-primary);
     text-decoration: none;
     &:hover {
       text-decoration: underline;

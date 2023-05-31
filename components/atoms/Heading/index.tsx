@@ -9,4 +9,5 @@ export const Heading = styled.span<NewHeadingProps>`
   margin: 3rem 0 1.38rem;
   line-height: 1.3;
   font-size: ${({ as }) => `var(--font-size-${as ?? 'h1'})`};
+  font-weight: ${({ as }) => `var(--font-weight-${as ?? 'h1'})`};
 `

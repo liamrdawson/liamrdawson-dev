@@ -36,8 +36,8 @@ export const Global = createGlobalStyle`
         margin: 0 auto;
       }
       body {
-        color: ${(props) => props.theme.colour.text};
-        background: ${(props) => props.theme.colour.background};
+        color: var(--color-text-base);
+        background: var(--color-background-inverse);
         font-family: Jost, Arial, sans-serif;
         max-width: 100%;
       }

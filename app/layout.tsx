@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
+import Footer from '@/components/organisms/Footer'
+import Header from '@/components/organisms/Header'
 import { ThemeProvider } from './providers'
-import Header from '../components/organisms/Header'
+import StyledComponentsRegistry from '../lib/registry'
 
 export const metadata: Metadata = {
-  title: 'My Fancy Page',
+  title: 'Create Connections',
   description: 'Welcome to Next.js',
 }
 
@@ -18,7 +20,7 @@ export const navigation = [
   },
   {
     name: 'Articles',
-    path: '/artiles',
+    path: '/articles',
   },
   {
     name: 'Contact',
@@ -32,8 +34,11 @@ export default function RootLayout({ children }: { children: any }) {
       <html lang="en">
         <head />
         <body>
-          <Header navigation={navigation} />
-          {children}
+          <StyledComponentsRegistry>
+            <Header navigation={navigation} />
+            {children}
+            <Footer />
+          </StyledComponentsRegistry>
         </body>
       </html>
     </ThemeProvider>

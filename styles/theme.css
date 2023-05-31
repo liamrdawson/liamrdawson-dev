@@ -30,6 +30,8 @@
   --color-text-footer-inverse: var(--ds-color-brand-primary-black);
   --color-text-footer-copyright: var(--ds-color-base-grey-400);
   --color-background-primary: var(--ds-color-brand-primary-black);
+  --color-background-inverse: var(--ds-color-brand-primary-grey);
+  --color-background-secondary: var(--ds-color-brand-secondary-red);
 
   --layout-z-index-z-neg-3: -300;
   --layout-z-index-z-neg-2: -200;
@@ -141,7 +143,7 @@
   --font-weight-hero: var(--ds-font-weight-bold);
   --font-weight-h1: var(--ds-font-weight-bold);
   --font-weight-h2: var(--ds-font-weight-bold);
-  --font-weight-h3: var(--ds-font-weight-medium);
+  --font-weight-h3: var(--ds-font-weight-bold);
   --font-weight-h4: var(--ds-font-weight-bold);
   --font-weight-h5: var(--ds-font-weight-bold);
   --font-weight-h6: var(--ds-font-weight-medium);
@@ -157,8 +159,15 @@
   --font-size-h5: var(--ds-font-text-heading-sm-mobile-font-size);
   --font-size-h6: var(--ds-font-text-heading-xs-mobile-font-size);
 
+  --grid-gutter: var(--ds-size-grid-gutter-mobile);
+
+  --nav: var(--ds-size-spacig-nav-sm-desktop);
+
+  --page-paragraph: var(--ds-size-spacing-paragraph-sm-desktop);
+
   --page-intro-small: var(--ds-size-spacing-section-intro-sm-mobile);
   --page-intro-large: var(--ds-size-spacing-section-intro-lg-mobile);
+
   --page-section: var(--ds-size-spacing-section-page-mobile);
 
   --blog-section: var(--ds-size-spacing-section-blog-mobile);
@@ -178,6 +187,7 @@
 
 @media only screen and (min-width: 1280px) {
   :root {
+    --grid-gutter: var(--ds-size-grid-gutter-desktop);
     --page-intro-small: var(--ds-size-spacing-section-intro-sm-desktop);
     --page-intro-large: var(--ds-size-spacing-section-intro-lg-desktop);
     --page-section: var(--ds-size-spacing-section-page-desktop);

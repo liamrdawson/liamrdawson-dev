@@ -1,33 +1,28 @@
+'use client'
+
 import styled from 'styled-components'
-import useHasMounted from '../../../utils/setHasMountedHook'
 
 const StyledFooter = styled.footer`
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${(props) => props.theme.colour.tertiary};
-  color: ${(props) => props.theme.colour.secondary};
-  margin: ${(props) => props.theme.LAYOUT[10]} auto 0;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-inverse-base);
+  margin: var(--grid-gutter) auto 0;
   a {
     text-decoration: none;
     text-align: center;
-    color: ${(props) => props.theme.colour.secondary};
+    color: var(--color-text-inverse-base);
   }
   p {
-    font-size: ${(props) => props.theme.typography.typeScale._050};
+    font-size: var(--font-size-small);
     height: 16px;
     text-align: center;
   }
 `
 
-const Footer: React.FunctionComponent = () => {
-  const hasMounted = useHasMounted()
-
-  if (!hasMounted) {
-    return null
-  }
-
+const Footer = () => {
   const date = new Date().getFullYear()
   return (
     <StyledFooter>

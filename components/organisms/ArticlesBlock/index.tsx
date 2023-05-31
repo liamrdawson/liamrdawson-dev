@@ -22,31 +22,18 @@ const HeadingAndArticlesContainer = styled.section`
     text-transform: uppercase;
     margin-top: 0;
     font-size: var(--font-size-h2);
-    margin-bottom: ${(props) => props.theme.LAYOUT[5]};
   }
 `
 
 const TagLine = styled.p`
-  font-size: ${(props) => props.theme.typography.typeScale._400};
+  font-size: var(--font-size-small);
   font-weight: 400;
   text-transform: none;
 `
 
-const HeroPostContainer = styled.div`
-  @media (min-width: 820) {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    column-gap: ${(props) => props.theme.SPACING[10]};
-  }
-  div {
-    overflow: hidden;
-  }
-`
-
 const ArticlesContainer = styled.div`
   display: flex;
-  row-gap: ${(props) => props.theme.SPACING[5]};
+  row-gap: var(--grid-gutter);
   flex-direction: column;
   justify-content: space-between;
 
@@ -70,7 +57,7 @@ const ArticlesContainer = styled.div`
 `
 
 const Divider = styled.div`
-  border: ${(props) => props.theme.colour.tertiary} 1px solid;
+  border: var(--color-border-tertiary) 1px solid;
 `
 
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
@@ -82,22 +69,20 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
 
   return (
     <HeadingAndArticlesContainer>
-      <HeroPostContainer>
-        <Heading as="h2">
-          Flowing Stream of Thoughts, Ideas & Opinions
-          <TagLine>
-            or: How I learned to stop worrying and love the <strong>current</strong>.
-          </TagLine>
-        </Heading>
-        <ArticlesContainer>
-          {articles.map((post) => (
-            <React.Fragment key={nanoid()}>
-              <Divider />
-              <PostPreview post={post} />
-            </React.Fragment>
-          ))}
-        </ArticlesContainer>
-      </HeroPostContainer>
+      <Heading as="h2">
+        Flowing Stream of Thoughts, Ideas & Opinions
+        <TagLine>
+          or: How I learned to stop worrying and love the <strong>current</strong>.
+        </TagLine>
+      </Heading>
+      <ArticlesContainer>
+        {articles.map((post) => (
+          <React.Fragment key={nanoid()}>
+            <Divider />
+            <PostPreview post={post} />
+          </React.Fragment>
+        ))}
+      </ArticlesContainer>
     </HeadingAndArticlesContainer>
   )
 }

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Callout = styled.p`
-  color: ${(props) => props.theme.colour.secondary};
-  background-color: ${(props) => props.theme.colour.tertiary};
-  padding: ${(props) => props.theme.SPACING[6]};
-  margin: ${(props) => props.theme.SPACING[10]} 0;
+  color: var(--color-text-inverse-base);
+  background-color: var(--color-background-secondary);
+  padding: 0 var(--page-section);
+  margin-top: var(--page-paragraph);
 `
