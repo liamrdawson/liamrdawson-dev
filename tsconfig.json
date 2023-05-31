@@ -3,7 +3,9 @@
     "baseUrl": ".",
     // Using "paths" allows you to configure module path aliases
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": [
+        "components/*"
+      ]
     },
     "target": "es5", //* Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
     "lib": [
@@ -31,11 +33,18 @@
       },
       {
         "name": "@styled/typescript-styled-plugin",
-        "tags": ["styled", "css", "sty"]
+        "tags": [
+          "styled",
+          "css",
+          "sty"
+        ]
       }
-    ]
+    ],
+    "incremental": true
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "next-env.d.ts",
     "custom.d.ts",
