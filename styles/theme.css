@@ -1,6 +1,7 @@
-@import './palette.css';
+@import './paletteStyles';
 
 :root {
+  /** UI Colour */
   --color-border-base: var(--ds-color-brand-primary-black);
   --color-border-secondary: var(--ds-color-brand-primary-white);
   --color-border-tertiary: var(--ds-color-brand-secondary-red);
@@ -14,6 +15,7 @@
   --color-border-button-tertiary-active: var(--ds-color-opaque-grey-800-high);
   --color-border-button-tertiary-disabled: var(--ds-color-opaque-grey-800-low);
 
+  /** Text Colour */
   --color-text-base: var(--ds-color-brand-primary-black);
   --color-text-inverse-base: var(--ds-color-brand-primary-grey);
   --color-text-inverse-secondary: var(--ds-color-brand-secondary-red);
@@ -48,6 +50,7 @@
   --layout-z-index-z-9: 900;
   --layout-z-index-z-10: 1000;
 
+  /** Animation Timing */
   --time-transition-100: 0.1s;
   --time-transition-125: 0.13s;
   --time-transition-150: 0.15s;
@@ -74,9 +77,9 @@
   --time-delay-initial: 0.5s;
   --time-delay-none: 0s;
 
-  --rem-base: 62.5%;
-
   --size-line-height-base: 1.6rem;
+
+  /** Typography */
 
   --size-line-height-mobile-xs: 1.2rem;
   --size-line-height-mobile-small: 1.6rem;
@@ -159,7 +162,10 @@
   --font-size-h5: var(--ds-font-text-heading-sm-mobile-font-size);
   --font-size-h6: var(--ds-font-text-heading-xs-mobile-font-size);
 
+  /** Spacing */
+
   --grid-gutter: var(--ds-size-grid-gutter-mobile);
+  --grid-padding: var(--ds-size-grid-padding-mobile);
 
   --nav: var(--ds-size-spacig-nav-sm-desktop);
 
@@ -187,7 +193,9 @@
 
 @media only screen and (min-width: 1280px) {
   :root {
+    /** Spacing */
     --grid-gutter: var(--ds-size-grid-gutter-desktop);
+    --grid-padding: var(--ds-size-grid-padding-desktop);
     --page-intro-small: var(--ds-size-spacing-section-intro-sm-desktop);
     --page-intro-large: var(--ds-size-spacing-section-intro-lg-desktop);
     --page-section: var(--ds-size-spacing-section-page-desktop);
@@ -200,14 +208,16 @@
     --caseStudy-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --service-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --industry-meta-bar: var(--ds-size-spacing-metabar-desktop);
-    --font-size-small: var(--font-text-body-sm-desktop-font-size);
-    --font-size-body: var(--font-text-body-base-desktop-font-size);
-    --font-size-large: var(--font-text-body-lg-desktop-font-size);
-    --font-size-h2: var(--font-text-heading-xl-desktop-font-size);
-    --font-size-h3: var(--font-text-heading-lg-desktop-font-size);
-    --font-size-h4: var(--font-text-heading-md-desktop-font-size);
-    --font-size-h5: var(--font-text-heading-sm-desktop-font-size);
-    --font-size-h6: var(--font-text-heading-xs-desktop-font-size);
+
+    /** Font Size */
+    --font-size-small: var(--ds-font-text-body-sm-desktop-font-size);
+    --font-size-body: var(--ds-font-text-body-base-desktop-font-size);
+    --font-size-large: var(--ds-font-text-body-lg-desktop-font-size);
+    --font-size-h2: var(--ds-font-text-heading-xl-desktop-font-size);
+    --font-size-h3: var(--ds-font-text-heading-md-desktop-font-size);
+    --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
+    --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);
+    --font-size-h6: var(--ds-font-text-heading-xs-desktop-font-size);
   }
 
   @media only screen and (min-width: 1920px) {

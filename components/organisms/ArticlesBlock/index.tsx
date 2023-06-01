@@ -26,7 +26,7 @@ const HeadingAndArticlesContainer = styled.section`
 `
 
 const TagLine = styled.p`
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-large);
   font-weight: 400;
   text-transform: none;
 `

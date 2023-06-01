@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const Global = createGlobalStyle`
       :root {
-        --font-family-hero: ${jost.style.fontFamily};
-        --font-family-header: ${inter.style.fontFamily};
+        --font-family-hero: ${inter.style.fontFamily};
+        --font-family-header: ${jost.style.fontFamily};
         --font-family-header: Didot, serif;
       }
       html {

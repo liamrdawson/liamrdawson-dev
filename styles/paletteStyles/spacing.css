@@ -1,0 +1,35 @@
+:root {
+  /** Base Units */
+
+  --ds-size-spacing-section-fixed-sm: 6rem;
+  --ds-size-spacing-section-fixed-md: 8rem;
+  --ds-size-spacing-section-fixed-lg: 14rem;
+  --ds-size-spacing-section-variable-xs: 4.1vw;
+  --ds-size-spacing-section-variable-sm: 7.8vw;
+  --ds-size-spacing-section-variable-md: 10.4vw;
+  --ds-size-spacing-section-variable-lg: 12.5vw;
+  --ds-size-spacing-section-variable-xl: 18.2vw;
+
+  --ds-size-grid-gutter-mobile: 0.6rem;
+  --ds-size-grid-gutter-desktop: 1rem;
+
+  --ds-size-grid-padding-mobile: 4.4vw;
+  --ds-size-grid-padding-desktop: 7rem;
+
+  /** UI Spacing */
+
+  --ds-size-spacig-nav-sm-desktop: var(--ds-size-spacing-section-fixed-sm);
+
+  --ds-size-spacing-paragraph-sm-desktop: 2.8rem;
+
+  --ds-size-spacing-section-intro-sm-mobile: var(--ds-size-spacing-section-fixed-sm);
+  --ds-size-spacing-section-intro-sm-desktop: var(--ds-size-spacing-section-variable-xs);
+  --ds-size-spacing-section-intro-lg-mobile: var(--ds-size-spacing-section-fixed-sm);
+  --ds-size-spacing-section-intro-lg-desktop: var(--ds-size-spacing-section-variable-sm);
+
+  --ds-size-spacing-section-page-mobile: var(--ds-size-spacing-section-variable-lg);
+  --ds-size-spacing-section-page-desktop: var(--ds-size-spacing-section-variable-lg);
+
+  --ds-size-spacing-section-blog-mobile: var(--ds-size-spacing-section-variable-md);
+  --ds-size-spacing-section-blog-desktop: var(--ds-size-spacing-section-variable-md);
+}

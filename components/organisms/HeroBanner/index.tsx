@@ -60,12 +60,12 @@ export const HeroBanner = () => (
     <HeroHeading tabIndex={0}>
       <RowOne>
         <span>I create </span>
-        <VideoPlayer src="/aboutVid.mp4" />
-        <VideoPlayer src="/aboutVid.mp4" />
+        <VideoPlayer src="/assets/images/aboutVid.mp4" />
+        <VideoPlayer src="/assets/images/aboutVid.mp4" />
       </RowOne>
       <RowTwo>memorable</RowTwo>
       <RowThree>
-        <VideoPlayer src="/aboutVid.mp4" />
+        <VideoPlayer src="/assets/images/aboutVid.mp4" />
         <span> experiences</span>
       </RowThree>
     </HeroHeading>
