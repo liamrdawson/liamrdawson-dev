@@ -18,8 +18,10 @@ const StyledLink = styled(Link)`
 `
 
 const ImageContainer = styled.div`
-  height: 400px;
   aspect-ratio: 7/5;
+  width: 200px;
+  /** Move away from using a grid system and start using css grid */
+  /* width: calc(((100vw + var(--grid-gutter) - var(--grid-padding) * 2) / 6 * 2) - var(--grid-gutter)); */
   position: relative;
   margin-right: var(--grid-gutter);
   img {
