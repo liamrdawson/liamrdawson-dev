@@ -123,26 +123,6 @@
   --letter-spacing-h5: -0.02em;
   --letter-spacing-h6: -0.02em;
 
-  --ds-font-text-body-sm-mobile-font-size: var(--ds-size-font-xxs);
-  --ds-font-text-body-sm-desktop-font-size: var(--ds-size-font-xs);
-  --ds-font-text-body-base-mobile-font-size: var(--ds-size-font-xs);
-  --ds-font-text-body-base-desktop-font-size: var(--ds-size-font-md);
-  --ds-font-text-body-lg-mobile-font-size: var(--ds-size-font-md);
-  --ds-font-text-body-lg-desktop-font-size: var(--ds-size-font-xl);
-  --ds-font-text-heading-xs-mobile-font-size: var(--ds-size-font-sm);
-  --ds-font-text-heading-xs-desktop-font-size: var(--ds-size-font-xl);
-  --ds-font-text-heading-sm-mobile-font-size: var(--ds-size-font-md);
-  --ds-font-text-heading-sm-desktop-font-size: var(--ds-size-font-xl);
-  --ds-font-text-heading-md-mobile-font-size: var(--ds-size-font-lg);
-  --ds-font-text-heading-md-desktop-font-size: var(--ds-size-font-3xl);
-  --ds-font-text-heading-lg-mobile-font-size: var(--ds-size-font-xl);
-  --ds-font-text-heading-lg-desktop-font-size: var(--ds-size-font-5xl);
-  --ds-font-text-heading-xl-mobile-font-size: var(--ds-size-font-xxl);
-  --ds-font-text-heading-xl-desktop-font-size: var(--ds-size-font-7xl);
-  --ds-font-text-heading-xxl-mobile-font-size: var(--ds-size-font-6xl);
-  --ds-font-text-heading-xxl-portrait-font-size: var(--ds-size-font-8xl);
-  --ds-font-text-heading-xxl-desktop-font-size: var(--ds-size-font-9xl);
-
   --font-weight-hero: var(--ds-font-weight-bold);
   --font-weight-h1: var(--ds-font-weight-bold);
   --font-weight-h2: var(--ds-font-weight-bold);
@@ -155,7 +135,7 @@
   --font-size-body: var(--ds-font-text-body-base-mobile-font-size);
   --font-size-large: var(--ds-font-text-body-lg-mobile-font-size);
 
-  --font-size-h1: var(--ds-font-text-heading-xxl-mobile-font-size);
+  --font-size-h1: var(--ds-font-text-heading-3xl-mobile-font-size);
   --font-size-h2: var(--ds-font-text-heading-xl-mobile-font-size);
   --font-size-h3: var(--ds-font-text-heading-lg-mobile-font-size);
   --font-size-h4: var(--ds-font-text-heading-md-mobile-font-size);
@@ -175,6 +155,11 @@
   --page-intro-large: var(--ds-size-spacing-section-intro-lg-mobile);
 
   --page-section: var(--ds-size-spacing-section-page-mobile);
+
+  --post-preview-divider: var(--ds-size-spacing-post-preview-divider-sm-mobile);
+
+  --post-preview: var(--ds-size-spacing-post-preview-sm-mobile);
+  --post-preview-heading: var(--ds-size-spacing-post-preview-heading-sm-mobile);
 
   --blog-section: var(--ds-size-spacing-section-blog-mobile);
 }
@@ -208,6 +193,7 @@
     --caseStudy-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --service-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --industry-meta-bar: var(--ds-size-spacing-metabar-desktop);
+    --post-preview-divider: var(--ds-size-spacing-post-preview-divider-sm-desktop);
 
     /** Font Size */
     --font-size-small: var(--ds-font-text-body-sm-desktop-font-size);
@@ -223,6 +209,7 @@
   @media only screen and (min-width: 1920px) {
     :root {
       --rem-base: 0.5vw;
+      --post-preview-divider: var(--ds-size-spacing-post-preview-divider-sm-desktop);
     }
   }
 }

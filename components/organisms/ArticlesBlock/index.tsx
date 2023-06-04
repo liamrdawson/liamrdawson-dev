@@ -11,17 +11,18 @@ type ArticlesInput = {
 }
 
 const HeadingAndArticlesContainer = styled.section`
-  @media (min-width: 820px) {
-    margin: 0 var(--page-section);
-  }
+  padding-left: var(--grid-padding);
+  padding-right: var(--grid-padding);
   display: flex;
   flex-direction: column;
   position: relative;
   h2 {
     font-family: var(--font-family-header);
     text-transform: uppercase;
-    margin-top: 0;
+    margin: 0;
     font-size: var(--font-size-h2);
+  }
+  @media (min-width: 820px) {
   }
 `
 
@@ -47,17 +48,8 @@ const ArticlesContainer = styled.div`
       height: 100%;
       transition: height 0.8s ease-in-out;
       overflow: hidden;
-      article {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
     }
   }
-`
-
-const Divider = styled.div`
-  border: var(--color-border-tertiary) 1px solid;
 `
 
 const ArticlesBlock = ({ articles }: ArticlesInput) => {
@@ -78,7 +70,6 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
       <ArticlesContainer>
         {articles.map((post) => (
           <React.Fragment key={nanoid()}>
-            <Divider />
             <PostPreview post={post} />
           </React.Fragment>
         ))}

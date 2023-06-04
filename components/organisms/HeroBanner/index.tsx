@@ -4,6 +4,7 @@ import { Heading } from '../../atoms/Heading'
 import { VideoPlayer } from '../../molecules/VideoPlayer'
 
 const BannerContainer = styled.div`
+  overflow-x: hidden;
   min-height: 700px;
   height: 90vh;
   width: 100%;

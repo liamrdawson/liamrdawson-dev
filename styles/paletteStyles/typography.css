@@ -7,29 +7,29 @@
   --ds-font-weight-medium: 399;
   --ds-font-weight-bold: 699;
 
-  --ds-size-font-xxs: 0.1rem;
-  --ds-size-font-xs: 0.4rem;
-  --ds-size-font-sm: 0.6rem;
-  --ds-size-font-md: 0.8rem;
-  --ds-size-font-lg: 1rem;
-  --ds-size-font-xl: 1.2rem;
-  --ds-size-font-xxl: 1.4rem;
-  --ds-size-font-3xl: 1.8rem;
-  --ds-size-font-4xl: 2.8rem;
-  --ds-size-font-5xl: 3.4rem;
-  --ds-size-font-6xl: 3.8rem;
-  --ds-size-font-7xl: 4rem;
-  --ds-size-font-8xl: 4.2rem;
-  --ds-size-font-9xl: 4.6rem;
+  --ds-size-font-xxs: 0.512rem;
+  --ds-size-font-xs: 0.64rem;
+  --ds-size-font-sm: 0.8rem;
+  --ds-size-font-md: 1rem;
+  --ds-size-font-lg: 1.25rem;
+  --ds-size-font-xl: 1.563rem;
+  --ds-size-font-xxl: 1.953rem;
+  --ds-size-font-3xl: 2.441rem;
+  --ds-size-font-4xl: 3.052rem;
+  --ds-size-font-5xl: 3.815rem;
+  --ds-size-font-6xl: 4.768rem;
+  --ds-size-font-7xl: 5.96rem;
+  --ds-size-font-8xl: 7.451rem;
+  --ds-size-font-9xl: 9.313rem;
   --ds-size-font-10xl: 6.25vw;
 
   /** UI Typography */
 
-  --ds-font-text-body-sm-mobile-font-size: var(--ds-size-font-xxs);
-  --ds-font-text-body-sm-desktop-font-size: var(--ds-size-font-xs);
-  --ds-font-text-body-base-mobile-font-size: var(--ds-size-font-xs);
+  --ds-font-text-body-sm-mobile-font-size: var(--ds-size-font-sm);
+  --ds-font-text-body-sm-desktop-font-size: var(--ds-size-font-sm);
+  --ds-font-text-body-base-mobile-font-size: var(--ds-size-font-md);
   --ds-font-text-body-base-desktop-font-size: var(--ds-size-font-md);
-  --ds-font-text-body-lg-mobile-font-size: var(--ds-size-font-md);
+  --ds-font-text-body-lg-mobile-font-size: var(--ds-size-font-lg);
   --ds-font-text-body-lg-desktop-font-size: var(--ds-size-font-xl);
   --ds-font-text-heading-xs-mobile-font-size: var(--ds-size-font-sm);
   --ds-font-text-heading-xs-desktop-font-size: var(--ds-size-font-xl);
@@ -39,7 +39,7 @@
   --ds-font-text-heading-md-desktop-font-size: var(--ds-size-font-3xl);
   --ds-font-text-heading-lg-mobile-font-size: var(--ds-size-font-xl);
   --ds-font-text-heading-lg-desktop-font-size: var(--ds-size-font-4xl);
-  --ds-font-text-heading-xl-mobile-font-size: var(--ds-size-font-xxl);
+  --ds-font-text-heading-xl-mobile-font-size: var(--ds-size-font-5xl);
   --ds-font-text-heading-xl-desktop-font-size: var(--ds-size-font-8xl);
   --ds-font-text-heading-xxl-mobile-font-size: var(--ds-size-font-7xl);
   --ds-font-text-heading-xxl-portrait-font-size: var(--ds-size-font-9xl);
