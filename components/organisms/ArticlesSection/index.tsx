@@ -13,6 +13,7 @@ type ArticlesInput = {
 const HeadingAndArticlesContainer = styled.section`
   padding-left: var(--grid-padding);
   padding-right: var(--grid-padding);
+  margin-top: var(--page-section);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -32,17 +33,18 @@ const TagLine = styled.p`
   text-transform: none;
 `
 
-const ArticlesContainer = styled.div`
+const ArticlesList = styled.ul`
   display: flex;
   row-gap: var(--grid-gutter);
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   @media (min-width: 820px) {
     a:nth-of-type(1) {
       height: 400%;
-    }
-    :hover a:nth-of-type(1):not(:hover) {
     }
     a {
       height: 100%;
@@ -67,13 +69,13 @@ const ArticlesSection = ({ articles }: ArticlesInput) => {
           or: How I learned to stop worrying and love the <strong>current</strong>.
         </TagLine>
       </Heading>
-      <ArticlesContainer>
+      <ArticlesList>
         {articles.map((post) => (
-          <React.Fragment key={nanoid()}>
+          <li key={nanoid()}>
             <PostPreview post={post} />
-          </React.Fragment>
+          </li>
         ))}
-      </ArticlesContainer>
+      </ArticlesList>
     </HeadingAndArticlesContainer>
   )
 }

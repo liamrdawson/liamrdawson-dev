@@ -10,15 +10,20 @@
   --ds-size-spacing-component-xl: clamp(2.63rem, calc(2.36rem + 1.3vw), 3.38rem);
   --ds-size-spacing-component-2xl: clamp(3.5rem, calc(3.15rem + 1.74vw), 4.5rem);
   --ds-size-spacing-component-3xl: clamp(5.25rem, calc(4.73rem + 2.61vw), 6.75rem);
+  --ds-size-spacing-component-4xl: clamp(9rem, calc(8.65rem + 1.74vw), 10rem);
+  --ds-size-spacing-component-5xl: clamp(11.25rem, calc(10.82rem + 2.17vw), 12.5rem);
+  --ds-size-spacing-component-6xl: clamp(15.75rem, calc(15.14rem + 3.04vw), 17.5rem);
 
-  --ds-size-spacing-section-fixed-sm: 6rem;
-  --ds-size-spacing-section-fixed-md: 8rem;
-  --ds-size-spacing-section-fixed-lg: 14rem;
+  --ds-size-spacing-section-fixed-sm: 9.313rem;
+  --ds-size-spacing-section-fixed-md: 9.313rem;
+  --ds-size-spacing-section-fixed-lg: 11.642rem;
+  --ds-size-spacing-section-fixed-xl: 14.552rem;
+  --ds-size-spacing-section-fixed-xxl: 18.19rem;
   --ds-size-spacing-section-variable-xs: 4.1vw;
   --ds-size-spacing-section-variable-sm: 7.8vw;
-  --ds-size-spacing-section-variable-md: 10.4vw;
+  --ds-size-spacing-section-variable-md: 10vw;
   --ds-size-spacing-section-variable-lg: 12.5vw;
-  --ds-size-spacing-section-variable-xl: 18.2vw;
+  --ds-size-spacing-section-variable-xl: 15.63vw;
 
   --ds-size-grid-gutter-mobile: 0.6rem;
   --ds-size-grid-gutter-desktop: 1rem;
@@ -52,7 +57,7 @@
   --ds-size-spacing-post-preview-heading-lg-mobile: var(--ds-size-spacing-component-md);
   --ds-size-spacing-post-preview-heading-lg-desktop: var(--ds-size-spacing-component-lg);
 
-  --ds-size-spacing-section-page-mobile: var(--ds-size-spacing-section-variable-lg);
+  --ds-size-spacing-section-page-mobile: var(--ds-size-spacing-section-fixed-lg);
   --ds-size-spacing-section-page-desktop: var(--ds-size-spacing-section-variable-lg);
 
   --ds-size-spacing-section-blog-mobile: var(--ds-size-spacing-section-variable-md);

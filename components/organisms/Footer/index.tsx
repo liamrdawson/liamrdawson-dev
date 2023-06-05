@@ -7,9 +7,10 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: var(--page-section);
   background-color: var(--color-background-primary);
   color: var(--color-text-inverse-base);
-  margin: var(--grid-gutter) auto 0;
+  /* margin: var(--grid-gutter) auto 0; */
   a {
     text-decoration: none;
     text-align: center;

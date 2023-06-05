@@ -25,16 +25,15 @@ const StyledLink = styled(Link)`
 const ImageContainer = styled.div`
   aspect-ratio: 7/5;
   width: 100%;
-  /** Move away from using a grid system and start using css grid */
-  /* width: calc(((100vw + var(--grid-gutter) - var(--grid-padding) * 2) / 6 * 2) - var(--grid-gutter)); */
   position: relative;
   margin-right: var(--grid-gutter);
+  max-width: 500px;
   img {
     object-position: 0 40%;
     object-fit: cover;
   }
-  @media screen and (min-width: 820px) {
-    width: 30%;
+  @media screen and (min-width: 540px) {
+    width: 40%;
   }
 `
 
@@ -45,6 +44,9 @@ const PostPreviewHeading = styled(Heading)`
   letter-spacing: var(--letter-spacing-h3);
   font-family: var(--font-family-primary);
   width: calc(100% - var(--font-size-h3));
+  @media screen and (min-width: 540px) {
+    margin-top: -0.3rem;
+  }
 `
 
 const Divider = styled.div`
@@ -65,7 +67,7 @@ const PostPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: var(--post-preview-divider);
-  @media (min-width: 820px) {
+  @media (min-width: 540px) {
     flex-direction: row;
   }
 `
@@ -76,9 +78,12 @@ const ArrowContainer = styled.div`
   svg {
     position: absolute;
     right: 0;
-    top: calc(0px + var(--post-preview-heading));
+    top: var(--post-preview-heading);
     height: var(--font-size-h3);
     width: var(--font-size-h3);
+    @media screen and (min-width: 540px) {
+      top: -0.3rem;
+    }
   }
 `
 

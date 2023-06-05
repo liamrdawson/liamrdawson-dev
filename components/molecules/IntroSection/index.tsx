@@ -3,11 +3,10 @@ import { Callout } from '../../atoms/Callout/Callout'
 
 const StyledSection = styled.section`
   color: var(--color-text-inverse-secondary);
-  text-align: center;
   margin: var(--page-section) auto;
   max-width: 800px;
   p {
-    line-height: 2.5;
+    line-height: var(--line-height-body);
   }
 `
 
