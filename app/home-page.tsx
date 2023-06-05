@@ -1,8 +1,8 @@
 'use client'
 
 import styled from 'styled-components'
-import Introduction from '../components/molecules/Intro'
-import ArticlesBlock from '../components/organisms/ArticlesBlock'
+import IntroSection from '../components/molecules/IntroSection'
+import ArticlesSection from '../components/organisms/ArticlesSection'
 import type Post from '../types/post'
 import { HeroBanner } from '../components/organisms/HeroBanner'
 
@@ -21,8 +21,8 @@ export default function HomePage({ allPosts }: Props): JSX.Element {
     <>
       <HeroBanner />
       <StyledMain>
-        <Introduction />
-        <ArticlesBlock articles={sortedPosts} />
+        <IntroSection />
+        <ArticlesSection articles={sortedPosts} />
       </StyledMain>
     </>
   )

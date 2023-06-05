@@ -52,7 +52,7 @@ const ArticlesContainer = styled.div`
   }
 `
 
-const ArticlesBlock = ({ articles }: ArticlesInput) => {
+const ArticlesSection = ({ articles }: ArticlesInput) => {
   const hasMounted = useHasMounted()
 
   if (!hasMounted) {
@@ -78,4 +78,4 @@ const ArticlesBlock = ({ articles }: ArticlesInput) => {
   )
 }
 
-export default ArticlesBlock
+export default ArticlesSection

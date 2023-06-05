@@ -11,7 +11,7 @@ const StyledSection = styled.section`
   }
 `
 
-const Introduction = () => (
+const IntroSection = () => (
   <StyledSection>
     <strong>Hey, I&apos;m Liam Dawson.</strong>
     <Callout>
@@ -30,4 +30,4 @@ const Introduction = () => (
   </StyledSection>
 )
 
-export default Introduction
+export default IntroSection
