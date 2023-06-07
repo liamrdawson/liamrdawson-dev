@@ -1,16 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Arrow from '@/components/atoms/Arrow'
+import { motion } from 'framer-motion'
 import type PostType from '../../../types/post'
 import { Heading } from '../../atoms/Heading'
-// import arrow from '../../../public/assets/icons/arrow.svg'
 
 type PostPreviewInput = {
   post: PostType
 }
 
-const Article = styled.article`
+const StyledMotionArticle = styled(motion.article)`
   background: none;
   display: flex;
   flex-direction: column;
@@ -28,6 +30,7 @@ const ImageContainer = styled.div`
   position: relative;
   margin-right: var(--grid-gutter);
   max-width: 500px;
+  overflow: hidden;
   img {
     object-position: 0 40%;
     object-fit: cover;
@@ -54,7 +57,7 @@ const Divider = styled.div`
   width: 100%;
 `
 
-const PostDescription = styled.div`
+const PostDescription = styled(motion.div)`
   flex-grow: 1;
   color: var(--color-text-inverse-secondary);
   p {
@@ -87,14 +90,27 @@ const ArrowContainer = styled.div`
   }
 `
 
+const MotionImage = motion(Image)
+
+const ImageMotion = {
+  rest: {
+    transform: 'perspective(500px) translate3d(0px, 0px, 50px)',
+  },
+  hover: {
+    transform: 'perspective(500px) translate3d(0px, 0px, 0px)',
+  },
+}
+
 export function PostPreview({ post }: PostPreviewInput) {
   return (
     <StyledLink href={`articles/${post.slug}`} passHref>
-      <Article>
+      <StyledMotionArticle initial="rest" whileHover="hover">
         <Divider />
         <PostPreviewContainer>
           <ImageContainer>
-            {post.coverImage && <Image src={post.coverImage} alt="hero image" sizes="50vw" fill />}
+            {post.coverImage && (
+              <MotionImage variants={ImageMotion} src={post.coverImage} alt="hero image" sizes="50vw" fill />
+            )}
           </ImageContainer>
           <ArrowContainer>
             <PostDescription>
@@ -104,7 +120,7 @@ export function PostPreview({ post }: PostPreviewInput) {
             <Arrow />
           </ArrowContainer>
         </PostPreviewContainer>
-      </Article>
+      </StyledMotionArticle>
     </StyledLink>
   )
 }
