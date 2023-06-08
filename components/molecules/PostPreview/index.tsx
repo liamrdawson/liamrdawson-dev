@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Arrow from '@/components/atoms/Arrow'
-import { motion } from 'framer-motion'
+import { motion, useAnimate } from 'framer-motion'
 import type PostType from '../../../types/post'
 import { Heading } from '../../atoms/Heading'
 
@@ -79,9 +79,6 @@ const ArrowContainer = styled.div`
   position: relative;
   width: 100%;
   svg {
-    position: absolute;
-    right: 0;
-    top: var(--post-preview-heading);
     height: var(--font-size-h3);
     width: var(--font-size-h3);
     @media screen and (min-width: 540px) {
@@ -95,16 +92,38 @@ const MotionImage = motion(Image)
 const ImageMotion = {
   rest: {
     transform: 'perspective(500px) translate3d(0px, 0px, 50px)',
+    x: 0,
   },
   hover: {
     transform: 'perspective(500px) translate3d(0px, 0px, 0px)',
+    x: 50,
   },
 }
 
+const ArrowBorder = styled.div`
+  height: var(--font-size-h3);
+  width: var(--font-size-h3);
+  position: absolute;
+  top: var(--post-preview-heading);
+  right: 0;
+  overflow: hidden;
+  @media screen and (min-width: 540px) {
+    top: -0.3rem;
+  }
+`
+
 export function PostPreview({ post }: PostPreviewInput) {
+  const [scope, animate] = useAnimate()
+
+  const animateArrow = async () => {
+    await animate('svg', { x: 30 }, { duration: 0.2 })
+    await animate('svg', { x: -30 }, { duration: 0 })
+    await animate('svg', { x: 0 }, { duration: 0.2 })
+  }
+
   return (
     <StyledLink href={`articles/${post.slug}`} passHref>
-      <StyledMotionArticle initial="rest" whileHover="hover">
+      <StyledMotionArticle onMouseEnter={() => animateArrow()} ref={scope} initial="rest" whileHover="hover">
         <Divider />
         <PostPreviewContainer>
           <ImageContainer>
@@ -117,7 +136,9 @@ export function PostPreview({ post }: PostPreviewInput) {
               <PostPreviewHeading as="h3">{post.title}</PostPreviewHeading>
               <p>01.02.23</p>
             </PostDescription>
-            <Arrow />
+            <ArrowBorder>
+              <Arrow />
+            </ArrowBorder>
           </ArrowContainer>
         </PostPreviewContainer>
       </StyledMotionArticle>
