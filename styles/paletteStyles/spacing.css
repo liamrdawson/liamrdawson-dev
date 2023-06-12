@@ -62,4 +62,7 @@
 
   --ds-size-spacing-section-blog-mobile: var(--ds-size-spacing-section-variable-md);
   --ds-size-spacing-section-blog-desktop: var(--ds-size-spacing-section-variable-md);
+
+  --ds-size-spacing-footer-row-mobile: var(--ds-size-spacing-component-3xl);
+  --ds-size-spacing-footer-row-desktop: var(--ds-size-spacing-component-4xl);
 }

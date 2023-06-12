@@ -14,14 +14,14 @@ const inter = Inter({
 export const Global = createGlobalStyle`
       :root {
         --font-family-hero: ${inter.style.fontFamily};
-        --font-family-header: ${jost.style.fontFamily};
+        --font-family-header: ${inter.style.fontFamily};
         --font-family-header: Didot, serif;
       }
       html {
         --tester: red;
         height: 100%;
         margin: 0;
-        font-size: 14px;
+        font-size: var(--rem-base);
         @media (min-width: 763px) {
           font-size: 16px;
         }
@@ -35,8 +35,7 @@ export const Global = createGlobalStyle`
       body {
         min-height: 100%;
         margin: 0 auto;
-      }
-      body {
+        font-size: var(--font-size-body);
         color: var(--color-text-base);
         background: var(--color-background-inverse);
         font-family: Jost, Arial, sans-serif;

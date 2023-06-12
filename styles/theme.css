@@ -130,17 +130,18 @@
   --font-weight-h4: var(--ds-font-weight-bold);
   --font-weight-h5: var(--ds-font-weight-bold);
   --font-weight-h6: var(--ds-font-weight-medium);
+  --font-weight-link: var(--ds-font-weight-bold);
 
   --font-size-small: var(--ds-font-text-body-sm-mobile-font-size);
   --font-size-body: var(--ds-font-text-body-base-mobile-font-size);
   --font-size-large: var(--ds-font-text-body-lg-mobile-font-size);
 
   --font-size-h1: var(--ds-font-text-heading-3xl-mobile-font-size);
-  --font-size-h2: var(--ds-font-text-heading-xl-mobile-font-size);
-  --font-size-h3: var(--ds-font-text-heading-lg-mobile-font-size);
+  --font-size-h2: var(--ds-font-text-heading-xxl-mobile-font-size);
+  --font-size-h3: var(--ds-font-text-heading-xl-mobile-font-size);
   --font-size-h4: var(--ds-font-text-heading-md-mobile-font-size);
-  --font-size-h5: var(--ds-font-text-heading-sm-mobile-font-size);
-  --font-size-h6: var(--ds-font-text-heading-xs-mobile-font-size);
+  --font-size-h5: var(--ds-font-text-heading-md-mobile-font-size);
+  --font-size-h6: var(--ds-font-text-heading-sm-mobile-font-size);
 
   /** Spacing */
 
@@ -162,6 +163,8 @@
   --post-preview-heading: var(--ds-size-spacing-post-preview-heading-sm-mobile);
 
   --blog-section: var(--ds-size-spacing-section-blog-mobile);
+
+  --footer-row: var(--ds-size-spacing-footer-row-mobile);
 }
 
 @media only screen and (min-width: 480px) {
