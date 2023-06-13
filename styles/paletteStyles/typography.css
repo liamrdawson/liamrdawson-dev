@@ -30,7 +30,7 @@
   --ds-font-text-body-base-mobile-font-size: var(--ds-size-font-lg);
   --ds-font-text-body-base-desktop-font-size: var(--ds-size-font-lg);
   --ds-font-text-body-lg-mobile-font-size: var(--ds-size-font-lg);
-  --ds-font-text-body-lg-desktop-font-size: var(--ds-size-font-xl);
+  --ds-font-text-body-lg-desktop-font-size: var(--ds-size-font-3xl);
   --ds-font-text-heading-xs-mobile-font-size: var(--ds-size-font-sm);
 
   --ds-font-text-heading-xs-desktop-font-size: var(--ds-size-font-xl);

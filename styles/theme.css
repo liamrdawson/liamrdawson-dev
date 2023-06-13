@@ -169,7 +169,15 @@
 
 @media only screen and (min-width: 480px) {
   :root {
+    --font-size-small: var(--ds-font-text-body-sm-desktop-font-size);
+    --font-size-body: var(--ds-font-text-body-base-desktop-font-size);
+    --font-size-large: var(--ds-font-text-body-lg-desktop-font-size);
     --font-size-h1: var(--font-text-heading-xxl-portrait-font-size);
+    --font-size-h2: var(--ds-font-text-heading-xl-desktop-font-size);
+    --font-size-h3: var(--ds-font-text-heading-md-desktop-font-size);
+    --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
+    --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);
+    --font-size-h6: var(--ds-font-text-heading-xs-desktop-font-size);
   }
 }
 
@@ -197,16 +205,6 @@
     --service-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --industry-meta-bar: var(--ds-size-spacing-metabar-desktop);
     --post-preview-divider: var(--ds-size-spacing-post-preview-divider-sm-desktop);
-
-    /** Font Size */
-    --font-size-small: var(--ds-font-text-body-sm-desktop-font-size);
-    --font-size-body: var(--ds-font-text-body-base-desktop-font-size);
-    --font-size-large: var(--ds-font-text-body-lg-desktop-font-size);
-    --font-size-h2: var(--ds-font-text-heading-xl-desktop-font-size);
-    --font-size-h3: var(--ds-font-text-heading-md-desktop-font-size);
-    --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
-    --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);
-    --font-size-h6: var(--ds-font-text-heading-xs-desktop-font-size);
   }
 
   @media only screen and (min-width: 1920px) {

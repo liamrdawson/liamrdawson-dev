@@ -22,12 +22,6 @@ export const Global = createGlobalStyle`
         height: 100%;
         margin: 0;
         font-size: var(--rem-base);
-        @media (min-width: 763px) {
-          font-size: 16px;
-        }
-        @media (min-width: 1023px) {
-          font-size: 18px;
-        }
         * {
           box-sizing: border-box;
         }

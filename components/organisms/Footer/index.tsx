@@ -1,6 +1,7 @@
 'use client'
 
 import { Heading } from '@/components/atoms/Heading'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
@@ -10,10 +11,19 @@ const StyledFooter = styled.footer`
   background-color: var(--color-background-primary);
   color: var(--color-text-inverse-base);
   a {
-    font-weight: var(--font-weight-link);
+    font-weight: var(--font-weight-h4);
     text-decoration: underline;
     text-align: center;
     color: var(--color-text-inverse-base);
+  }
+`
+
+const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
   }
 `
 
@@ -22,17 +32,21 @@ const Copyright = styled.div`
   font-size: var(--font-size-small);
   margin-top: var(--footer-row);
   color: var(--color-text-footer-copyright);
-  padding-left: var(--grid-padding);
-  padding-right: var(--grid-padding);
-  padding-bottom: var(--grid-padding);
+  padding: 2rem var(--grid-padding);
   text-transform: uppercase;
 `
 
 const Content = styled.div`
-  font-size: var(--ds-size-font-xxl);
+  font-size: var(--font-size-large);
   margin-top: var(--footer-row);
   padding-left: var(--grid-padding);
   padding-right: var(--grid-padding);
+  p {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 700px) {
+    width: 30%;
+  }
 `
 
 const SocialsList = styled.div`
@@ -40,32 +54,55 @@ const SocialsList = styled.div`
   padding-left: var(--grid-padding);
   padding-right: var(--grid-padding);
   font-size: 100%;
+  h4 {
+    margin: 0;
+  }
   ul {
     list-style: none;
     padding: 0;
     li {
       padding: 0;
       margin-top: var(--ds-size-spacing-component-sm);
+      a {
+        text-decoration: none;
+      }
     }
   }
+  @media screen and (min-width: 700px) {
+    width: 30%;
+  }
+`
+
+const NoWrap = styled.span`
+  white-space: nowrap;
 `
 
 const Footer = () => {
   const date = new Date().getFullYear()
   return (
     <StyledFooter>
-      <Content>
-        <p>I collaborate with ambitious businesses who want to build something special. Let’s talk.</p>
-        <a href="mailto:hello@liamrdawson.com">hello@liamrdawson.com</a>
-      </Content>
-      <SocialsList>
-        <Heading as="h4">Social</Heading>
-        <ul>
-          <li>Instagram</li>
-          <li>Twitter</li>
-          <li>LinkedIn</li>
-        </ul>
-      </SocialsList>
+      <Contact>
+        <Content>
+          <p>
+            I collaborate with ambitious businesses who want to build something special. <NoWrap>Let’s talk.</NoWrap>
+          </p>
+          <a href="mailto:hello@liamrdawson.com">hello@liamrdawson.com</a>
+        </Content>
+        <SocialsList>
+          <Heading as="h4">Social</Heading>
+          <ul>
+            <li>
+              <Link href="https://www.instagram.com/liam_r_dawson/">Instagram</Link>
+            </li>
+            <li>
+              <Link href="https://twitter.com/LiamRDawson">Twitter</Link>
+            </li>
+            <li>
+              <Link href="https://www.linkedin.com/in/liamrdawson/">LinkedIn</Link>
+            </li>
+          </ul>
+        </SocialsList>
+      </Contact>
       <Copyright>
         <p>Copyright &copy; {date} Liam Dawson</p>
       </Copyright>
