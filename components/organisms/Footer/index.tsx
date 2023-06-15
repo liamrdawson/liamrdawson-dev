@@ -19,11 +19,14 @@ const StyledFooter = styled.footer`
 `
 
 const Contact = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   @media screen and (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 `
 
@@ -45,7 +48,7 @@ const Content = styled.div`
     margin-top: 0;
   }
   @media screen and (min-width: 700px) {
-    width: 30%;
+    width: 60%;
   }
 `
 
@@ -65,11 +68,12 @@ const SocialsList = styled.div`
       margin-top: var(--ds-size-spacing-component-sm);
       a {
         text-decoration: none;
+        font-weight: 400;
       }
     }
   }
   @media screen and (min-width: 700px) {
-    width: 30%;
+    width: fit-content;
   }
 `
 
