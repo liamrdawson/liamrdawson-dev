@@ -48,7 +48,6 @@ const Content = styled.div`
     margin-top: 0;
   }
   @media screen and (min-width: 700px) {
-    /* width: 60%; */
     justify-self: stretch;
   }
 `
