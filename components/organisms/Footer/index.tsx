@@ -22,7 +22,7 @@ const Contact = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   @media screen and (min-width: 700px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 35% 1fr 35%;
     justify-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -48,7 +48,8 @@ const Content = styled.div`
     margin-top: 0;
   }
   @media screen and (min-width: 700px) {
-    width: 60%;
+    /* width: 60%; */
+    justify-self: stretch;
   }
 `
 
@@ -74,6 +75,8 @@ const SocialsList = styled.div`
   }
   @media screen and (min-width: 700px) {
     width: fit-content;
+    justify-self: end;
+    grid-column: 3 / 4;
   }
 `
 
