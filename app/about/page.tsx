@@ -8,7 +8,7 @@ import aboutMePic from '../../public/assets/images/about-image-1.jpg'
 import photo1 from '../../public/assets/images/about-image-2.jpg'
 import photo2 from '../../public/assets/images/about-image-3.jpg'
 import { Heading } from '../../components/atoms/Heading'
-import { Callout } from '../../components/atoms/Callout/Callout'
+import { Callout } from '../../components/atoms/Callout'
 
 const ImageContainer = styled.div`
   height: 500px;

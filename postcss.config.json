@@ -2,6 +2,7 @@
   "plugins": [
     "postcss-import",
     "postcss-flexbugs-fixes",
+    "postcss-nesting",
     [
       "postcss-preset-env",
       {

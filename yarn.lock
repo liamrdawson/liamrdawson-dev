@@ -5210,6 +5210,14 @@ postcss-nesting@^11.2.1:
     "@csstools/selector-specificity" "^2.0.0"
     postcss-selector-parser "^6.0.10"
 
+postcss-nesting@^11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-11.3.0.tgz#f0a16ecd55555770d41974236c90918447355a5f"
+  integrity sha512-JlS10AQm/RzyrUGgl5irVkAlZYTJ99mNueUl+Qab+TcHhVedLiylWVkKBhRale+rS9yWIJK48JVzQlq3LcSdeA==
+  dependencies:
+    "@csstools/selector-specificity" "^2.0.0"
+    postcss-selector-parser "^6.0.10"
+
 postcss-opacity-percentage@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-opacity-percentage/-/postcss-opacity-percentage-2.0.0.tgz#c0a56060cd4586e3f954dbde1efffc2deed53002"

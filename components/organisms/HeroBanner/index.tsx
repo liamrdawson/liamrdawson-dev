@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import styled from 'styled-components'
-import { Heading } from '../../atoms/Heading'
+import { HeroHeading } from '../../atoms/Heading'
 import { VideoPlayer } from '../../molecules/VideoPlayer'
 
 const BannerContainer = styled.div`
@@ -13,18 +13,6 @@ const BannerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
-
-const HeroHeading = styled(Heading)`
-  color: var(--color-text-inverse-base);
-  font-family: var(--font-family-hero);
-  font-weight: var(--font-weight-hero);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: 0 auto;
-  font-style: italic;
 `
 
 const RowOne = styled.span`
@@ -58,7 +46,7 @@ const RowThree = styled.span`
 
 export const HeroBanner = () => (
   <BannerContainer>
-    <HeroHeading tabIndex={0}>
+    <HeroHeading>
       <RowOne>
         <span>I create </span>
         <VideoPlayer src="/assets/images/aboutVid.mp4" />

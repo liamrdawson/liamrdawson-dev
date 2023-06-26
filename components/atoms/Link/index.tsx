@@ -1,28 +1,17 @@
 import Link from 'next/link'
-import styled from 'styled-components'
+import style from './link.module.css'
 
 interface LinkAtomProps {
   path: string
   name: string
 }
 
-const StyledSpan = styled.span`
-  a {
-    color: var(--color-text-inverse-base);
-    font-family: var(--font-family-primary);
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`
-
 const LinkAtom = ({ path, name }: LinkAtomProps) => (
-  <StyledSpan>
+  <span className={style.link}>
     <Link href={path} passHref>
       {name}
     </Link>
-  </StyledSpan>
+  </span>
 )
 
 export default LinkAtom

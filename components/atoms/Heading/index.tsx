@@ -1,13 +1,18 @@
-import styled from 'styled-components'
+import { ReactNode } from 'react'
+import style from './heading.module.css'
 
 interface NewHeadingProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
+  children: ReactNode
 }
 
-export const Heading = styled.span<NewHeadingProps>`
-  text-transform: uppercase;
-  margin: 3rem 0 1.38rem;
-  line-height: 1.3;
-  font-size: ${({ as }) => `var(--font-size-${as ?? 'h1'})`};
-  font-weight: ${({ as }) => `var(--font-weight-${as ?? 'h1'})`};
-`
+interface HeroHeadingProps {
+  children: ReactNode
+}
+
+export const Heading = ({ children, as = 'h1' }: NewHeadingProps) => {
+  const CustomTag = as as keyof JSX.IntrinsicElements
+  return <CustomTag className={`${style.base} ${style[as]}`}>{children}</CustomTag>
+}
+
+export const HeroHeading = ({ children }: HeroHeadingProps) => <h1 className={style.hero}>{children}</h1>
