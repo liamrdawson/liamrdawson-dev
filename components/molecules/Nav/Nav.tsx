@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import LinkAtom from '@/components/atoms/Link/Link'
+import style from './nav.module.css'
 
 interface INavLink {
   path: string
@@ -10,20 +10,8 @@ interface Props {
   navLinks: INavLink[]
 }
 
-const StyledNav = styled.nav`
-  width: 100%;
-  ul {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-  }
-`
-
 const Nav = ({ navLinks }: Props) => (
-  <StyledNav>
+  <nav className={style.nav}>
     <ul>
       {navLinks.map((navLink) => (
         <li key={`navLink-${navLinks.indexOf(navLink)}`}>
@@ -31,7 +19,7 @@ const Nav = ({ navLinks }: Props) => (
         </li>
       ))}
     </ul>
-  </StyledNav>
+  </nav>
 )
 
 export default Nav

@@ -1,17 +1,8 @@
-import styled from 'styled-components'
 import { Callout } from '@/components/atoms/Callout/Callout'
-
-const StyledSection = styled.section`
-  color: var(--color-text-inverse-secondary);
-  margin: var(--page-section) auto;
-  max-width: 800px;
-  p {
-    line-height: var(--line-height-body);
-  }
-`
+import style from './intro-section.module.css'
 
 const IntroSection = () => (
-  <StyledSection>
+  <section className={style.section}>
     <strong>Hey, I&apos;m Liam Dawson.</strong>
     <Callout>
       <strong>I love building amazing websites and applicataions.</strong>
@@ -26,7 +17,7 @@ const IntroSection = () => (
     <p>
       <strong>Let&apos;s Talk</strong>
     </p>
-  </StyledSection>
+  </section>
 )
 
 export default IntroSection

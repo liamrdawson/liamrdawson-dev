@@ -1,0 +1,8 @@
+.section {
+  color: var(--color-text-inverse-secondary);
+  margin: var(--page-section) auto;
+  max-width: 800px;
+  p {
+    line-height: var(--line-height-body);
+  }
+}

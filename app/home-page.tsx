@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import IntroSection from '@/components/molecules/IntroSection'
+import IntroSection from '@/components/molecules/IntroSection/IntroSection'
 import ArticlesSection from '@/components/organisms/ArticlesSection'
 import { HeroBanner } from '@/components/organisms/HeroBanner'
 import type Post from '@/types/post'

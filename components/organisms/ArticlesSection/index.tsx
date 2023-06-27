@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import { nanoid } from 'nanoid'
 import { Heading } from '@/components/atoms/Heading/Heading'
-import { PostPreview } from '@/components/molecules/PostPreview'
+import { PostPreview } from '@/components/molecules/PostPreview/PostPreview'
 import type Post from '@/types/post'
 import useHasMounted from '@/utils/setHasMountedHook'
 

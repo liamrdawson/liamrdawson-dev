@@ -1,6 +1,4 @@
-import styled from 'styled-components'
-
-const VideoPlayerContainer = styled.div`
+.video-player {
   position: relative;
   height: 180px;
   width: 225px;
@@ -19,14 +17,4 @@ const VideoPlayerContainer = styled.div`
     border: 0;
     padding: 0;
   }
-`
-
-type VideoPlayerProps = {
-  src: string
 }
-
-export const VideoPlayer = ({ src }: VideoPlayerProps) => (
-  <VideoPlayerContainer>
-    <video autoPlay loop playsInline src={src} preload="metadata" muted />
-  </VideoPlayerContainer>
-)

@@ -44,7 +44,7 @@
     "custom.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/molecules/Nav/index.tsx",
+    "components/molecules/Nav/Nav.tsx",
     "global.d.ts",
     ".next/types/**/*.ts"
   ]
