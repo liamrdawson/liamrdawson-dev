@@ -2,8 +2,8 @@
 
 import styled from 'styled-components'
 import IntroSection from '@/components/molecules/IntroSection/IntroSection'
-import ArticlesSection from '@/components/organisms/ArticlesSection'
-import { HeroBanner } from '@/components/organisms/HeroBanner'
+import ArticlesSection from '@/components/organisms/ArticlesSection/ArticlesSection'
+import { HeroBanner } from '@/components/organisms/HeroBanner/HeroBanner'
 import type Post from '@/types/post'
 
 type Props = {

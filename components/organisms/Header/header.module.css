@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  background-color: var(--color-background-primary);
+  overflow: hidden;
+  nav {
+    color: var(--color-text-inverse-base);
+    width: 30%;
+    margin: 0 auto;
+  }
+}
