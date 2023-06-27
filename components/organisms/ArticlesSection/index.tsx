@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import React from 'react'
 import { nanoid } from 'nanoid'
-import { Heading } from '../../atoms/Heading'
-import { PostPreview } from '../../molecules/PostPreview'
-import type Post from '../../../types/post'
-import useHasMounted from '../../../utils/setHasMountedHook'
+import { Heading } from '@/components/atoms/Heading/Heading'
+import { PostPreview } from '@/components/molecules/PostPreview'
+import type Post from '@/types/post'
+import useHasMounted from '@/utils/setHasMountedHook'
 
 type ArticlesInput = {
   articles: Post[]

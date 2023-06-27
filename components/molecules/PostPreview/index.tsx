@@ -3,10 +3,10 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import Image from 'next/image'
-import Arrow from '@/components/atoms/Arrow'
 import { motion, useAnimate } from 'framer-motion'
-import type PostType from '../../../types/post'
-import { Heading } from '../../atoms/Heading'
+import Arrow from '@/components/atoms/Arrow/Arrow'
+import { Heading } from '@/components/atoms/Heading/Heading'
+import type PostType from '@/types/post'
 
 type PostPreviewInput = {
   post: PostType

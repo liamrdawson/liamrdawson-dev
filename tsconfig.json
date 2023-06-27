@@ -3,7 +3,10 @@
     "baseUrl": ".",
     // Using "paths" allows you to configure module path aliases
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": ["components/*"],
+      "@/assets/*": ["public/assets/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"]
     },
     "target": "es5", //* Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
     "lib": [

@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import Nav from '../../molecules/Nav'
+import Nav from '@/components/molecules/Nav'
 
 interface ILink {
   path: string

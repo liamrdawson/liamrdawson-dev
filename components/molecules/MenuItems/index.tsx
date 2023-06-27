@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { PrimaryButton } from '../../atoms/Button'
+import { PrimaryButton } from '@/components/atoms/Button/Button'
 
 interface IItem {
   name: string

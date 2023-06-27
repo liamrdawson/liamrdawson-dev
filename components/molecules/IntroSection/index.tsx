@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Callout } from '../../atoms/Callout'
+import { Callout } from '@/components/atoms/Callout/Callout'
 
 const StyledSection = styled.section`
   color: var(--color-text-inverse-secondary);

@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading } from '@/components/atoms/Heading'
+import { Heading } from '@/components/atoms/Heading/Heading'
 import Link from 'next/link'
 import styled from 'styled-components'
 

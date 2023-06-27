@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import styled from 'styled-components'
-import { HeroHeading } from '../../atoms/Heading'
-import { VideoPlayer } from '../../molecules/VideoPlayer'
+import { HeroHeading } from '@/components/atoms/Heading/Heading'
+import { VideoPlayer } from '@/components/molecules/VideoPlayer'
 
 const BannerContainer = styled.div`
   overflow-x: hidden;

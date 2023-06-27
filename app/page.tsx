@@ -1,9 +1,8 @@
 import html from 'remark-html'
 import { remark } from 'remark'
+import Post from '@/types/post'
+import { getAllPosts } from '@/utils/blogPosts'
 import HomePage from './home-page'
-
-import { getAllPosts } from '../utils/blogPosts'
-import Post from '../types/post'
 
 async function markdownToHtml(markdown: string) {
   const result = await remark().use(html).process(markdown)

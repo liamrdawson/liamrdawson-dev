@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LinkAtom from '../../atoms/Link'
+import LinkAtom from '@/components/atoms/Link/Link'
 
 interface INavLink {
   path: string

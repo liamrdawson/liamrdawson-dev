@@ -1,10 +1,10 @@
 'use client'
 
 import styled from 'styled-components'
-import IntroSection from '../components/molecules/IntroSection'
-import ArticlesSection from '../components/organisms/ArticlesSection'
-import type Post from '../types/post'
-import { HeroBanner } from '../components/organisms/HeroBanner'
+import IntroSection from '@/components/molecules/IntroSection'
+import ArticlesSection from '@/components/organisms/ArticlesSection'
+import { HeroBanner } from '@/components/organisms/HeroBanner'
+import type Post from '@/types/post'
 
 type Props = {
   allPosts: Post[]

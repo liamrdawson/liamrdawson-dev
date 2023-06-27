@@ -1,8 +1,8 @@
 import { remark } from 'remark'
 import html from 'remark-html'
-import { getAllPosts, getPostBySlug } from '../../../utils/blogPosts'
+import Post from '@/types/post'
+import { getAllPosts, getPostBySlug } from '@/utils/blogPosts'
 import PostLayout from './post-layout'
-import Post from '../../../types/post'
 
 type Params = {
   params: {

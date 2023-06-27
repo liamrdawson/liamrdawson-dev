@@ -3,7 +3,7 @@
 /* eslint-disable react/no-danger */
 import { useRouter } from 'next/navigation'
 import ErrorPage from 'next/error'
-import Post from '../../../types/post'
+import Post from '@/types/post'
 
 type Props = {
   post: Post & {
