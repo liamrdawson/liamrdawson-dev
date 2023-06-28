@@ -8,4 +8,5 @@ type Props = {
 }
 
 const PostLayout = ({ post }: Props) => <article dangerouslySetInnerHTML={{ __html: post.htmlContent }} />
+
 export default PostLayout
