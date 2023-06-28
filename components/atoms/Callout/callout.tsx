@@ -5,4 +5,6 @@ type Props = {
   children: ReactNode
 }
 
-export const Callout = ({ children }: Props) => <p className={style.callout}>{children}</p>
+const Callout = ({ children }: Props) => <p className={style.callout}>{children}</p>
+
+export default Callout

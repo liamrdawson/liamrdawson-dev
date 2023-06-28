@@ -1,13 +1,27 @@
 import { Metadata } from 'next'
+import { Jost, Inter } from 'next/font/google'
 import Footer from '@/components/organisms/Footer/Footer'
 import Header from '@/components/organisms/Header/Header'
-import { ThemeProvider } from './providers'
-import StyledComponentsRegistry from '../lib/registry'
+import 'normalize.css'
+import '../styles/theme.css'
+import '../styles/global.css'
 
 export const metadata: Metadata = {
   title: 'Create Connections',
   description: 'Welcome to Next.js',
 }
+
+const jost = Jost({
+  subsets: ['latin'],
+  variable: '--jost',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--inter',
+  display: 'swap',
+})
 
 export const navigation = [
   {
@@ -30,17 +44,13 @@ export const navigation = [
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <ThemeProvider>
-      <html lang="en">
-        <head />
-        <body>
-          <StyledComponentsRegistry>
-            <Header navigation={navigation} />
-            {children}
-            <Footer />
-          </StyledComponentsRegistry>
-        </body>
-      </html>
-    </ThemeProvider>
+    <html lang="en" className={`${inter.variable} ${jost.variable}`}>
+      <head />
+      <body>
+        <Header navigation={navigation} />
+        {children}
+        <Footer />
+      </body>
+    </html>
   )
 }

@@ -1,4 +1,4 @@
-import { Callout } from '@/components/atoms/Callout/Callout'
+import Callout from '@/components/atoms/Callout/Callout'
 import style from './intro-section.module.css'
 
 const IntroSection = () => (

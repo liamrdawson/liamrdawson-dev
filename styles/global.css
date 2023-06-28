@@ -1,0 +1,38 @@
+:root {
+  --font-family-hero: var(--inter);
+  --font-family-header: var(--inter);
+  --font-family-header: var(--jost);
+}
+
+html {
+  --tester: red;
+  height: 100%;
+  margin: 0;
+  font-size: var(--rem-base);
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  min-height: 100%;
+  margin: 0 auto;
+  font-size: var(--font-size-body);
+  color: var(--color-text-base);
+  background: var(--color-background-inverse);
+  font-family: Jost, Arial, sans-serif;
+  max-width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: var(--page-section);
+}
+
+text {
+  margin-top: var(--page-paragraph);
+}
