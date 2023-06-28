@@ -1,5 +1,3 @@
-'use client'
-
 import IntroSection from '@/components/molecules/IntroSection/IntroSection'
 import ArticlesSection from '@/components/organisms/ArticlesSection/ArticlesSection'
 import { HeroBanner } from '@/components/organisms/HeroBanner/HeroBanner'

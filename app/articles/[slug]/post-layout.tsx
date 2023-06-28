@@ -1,5 +1,3 @@
-'use client'
-
 /* eslint-disable react/no-danger */
 import { useRouter } from 'next/navigation'
 import ErrorPage from 'next/error'
