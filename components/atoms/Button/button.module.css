@@ -7,7 +7,4 @@
   border: none;
   cursor: pointer;
   outline: inherit;
-  &:hover {
-    text-decoration: underline;
-  }
 }

@@ -2,6 +2,7 @@
   width: 100%;
   background-color: var(--color-background-primary);
   overflow: hidden;
+  padding: calc(1.5rem + 2.5vw) var(--grid-padding);
   nav {
     color: var(--color-text-inverse-base);
     width: 30%;
