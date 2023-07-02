@@ -1,7 +1,6 @@
 :root {
   --font-family-hero: var(--inter);
-  --font-family-header: var(--inter);
-  --font-family-header: var(--jost);
+  --font-family-header: Didot, serif;
 }
 
 html {

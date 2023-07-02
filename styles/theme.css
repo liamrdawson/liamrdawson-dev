@@ -136,8 +136,8 @@
   --font-size-body: var(--ds-font-text-body-base-mobile-font-size);
   --font-size-large: var(--ds-font-text-body-lg-mobile-font-size);
 
-  --font-size-h1: var(--ds-font-text-heading-3xl-mobile-font-size);
-  --font-size-h2: var(--ds-font-text-heading-xxl-mobile-font-size);
+  --font-size-h1: var(--ds-font-text-heading-4xl-mobile-font-size);
+  --font-size-h2: var(--ds-font-text-heading-4xl-mobile-font-size);
   --font-size-h3: var(--ds-font-text-heading-xl-mobile-font-size);
   --font-size-h4: var(--ds-font-text-heading-md-mobile-font-size);
   --font-size-h5: var(--ds-font-text-heading-md-mobile-font-size);
@@ -172,8 +172,8 @@
     --font-size-small: var(--ds-font-text-body-sm-desktop-font-size);
     --font-size-body: var(--ds-font-text-body-base-desktop-font-size);
     --font-size-large: var(--ds-font-text-body-lg-desktop-font-size);
-    --font-size-h1: var(--font-text-heading-xxl-portrait-font-size);
-    --font-size-h2: var(--ds-font-text-heading-xl-desktop-font-size);
+    --font-size-h1: var(--font-text-heading-3xl-portrait-font-size);
+    --font-size-h2: var(--ds-font-text-heading-xxl-desktop-font-size);
     --font-size-h3: var(--ds-font-text-heading-lg-desktop-font-size);
     --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
     --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);
