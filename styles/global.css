@@ -33,6 +33,6 @@ section {
   margin-top: var(--page-section);
 }
 
-text {
-  margin-top: var(--page-paragraph);
+p {
+  margin: var(--page-paragraph) 0 0;
 }

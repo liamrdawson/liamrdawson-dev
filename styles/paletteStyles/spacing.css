@@ -35,7 +35,7 @@
 
   --ds-size-spacig-nav-sm-desktop: var(--ds-size-spacing-section-fixed-sm);
 
-  --ds-size-spacing-paragraph-sm-desktop: 2.8rem;
+  --ds-size-spacing-paragraph-sm-desktop: var(--ds-size-spacing-component-2xl);
 
   --ds-size-spacing-section-intro-sm-mobile: var(--ds-size-spacing-section-fixed-sm);
   --ds-size-spacing-section-intro-sm-desktop: var(--ds-size-spacing-section-variable-xs);

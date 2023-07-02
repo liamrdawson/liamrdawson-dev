@@ -25,7 +25,6 @@
   margin: 0 auto;
   font-size: clamp(90px, 12vw, 188px);
   margin-top: 49;
-  margin-bottom: 49px;
   width: 100%;
 }
 
@@ -34,6 +33,7 @@
   flex-direction: row;
   font-size: clamp(50px, 8vw, 125px);
   justify-content: space-between;
+  margin-top: 49px;
   span {
     padding-right: 1vw;
   }

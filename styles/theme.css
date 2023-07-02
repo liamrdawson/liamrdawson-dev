@@ -123,7 +123,7 @@
   --letter-spacing-h5: -0.02em;
   --letter-spacing-h6: -0.02em;
 
-  --font-weight-hero: var(--ds-font-weight-bold);
+  --font-weight-hero: var(--ds-font-weight-black);
   --font-weight-h1: var(--ds-font-weight-bold);
   --font-weight-h2: var(--ds-font-weight-bold);
   --font-weight-h3: var(--ds-font-weight-bold);
