@@ -15,9 +15,7 @@ const IntroSection = () => (
     </p>
     <p>Welcome to my small corner of the internet.</p>
     <p>If you think we could work together to enhance your business, or just want to say hi;</p>
-    <p>
-      <PrimaryButton value="let's talk" />
-    </p>
+    <PrimaryButton value="let's talk" />
   </section>
 )
 

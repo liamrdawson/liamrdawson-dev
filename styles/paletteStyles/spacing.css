@@ -37,6 +37,9 @@
 
   --ds-size-spacing-paragraph-sm-desktop: var(--ds-size-spacing-component-2xl);
 
+  --ds-size-spacing-button-md-mobile: var(--ds-size-spacing-component-2xl);
+  --ds-size-spacing-button-md-desktop: var(--ds-size-spacing-component-3xl);
+
   --ds-size-spacing-section-intro-sm-mobile: var(--ds-size-spacing-section-fixed-sm);
   --ds-size-spacing-section-intro-sm-desktop: var(--ds-size-spacing-section-variable-xs);
   --ds-size-spacing-section-intro-lg-mobile: var(--ds-size-spacing-section-fixed-sm);

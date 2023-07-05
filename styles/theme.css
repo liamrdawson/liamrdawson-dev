@@ -8,7 +8,7 @@
   --color-border-button-primary-base: var(--ds-color-brand-primary-black);
   --color-border-button-primary-active: var(--ds-color-opaque-grey-800-high);
   --color-border-button-primary-disabled: var(--ds-color-opaque-grey-800-low);
-  --color-border-button-secondary-base: var(--ds-color-base-white);
+  --color-border-button-secondary-base: var(--ds-color-brand-secondary-red);
   --color-border-button-secondary-active: var(--ds-color-opaque-white-high);
   --color-border-button-secondary-disabled: var(--ds-color-opaque-white-low);
   --color-border-button-tertiary-base: var(--ds-color-brand-primary-black);
@@ -19,12 +19,12 @@
   --color-text-base: var(--ds-color-brand-primary-black);
   --color-text-inverse-base: var(--ds-color-brand-primary-grey);
   --color-text-inverse-secondary: var(--ds-color-brand-secondary-red);
-  --color-text-button-primary-base: var(--ds-color-brand-primary-black);
-  --color-text-button-primary-hover: var(--ds-color-brand-primary-white);
+  --color-text-button-primary-base: var(--ds-color-brand-secondary-black);
+  --color-text-button-primary-hover: var(--ds-color-brand-primary-grey);
   --color-text-button-primary-active: var(--ds-color-brand-primary-white);
-  --color-text-button-secondary-base: var(--ds-color-brand-primary-white);
-  --color-text-button-secondary-hover: var(--ds-color-brand-primary-black);
-  --color-text-button-secondary-active: var(--ds-color-brand-primary-black);
+  --color-text-button-secondary-base: var(--ds-color-brand-secondary-red);
+  --color-text-button-secondary-hover: var(--ds-color-brand-primary-grey);
+  --color-text-button-secondary-active: var(--ds-color-brand-secondary-red);
   --color-text-button-tertiary-base: var(--ds-color-brand-primary-black);
   --color-text-button-tertiary-hover: var(--ds-color-brand-secondary-red);
   --color-text-button-tertiary-active: var(--ds-color-brand-secondary-red);
@@ -131,6 +131,7 @@
   --font-weight-h5: var(--ds-font-weight-bold);
   --font-weight-h6: var(--ds-font-weight-medium);
   --font-weight-link: var(--ds-font-weight-bold);
+  --font-weight-button: var(--ds-font-weight-bold);
 
   --font-size-small: var(--ds-font-text-body-sm-mobile-font-size);
   --font-size-body: var(--ds-font-text-body-base-mobile-font-size);
@@ -151,6 +152,10 @@
   --nav: var(--ds-size-spacig-nav-sm-desktop);
 
   --page-paragraph: var(--ds-size-spacing-paragraph-sm-desktop);
+
+  --cta: var(--ds-size-spacing-button-md-mobile);
+
+  --button-padding: var(--ds-size-spacing-component-3xs) var(--ds-size-spacing-component-xl);
 
   --page-intro-small: var(--ds-size-spacing-section-intro-sm-mobile);
   --page-intro-large: var(--ds-size-spacing-section-intro-lg-mobile);
@@ -176,6 +181,18 @@
     --font-size-large: var(--ds-font-text-body-lg-desktop-font-size);
     --font-size-h1: var(--font-text-heading-3xl-portrait-font-size);
     --font-size-h2: var(--ds-font-text-heading-xxl-mobile-font-size);
+    --font-size-h3: var(--ds-font-text-heading-lg-desktop-font-size);
+    --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
+    --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);
+    --font-size-h6: var(--ds-font-text-heading-xs-desktop-font-size);
+    --cta: var(--ds-size-spacing-button-md-desktop);
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  :root {
+    --font-size-h1: var(--font-text-heading-xxl-portrait-font-size);
+    --font-size-h2: var(--ds-font-text-heading-xl-desktop-font-size);
     --font-size-h3: var(--ds-font-text-heading-lg-desktop-font-size);
     --font-size-h4: var(--ds-font-text-heading-md-desktop-font-size);
     --font-size-h5: var(--ds-font-text-heading-sm-desktop-font-size);

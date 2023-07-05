@@ -1,35 +1,38 @@
 .base-button {
   font-family: var(--font-family-primary);
-  color: var(--color-text-button-primary-base);
-  font-size: var(--font-size-large);
-  font-weight: 600;
+  color: var(--color-text-button-secondary-base);
+  font-size: var(--font-size-body);
+  padding: var(--button-padding);
+  line-height: var(--size-line-height-desktop-large);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: var(--font-weight-button);
   background: none;
-  border: var(--color-border-button-primary-base) solid 1px;
-  border-radius: 50px;
+  border: var(--color-border-button-secondary-base) solid 0.1rem;
+  border-radius: 1.6rem;
   display: block;
   position: relative;
-  margin: 0 auto;
+  margin: var(--cta) auto 0;
   outline: none;
   cursor: pointer;
-  outline: inherit;
   overflow: hidden;
-  transition: color 0.25s ease-in 0.125s;
-  :hover {
-    color: var(--color-text-button-primary-hover);
-    transition: color 0.25s ease-in 0.125s;
+  transition: color 0.2s ease-in;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    background-color: var(--color-background-secondary);
+    z-index: -1;
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.2s ease-in;
   }
-}
-
-.value {
-  color: black;
-}
-
-.fill {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color-background-primary);
-  z-index: -1;
+  &:hover {
+    color: var(--color-text-button-secondary-hover);
+    &::before {
+      transform: translateZ(0);
+    }
+  }
 }
