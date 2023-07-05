@@ -138,7 +138,7 @@
 
   --font-size-h1: var(--ds-font-text-heading-4xl-mobile-font-size);
   --font-size-h2: var(--ds-font-text-heading-xl-mobile-font-size);
-  --font-size-h3: var(--ds-font-text-heading-lg-mobile-font-size);
+  --font-size-h3: var(--ds-font-text-heading-md-mobile-font-size);
   --font-size-h4: var(--ds-font-text-heading-md-mobile-font-size);
   --font-size-h5: var(--ds-font-text-heading-md-mobile-font-size);
   --font-size-h6: var(--ds-font-text-heading-sm-mobile-font-size);
