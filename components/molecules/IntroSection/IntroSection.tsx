@@ -1,4 +1,5 @@
 import Callout from '@/components/atoms/Callout/Callout'
+import { PrimaryButton } from '@/components/atoms/Button/Button'
 import style from './intro-section.module.css'
 
 const IntroSection = () => (
@@ -15,7 +16,7 @@ const IntroSection = () => (
     <p>Welcome to my small corner of the internet.</p>
     <p>If you think we could work together to enhance your business, or just want to say hi;</p>
     <p>
-      <strong>Let&apos;s Talk</strong>
+      <PrimaryButton value="let's talk" />
     </p>
   </section>
 )

@@ -14,7 +14,7 @@ const ArticlesSection = ({ articles }: ArticlesInput) => (
   <section className={style.section}>
     <Heading as="h2">
       Flowing Stream of Thoughts, Ideas & Opinions
-      <p className={style.tagline}>
+      <p className={style.subheading}>
         or: How I learned to stop worrying and love the <strong>current</strong>.
       </p>
     </Heading>
