@@ -1,39 +1,60 @@
 {
-  "name": "liamrdawson-frontend-dev",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "normalize.css": "^8.0.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-responsive": "^7.0.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.1.1"
-  },
+  "name": "liamrdawson-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "svgr": "svgr -d src/icons/ assets/",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "types": "tsc --noEmit",
+    "precommit": "yarn types && yarn lint",
+    "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamrdawson/liamrdawson-dev.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liamrdawson/liamrdawson-dev/issues"
+  },
+  "homepage": "https://github.com/liamrdawson/liamrdawson-dev#readme",
+  "dependencies": {
+    "framer-motion": "^10.12.16",
+    "gray-matter": "^4.0.3",
+    "luxon": "^3.3.0",
+    "nanoid": "^4.0.2",
+    "next": "^13.4.8",
+    "normalize.css": "^8.0.1",
+    "postcss-preset-env": "^8.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
-    "@svgr/cli": "^4.3.2"
+    "@types/luxon": "^3.3.0",
+    "@types/node": "20.3.2",
+    "@types/react": "^17.0.37",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "^13.4.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.3",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^11.3.0",
+    "typescript": "^4.5.3"
   }
 }

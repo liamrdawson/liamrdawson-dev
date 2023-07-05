@@ -1,0 +1,11 @@
+.image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  img {
+    width: 48%;
+    object-fit: cover;
+    height: 500px;
+  }
+}

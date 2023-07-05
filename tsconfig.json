@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Using "paths" allows you to configure module path aliases
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/assets/*": ["public/assets/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"]
+    },
+    "target": "es5", //* Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
+    "lib": [
+      //* Specify a set of bundled library declaration files that describe the target runtime environment.
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": [],
+    "allowJs": true,
+    "skipLibCheck": true, // Skip type checking all .d.ts files.
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true, // Disable emitting files from a compilation.
+    "incremental": false, // Save .tsbuildinfo files to allow for incremental compilation of projects.
+    "esModuleInterop": true, // Emit additional JavaScript to ease support for importing CommonJS modules. This enables allowSyntheticDefaultImports for type compatibility.
+    "module": "esnext", //* Specify what module code is generated.
+    "moduleResolution": "node", //* Specify how TypeScript looks up a file from a given module specifier.
+    "resolveJsonModule": true, //* Enable importing .json files.
+    "isolatedModules": true, //* Ensure that each file can be safely transpiled without relying on other imports.
+    "jsx": "preserve", //* Specify what JSX code is generated.
+    "plugins": [
+      {
+        "name": "next"
+      },
+      {
+        "name": "@styled/typescript-styled-plugin",
+        "tags": ["styled", "css", "sty"]
+      }
+    ]
+  },
+  "exclude": ["node_modules", ".next"],
+  "include": [
+    "next-env.d.ts",
+    "custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/molecules/Nav/Nav.tsx",
+    "global.d.ts",
+    ".next/types/**/*.ts"
+  ]
+}

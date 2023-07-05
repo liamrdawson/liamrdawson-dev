@@ -1,0 +1,37 @@
+.nav {
+  width: 100%;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    li {
+      padding: 0 3rem;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.nav[data-active='true'] {
+  text-decoration: underline;
+}
+
+.underline {
+  background: var(--color-text-inverse-base);
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.link-wrapper {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}

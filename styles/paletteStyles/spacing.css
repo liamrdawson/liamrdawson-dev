@@ -1,0 +1,68 @@
+:root {
+  /** Base Units */
+
+  --ds-size-spacing-component-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
+  --ds-size-spacing-component-2xs: clamp(0.44rem, calc(0.39rem + 0.22vw), 0.56rem);
+  --ds-size-spacing-component-xs: clamp(0.69rem, calc(0.62rem + 0.33vw), 0.88rem);
+  --ds-size-spacing-component-sm: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+  --ds-size-spacing-component-md: clamp(1.31rem, calc(1.18rem + 0.65vw), 1.69rem);
+  --ds-size-spacing-component-lg: clamp(1.75rem, calc(1.58rem + 0.87vw), 2.25rem);
+  --ds-size-spacing-component-xl: clamp(2.63rem, calc(2.36rem + 1.3vw), 3.38rem);
+  --ds-size-spacing-component-2xl: clamp(3.5rem, calc(3.15rem + 1.74vw), 4.5rem);
+  --ds-size-spacing-component-3xl: clamp(5.25rem, calc(4.73rem + 2.61vw), 6.75rem);
+  --ds-size-spacing-component-4xl: clamp(9rem, calc(8.65rem + 1.74vw), 10rem);
+  --ds-size-spacing-component-5xl: clamp(11.25rem, calc(10.82rem + 2.17vw), 12.5rem);
+  --ds-size-spacing-component-6xl: clamp(15.75rem, calc(15.14rem + 3.04vw), 17.5rem);
+
+  --ds-size-spacing-section-fixed-sm: 9.313rem;
+  --ds-size-spacing-section-fixed-md: 9.313rem;
+  --ds-size-spacing-section-fixed-lg: 11.642rem;
+  --ds-size-spacing-section-fixed-xl: 14.552rem;
+  --ds-size-spacing-section-fixed-xxl: 18.19rem;
+  --ds-size-spacing-section-variable-xs: 4.1vw;
+  --ds-size-spacing-section-variable-sm: 7.8vw;
+  --ds-size-spacing-section-variable-md: 10vw;
+  --ds-size-spacing-section-variable-lg: 12.5vw;
+  --ds-size-spacing-section-variable-xl: 15.63vw;
+
+  --ds-size-grid-gutter-mobile: 0.6rem;
+  --ds-size-grid-gutter-desktop: 1rem;
+
+  --ds-size-grid-padding-mobile: 4.4vw;
+  --ds-size-grid-padding-desktop: 7rem;
+
+  /** UI Spacing */
+
+  --ds-size-spacig-nav-sm-desktop: var(--ds-size-spacing-section-fixed-sm);
+
+  --ds-size-spacing-paragraph-sm-desktop: var(--ds-size-spacing-component-2xl);
+
+  --ds-size-spacing-section-intro-sm-mobile: var(--ds-size-spacing-section-fixed-sm);
+  --ds-size-spacing-section-intro-sm-desktop: var(--ds-size-spacing-section-variable-xs);
+  --ds-size-spacing-section-intro-lg-mobile: var(--ds-size-spacing-section-fixed-sm);
+  --ds-size-spacing-section-intro-lg-desktop: var(--ds-size-spacing-section-variable-sm);
+
+  --ds-size-spacing-post-preview-divider-sm-desktop: var(--ds-size-spacing-component-sm);
+  --ds-size-spacing-post-preview-divider-sm-mobile: var(--ds-size-spacing-component-xs);
+  --ds-size-spacing-post-preview-divider-lg-mobile: var(--ds-size-spacing-component-md);
+  --ds-size-spacing-post-preview-divider-lg-desktop: var(--ds-size-spacing-component-lg);
+
+  --ds-size-spacing-post-preview-sm-mobile: var(--ds-size-spacing-component-xl);
+  --ds-size-spacing-post-preview-sm-desktop: var(--ds-size-spacing-component-xxl);
+  --ds-size-spacing-post-preview-lg-mobile: var(--ds-size-spacing-component-3xl);
+  --ds-size-spacing-post-preview-lg-desktop: var(--ds-size-spacing-component-4xl);
+
+  --ds-size-spacing-post-preview-heading-sm-mobile: var(--ds-size-spacing-component-xs);
+  --ds-size-spacing-post-preview-heading-sm-desktop: var(--ds-size-spacing-component-sm);
+  --ds-size-spacing-post-preview-heading-lg-mobile: var(--ds-size-spacing-component-md);
+  --ds-size-spacing-post-preview-heading-lg-desktop: var(--ds-size-spacing-component-lg);
+
+  --ds-size-spacing-section-page-mobile: var(--ds-size-spacing-section-fixed-lg);
+  --ds-size-spacing-section-page-desktop: var(--ds-size-spacing-section-variable-lg);
+
+  --ds-size-spacing-section-blog-mobile: var(--ds-size-spacing-section-variable-md);
+  --ds-size-spacing-section-blog-desktop: var(--ds-size-spacing-section-variable-md);
+
+  --ds-size-spacing-footer-row-mobile: var(--ds-size-spacing-component-3xl);
+  --ds-size-spacing-footer-row-desktop: var(--ds-size-spacing-component-4xl);
+}

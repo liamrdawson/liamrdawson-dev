@@ -1,0 +1,5 @@
+.callout {
+  color: var(--color-text-inverse-base);
+  background-color: var(--color-background-secondary);
+  margin-top: var(--page-paragraph);
+}
