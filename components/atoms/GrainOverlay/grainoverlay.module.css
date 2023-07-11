@@ -1,0 +1,16 @@
+.grain {
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../../public/assets/images/noise-1.jpeg');
+  background-size: cover;
+  position: fixed;
+  height: calc(100% + 20rem);
+  width: calc(100% + 20rem);
+  content: '';
+  border: solid red 1px;
+  z-index: 99;
+}

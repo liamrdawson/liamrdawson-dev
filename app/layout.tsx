@@ -5,6 +5,7 @@ import Header from '@/components/organisms/Header/Header'
 import 'normalize.css'
 import '../styles/theme.css'
 import '../styles/global.css'
+import GrainOverlay from '@/components/atoms/GrainOverlay/GrainOverlay'
 
 export const metadata: Metadata = {
   title: 'Create Connections',
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en" className={`${inter.variable} ${jost.variable}`}>
       <head />
       <body>
+        <GrainOverlay />
         <Header navigation={navigation} />
         {children}
         <Footer />
