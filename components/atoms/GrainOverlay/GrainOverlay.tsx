@@ -22,7 +22,7 @@ const GrainOverlay = () => {
       { rotate: rotation, delay: 4, duration: 0 },
       {
         duration: 0,
-        delay: 0.042,
+        delay: 1 / 24,
         onComplete: () => setRotation(getRandomNumber(0, 360, rotation)),
       },
     )
