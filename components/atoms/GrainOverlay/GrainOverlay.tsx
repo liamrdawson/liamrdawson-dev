@@ -4,9 +4,9 @@ import { motion, useAnimate } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import style from './grainoverlay.module.css'
 
-function getRandomNumber(min: number, max: number, currentNumber: number): number {
+function getRandomNumber(min: number, max: number, currentNumber?: number): number {
   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
-  if (randomNumber === currentNumber) {
+  if (currentNumber && randomNumber === currentNumber) {
     return randomNumber + 1
   }
   return randomNumber
@@ -19,7 +19,7 @@ const GrainOverlay = () => {
   useEffect(() => {
     animate(
       scope.current,
-      { rotate: rotation, delay: 4, duration: 0 },
+      { rotate: rotation, x: `${getRandomNumber(-9, 9)}rem`, y: `${getRandomNumber(-9, 9)}rem` },
       {
         duration: 0,
         delay: 1 / 24,
