@@ -1,6 +1,6 @@
 .grain {
-  mix-blend-mode: screen;
-  opacity: 0.4;
+  mix-blend-mode: plus-lighter;
+  opacity: 0.2;
   pointer-events: none;
   position: absolute;
   top: -50rem;
@@ -11,6 +11,5 @@
   height: calc(100vw + 60rem);
   width: calc(100vw + 60rem);
   content: '';
-  border: solid red 1px;
   z-index: 99;
 }
