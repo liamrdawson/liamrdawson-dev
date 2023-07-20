@@ -1,0 +1,9 @@
+.slide-container {
+  height: var(--font-size-h1);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+}

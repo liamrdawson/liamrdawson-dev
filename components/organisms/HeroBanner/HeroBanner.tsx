@@ -1,21 +1,44 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import { HeroHeading } from '@/components/atoms/Heading/Heading'
-import { VideoPlayer } from '@/components/molecules/VideoPlayer/VideoPlayer'
+import TextSlider from '../../molecules/TextSlider/TextSlider'
+import HeroImage from '../../molecules/HeroImage/HeroImage'
 import style from './hero-banner.module.css'
 
 export const HeroBanner = () => (
   <div className={style.container}>
-    <HeroHeading>
-      <div className={style['row-one']}>
-        <span>I create </span>
-        <VideoPlayer src="/assets/images/aboutVid.mp4" />
-        <VideoPlayer src="/assets/images/aboutVid.mp4" />
-      </div>
-      <div className={style['row-two']}>memorable</div>
-      <div className={style['row-three']}>
-        <VideoPlayer src="/assets/images/aboutVid.mp4" />
-        <span> experiences</span>
-      </div>
-    </HeroHeading>
+    <div className={style.column}>
+      <span>
+        <HeroHeading>
+          <TextSlider initialValue="100%" endValue="0%" axis="y" delay={0.4} duration={0.2}>
+            I build
+          </TextSlider>
+          <TextSlider initialValue="100%" endValue="0%" axis="y" delay={0.42} duration={0.2}>
+            digital
+          </TextSlider>
+          <TextSlider
+            styleVal={{ width: '120%' }}
+            initialValue="100%"
+            endValue="0%"
+            axis="y"
+            delay={0.44}
+            duration={0.2}
+          >
+            experiences
+          </TextSlider>
+          <TextSlider initialValue="100%" endValue="0%" axis="y" delay={0.46} duration={0.2}>
+            that are
+          </TextSlider>
+          <TextSlider initialValue="100%" endValue="0%" axis="y" delay={0.48} duration={0.2}>
+            impossible
+          </TextSlider>
+          <TextSlider initialValue="100%" endValue="0%" axis="y" delay={0.5} duration={0.2}>
+            to forget.
+          </TextSlider>
+        </HeroHeading>
+      </span>
+    </div>
+    <div className={style.column}>
+      <HeroImage />
+    </div>
   </div>
 )

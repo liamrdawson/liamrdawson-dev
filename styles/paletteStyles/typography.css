@@ -42,8 +42,8 @@
   --ds-font-text-heading-lg-mobile-font-size: var(--ds-size-font-xxl);
   --ds-font-text-heading-lg-desktop-font-size: var(--ds-size-font-xxl);
   --ds-font-text-heading-xl-mobile-font-size: var(--ds-size-font-3xl);
-  --ds-font-text-heading-xl-desktop-font-size: var(--ds-size-font-5xl);
+  --ds-font-text-heading-xl-desktop-font-size: var(--ds-size-font-4xl);
   --ds-font-text-heading-xxl-mobile-font-size: var(--ds-size-font-5xl);
   --ds-font-text-heading-xxl-portrait-font-size: var(--ds-size-font-6xl);
-  --ds-font-text-heading-xxl-desktop-font-size: var(--ds-size-font-6xl);
+  --ds-font-text-heading-xxl-desktop-font-size: var(--ds-size-font-5xl);
 }
