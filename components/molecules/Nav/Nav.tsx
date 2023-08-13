@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 import LinkAtom from '@/components/atoms/Link/Link'
+import TextSlider from '@/components/molecules/TextSlider/TextSlider'
 import style from './nav.module.css'
 
 interface INavLink {
@@ -36,24 +37,33 @@ const Nav = ({ navLinks }: Props) => {
     <nav className={style.nav}>
       <ul>
         {navLinks.map((navLink) => (
-          <motion.li
+          <TextSlider
+            initialValue="100%"
+            endValue="0%"
+            axis="y"
+            delay={0.5}
+            duration={0.2}
             key={`navLink-${navLinks.indexOf(navLink)}`}
-            data-active={isActiveLink(pathName, navLink.path)}
-            className={style.nav}
-            initial="rest"
-            whileHover="hover"
-            onClick={() => setActiveLink(navLink.path)}
+            styleVal={{ height: '16px', width: '100%' }}
           >
-            <span className={style['link-wrapper']}>
-              <LinkAtom path={navLink.path} name={navLink.name} />
-              <motion.div
-                transition={{ type: 'spring', duration: 0.25, bounce: 0 }}
-                variants={hoverLinkMotion(getRestState(navLink.path))}
-                className={style.underline}
-                key={activeLink}
-              />
-            </span>
-          </motion.li>
+            <motion.li
+              data-active={isActiveLink(pathName, navLink.path)}
+              className={style.nav}
+              initial="rest"
+              whileHover="hover"
+              onClick={() => setActiveLink(navLink.path)}
+            >
+              <span className={style['link-wrapper']}>
+                <LinkAtom path={navLink.path} name={navLink.name} />
+                <motion.div
+                  transition={{ type: 'spring', duration: 0.25, bounce: 0 }}
+                  variants={hoverLinkMotion(getRestState(navLink.path))}
+                  className={style.underline}
+                  key={activeLink}
+                />
+              </span>
+            </motion.li>
+          </TextSlider>
         ))}
       </ul>
     </nav>

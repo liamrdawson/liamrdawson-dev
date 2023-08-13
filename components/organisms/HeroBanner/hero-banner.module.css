@@ -1,14 +1,14 @@
 .container {
-  overflow-x: hidden;
-  min-height: 800px;
   height: 80vh;
   width: 100%;
-  padding: 0 var(--grid-gutter);
+
+  padding: 0 20rem;
   background: var(--color-background-primary);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
+
+  font-size: var(--font-size-h1);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .column {
@@ -19,7 +19,6 @@
   justify-content: flex-end;
   padding: 0 20px 60px 20px;
   h1 {
-    margin: 0 auto;
-    font-size: var(--font-size-h1);
+    margin-left: 0;
   }
 }

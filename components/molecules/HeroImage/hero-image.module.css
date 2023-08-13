@@ -1,5 +1,6 @@
 .hero-image {
   height: 100%;
+  justify-self: right;
   align-self: center;
   overflow: hidden;
   position: relative;

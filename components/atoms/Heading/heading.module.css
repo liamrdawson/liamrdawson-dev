@@ -30,6 +30,7 @@
 }
 
 .hero {
+  font-size: var(--font-size-h1);
   color: var(--color-text-inverse-base);
   font-family: var(--font-family-hero);
   font-weight: var(--font-weight-hero);
@@ -37,5 +38,6 @@
   display: flex;
   flex-direction: column;
   width: 75%;
-  margin: 0 auto;
+  margin-left: 0;
+  align-self: end;
 }

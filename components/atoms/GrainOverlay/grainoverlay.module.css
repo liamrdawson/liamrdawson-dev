@@ -1,6 +1,6 @@
 .grain {
-  mix-blend-mode: plus-lighter;
-  opacity: 0.2;
+  mix-blend-mode: exclusion;
+  opacity: 0.1;
   pointer-events: none;
   position: absolute;
   top: -50rem;

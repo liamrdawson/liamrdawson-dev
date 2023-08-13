@@ -21,7 +21,7 @@ const TextSlider = ({ children, duration, delay, axis, initialValue, endValue, s
       animate={axis === 'y' ? { y: endValue } : { x: endValue }}
       transition={{
         duration: duration || 0.3,
-        delay: delay || 0.5,
+        delay: delay || 1,
       }}
       className={style.slide}
     >

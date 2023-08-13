@@ -22,6 +22,7 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--inter',
   display: 'swap',
+  adjustFontFallback: false,
 })
 
 export const navigation = [

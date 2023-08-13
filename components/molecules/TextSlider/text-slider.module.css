@@ -1,9 +1,13 @@
 .slide-container {
   height: var(--font-size-h1);
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
+  width: 180%;
+  /* border: green solid 1px; */
 }
 
 .slide {
+  height: var(--font-size-h1);
   position: absolute;
+  /* border: gold solid 1px; */
 }
