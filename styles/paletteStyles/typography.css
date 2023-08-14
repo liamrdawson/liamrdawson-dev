@@ -8,18 +8,19 @@
   --ds-font-weight-bold: 699;
   --ds-font-weight-black: 900;
 
-  --ds-size-font-xxs: 0.512rem;
-  --ds-size-font-xs: 0.64rem;
-  --ds-size-font-sm: 0.8rem;
+  --ds-size-font-xxs: 0.422;
+  --ds-size-font-xs: 0.563;
+  --ds-size-font-sm: 0.75rem;
   --ds-size-font-md: 1.1rem;
-  --ds-size-font-lg: 1.414rem;
-  --ds-size-font-xl: 1.999rem;
-  --ds-size-font-xxl: 2.827rem;
-  --ds-size-font-3xl: 3.998rem;
-  --ds-size-font-4xl: 5.653rem;
-  --ds-size-font-5xl: 7.993rem;
-  --ds-size-font-6xl: 11.302rem;
-  --ds-size-font-7xl: 5.96rem;
+  --ds-size-font-lg: 1.333rem;
+  --ds-size-font-xl: 1.777rem;
+  --ds-size-font-xxl: 2.369rem;
+  --ds-size-font-3xl: 3.157rem;
+  --ds-size-font-4xl: 4.209rem;
+  --ds-size-font-5xl: 5.61rem;
+  --ds-size-font-6xl: 7.478rem;
+  --ds-size-font-7xl: 9.969rem;
+
   --ds-size-font-8xl: 7.451rem;
   --ds-size-font-9xl: 9.313rem;
   --ds-size-font-10xl: 6.25vw;
@@ -43,7 +44,7 @@
   --ds-font-text-heading-lg-desktop-font-size: var(--ds-size-font-xxl);
   --ds-font-text-heading-xl-mobile-font-size: var(--ds-size-font-3xl);
   --ds-font-text-heading-xl-desktop-font-size: var(--ds-size-font-4xl);
-  --ds-font-text-heading-xxl-mobile-font-size: var(--ds-size-font-5xl);
+  --ds-font-text-heading-xxl-mobile-font-size: var(--ds-size-font-4xl);
   --ds-font-text-heading-xxl-portrait-font-size: var(--ds-size-font-6xl);
   --ds-font-text-heading-xxl-desktop-font-size: var(--ds-size-font-5xl);
 }

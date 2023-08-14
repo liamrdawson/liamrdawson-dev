@@ -1,6 +1,6 @@
 'use client'
 
-import photo1 from '@/assets/images/about-image-2.jpg'
+import photo1 from '@/assets/images/about-image-3.jpg'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import style from './hero-image.module.css'
@@ -16,7 +16,7 @@ const HeroImage = () => (
       src={photo1}
       alt="photo 1"
       placeholder="blur"
-      objectFit="fill"
+      objectFit="cover"
       loading="eager"
       fill
     />

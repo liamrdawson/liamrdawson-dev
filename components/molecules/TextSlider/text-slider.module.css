@@ -2,7 +2,7 @@
   height: var(--font-size-h1);
   position: relative;
   overflow-y: hidden;
-  width: 180%;
+  /* width: 180%; */
   /* border: green solid 1px; */
 }
 
